@@ -332,11 +332,11 @@ public class CoreWorkload extends Workload {
 	public static final String INSERTION_RETRY_INTERVAL_DEFAULT = "3";
 
 	// Needed for web service benchmarking.
-	public static final String READ_TRACE_FILE = "read.trace";
-	public static final String READ_TRACE_FILE_DEFAULT = "benchmarking_input/readtrace.txt";
+	public static final String READ_TRACE_FILE = "readtrace";
+	public static final String READ_TRACE_FILE_DEFAULT = "/home/ubuntu/readtrace.txt";
 
-	public static final String WRITE_TRACE_FILE = "write.trace";
-	public static final String WRITE_TRACE_FILE_DEFAULT = "benchmarking_input/writetrace.txt";
+	public static final String WRITE_TRACE_FILE = "writetrace";
+	public static final String WRITE_TRACE_FILE_DEFAULT = "/home/ubuntu/writetrace.txt";
 	
 	public static final String READ_ZIPFIAN_CONSTANT = "readzipfconstant";
 	public static final String READ_ZIPFIAN_CONSTANT_DEAFULT = "0.99";

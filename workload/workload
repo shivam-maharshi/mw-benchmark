@@ -43,6 +43,8 @@ insertzipfconstant=0.99
 insertsizezipfconstant=0.99
 recordcount=20000
 writecount=1500
+readtrace=/home/ubuntu/readtrace.txt
+writetrace=/home/ubuntu/writetrace.txt
 
 #	Measurement Properties
 histogram.buckets=1
