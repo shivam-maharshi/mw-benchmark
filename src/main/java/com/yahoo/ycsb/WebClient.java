@@ -134,7 +134,6 @@ public class WebClient extends DB {
 				response.append(inputLine);
 			}
 			in.close();
-			System.out.println(con.getResponseCode());
 			if (response.toString().contains("Success")) {
 				responseCode = 200;
 			}
@@ -171,13 +170,10 @@ public class WebClient extends DB {
 
 	public static void main(String[] args) throws UnsupportedEncodingException {
 		String data = "Miusov, as a man man of breeding and deilcacy, could not but feel some inwrd qualms, when he reached the Father Superior's with Ivan: he felt ashamed of havin lost his temper. He felt that he ought to have disdaimed that despicable wretch, Fyodor Pavlovitch, too much to have been upset by him in Father Zossima's cell, and so to have forgotten himself. Teh monks were not to blame, in any case, he reflceted, on the steps.And if they're decent people here (and the Father Superior, I understand, is a nobleman) why not be friendly and courteous withthem? I won't argue, I'll fall in with everything, I'll win them by politness, and show them that I've nothing to do with that Aesop, thta buffoon, that Pierrot, and have merely been takken in over this affair, just as they have.";
-		System.out.println(data.getBytes().length);
-
 		WebClient w = new WebClient();
 		String params = "section=0";
-		params += "&title=%CE%95%CE%BB%CE%B5%CF%85%CE%B8%CE%B5%CF%81%CE%BF%CF%84%CE%B5%CE%BA%CF%84%CE%BF%CE%BD%CE%B9%CF%83%CE%BC%CF%8C%CF%82"; // URLEncoder.encode("Î§Ï�Î®ÏƒÏ„Î¿Ï‚_Î”Î¹Î´Î±ÏƒÎºÎ¬Î»Î¿Ï…_(Î¿Ï€Î»Î±Ï�Ï‡Î·Î³ÏŒÏ‚)",
-		// "UTF-8");
-		params += "&appendtext=" + data + data + data + data;
+		params += "&title=" + URLEncoder.encode("Αγορά", "UTF-8");
+		params += "&appendtext=" + data;
 		params += "&token=%2B%5C";
 		w.sendPost("http://52.34.20.119/mediawiki/api.php?action=edit&format=json", params);
 	}
