@@ -585,13 +585,11 @@ public class CoreWorkload extends Workload {
 		 * 
 		 * if (!orderedinserts) { keynum = Utils.hash(keynum); }
 		 */
-		System.out.println("The read URL is : " + readUrlMap.get(keynum));
 		return readUrlMap.get(keynum);
 	}
 
 	// This key now returns the URL of the web service to be bench marked.
 	public String buildInsertKeyName(long keynum) {
-		System.out.println("The write URL is : " + writeUrlMap.get(keynum));
 		return writeUrlMap.get(keynum);
 	}
 
@@ -600,7 +598,6 @@ public class CoreWorkload extends Workload {
 	 */
 	private HashMap<String, ByteIterator> buildSingleValue(String key) {
 		HashMap<String, ByteIterator> value = new HashMap<String, ByteIterator>();
-
 		String fieldkey = fieldnames.get(Integer.parseInt(fieldchooser.nextString()));
 		ByteIterator data;
 		if (dataintegrity) {

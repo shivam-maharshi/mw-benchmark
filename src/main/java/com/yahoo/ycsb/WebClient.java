@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Properties;
 import java.util.Set;
@@ -21,7 +22,8 @@ public class WebClient extends DB {
 
 	private Properties props;
 	private static final String URL_PREFIX = "url.prefix";
-	private static final String URL_PREFIX_DEFAULT = "http://52.34.20.119/mediawiki";
+	private static final String URL_PREFIX_DEFAULT = "52.34.20.119/mediawiki";
+	private static final String HTTP = "http://";
 	private static String urlPrefix;
 
 	@Override
@@ -32,7 +34,8 @@ public class WebClient extends DB {
 
 	@Override
 	public Status read(String table, String key, Set<String> fields, HashMap<String, ByteIterator> result) {
-		return getStatus(sendGet(urlPrefix + "/index.php/" + key));
+		System.out.println("Get title : " + key);
+		return getStatus(sendGet(HTTP + urlPrefix + "/index.php/" + key));
 	}
 
 	private Status getStatus(int responseCode) {
@@ -56,11 +59,12 @@ public class WebClient extends DB {
 
 	@Override
 	public Status insert(String table, String key, HashMap<String, ByteIterator> values) {
+		System.out.println("Post title : " + key);
 		String postUrl = "/api.php?action=edit&format=json";
 		String postParams;
 		try {
 			postParams = getPostParameters(key, values.get("field0"));
-			return getStatus(sendPost(urlPrefix + postUrl, postParams));
+			return getStatus(sendPost(HTTP + urlPrefix + postUrl, postParams));
 		} catch (UnsupportedEncodingException e) {
 			return Status.ERROR;
 		}
@@ -102,12 +106,9 @@ public class WebClient extends DB {
 	}
 
 	private String getPostParameters(String title, ByteIterator data) throws UnsupportedEncodingException {
-		String s = data.toString();
-		System.out.println("data : " + s);
-		System.out.println("data size : " + s.getBytes().length);
 		StringBuffer params = new StringBuffer("section=0");
-		params.append("&title=").append(title).append("&appendtext=").append(data.toString()).append("&token=%2B%5C");
-		// URLEncoder.encode(url, "UTF-8")
+		params.append("&title=").append(URLEncoder.encode(title, "UTF-8")).append("&appendtext=")
+				.append(data.toString()).append("&token=%2B%5C");
 		return params.toString();
 	}
 
@@ -174,7 +175,7 @@ public class WebClient extends DB {
 
 		WebClient w = new WebClient();
 		String params = "section=0";
-		params += "&title=%CE%95%CE%BB%CE%B5%CF%85%CE%B8%CE%B5%CF%81%CE%BF%CF%84%CE%B5%CE%BA%CF%84%CE%BF%CE%BD%CE%B9%CF%83%CE%BC%CF%8C%CF%82"; // URLEncoder.encode("Χρήστος_Διδασκάλου_(οπλαρχηγός)",
+		params += "&title=%CE%95%CE%BB%CE%B5%CF%85%CE%B8%CE%B5%CF%81%CE%BF%CF%84%CE%B5%CE%BA%CF%84%CE%BF%CE%BD%CE%B9%CF%83%CE%BC%CF%8C%CF%82"; // URLEncoder.encode("Î§Ï�Î®ÏƒÏ„Î¿Ï‚_Î”Î¹Î´Î±ÏƒÎºÎ¬Î»Î¿Ï…_(Î¿Ï€Î»Î±Ï�Ï‡Î·Î³ÏŒÏ‚)",
 		// "UTF-8");
 		params += "&appendtext=" + data + data + data + data;
 		params += "&token=%2B%5C";
