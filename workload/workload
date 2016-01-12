@@ -29,17 +29,17 @@ dataintegrity=false
 fieldcount=1
 fieldlength=1000
 fieldlengthdistribution=zipfian
-readproportion=0.999
+readproportion=0.9999
 updateproportion=0
 scanproportion=0
-insertproportion=0.001
+insertproportion=0.0001
 requestdistribution=zipfian
 operationcount=100
 
 #	Custom Properties
 url.prefix=52.34.20.119/mediawiki
-readzipfconstant=0.99
-insertzipfconstant=0.99
+readzipfconstant=0.6175
+insertzipfconstant=0.6391
 insertsizezipfconstant=0.99
 recordcount=20000
 writecount=1500

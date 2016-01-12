@@ -369,12 +369,12 @@ public class ZipfianGenerator extends IntegerGenerator {
 	}
 
 	public static void main(String[] args) {
-		ZipfianGenerator zg = new ZipfianGenerator(1, 10000, 0.99);
-		int[] c = new int[10000];
-		for (int i = 0; i < 10000; i++) {
+		ZipfianGenerator zg = new ZipfianGenerator(0, 100000, 0.99);
+		int[] c = new int[100001];
+		for (int i = 0; i < 100001; i++) {
 			c[zg.nextInt()]++;
 		}
-		for (int i = 0; i < 10000; i++) {
+		for (int i = 0; i < 1000; i++) {
 			System.out.println(c[i]);
 		}
 	}
