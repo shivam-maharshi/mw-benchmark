@@ -26,7 +26,7 @@ measurementtype=timeseries
 #	Worload Properties
 dataintegrity=false
 fieldcount=1
-fieldlength=1000
+fieldlength=258245
 fieldlengthdistribution=zipfian
 readproportion=0.9999
 updateproportion=0
