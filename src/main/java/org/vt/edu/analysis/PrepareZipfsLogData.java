@@ -12,6 +12,17 @@ import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class is responsible for preparing log of URL hit counts versus log of
+ * their ranks. This data is exported to a CSV file where a linear regression is
+ * applied using MS Excel inbuilt tools to calculate Zipf's constant using the
+ * methodology explained in this paper -
+ * http://www.hpl.hp.com/research/idl/papers/ranking/ranking.html. This class is
+ * used for calculating the Zipf's constant for both Read and Write operations,
+ * however in general can be applied for any such similar data.
+ * 
+ * @author shivam.maharshi
+ */
 public class PrepareZipfsLogData {
 
 	// Required for calculation of Zipf's constant for read trace.

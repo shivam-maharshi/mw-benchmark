@@ -1,4 +1,4 @@
-package org.vt.edu.trace;
+package org.vt.edu.analysis;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -10,6 +10,9 @@ import java.io.Writer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
+
+import org.vt.edu.trace.TraceFileNameGenerator;
+
 import java.util.SortedMap;
 import java.util.TreeMap;
 
