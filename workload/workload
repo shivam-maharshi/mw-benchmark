@@ -16,7 +16,6 @@
 # Yahoo! Cloud System Benchmark
 
 #	Core Properties
-
 workload=com.yahoo.ycsb.workloads.CoreWorkload
 db=com.yahoo.ycsb.WebClient
 exporter=com.yahoo.ycsb.measurements.exporter.TextMeasurementsExporter
@@ -34,7 +33,8 @@ updateproportion=0
 scanproportion=0
 insertproportion=0.0001
 requestdistribution=zipfian
-operationcount=100
+operationcount=10000
+maxexecutiontime=720
 
 #	Custom Properties
 url.prefix=52.34.20.119/mediawiki
@@ -56,5 +56,4 @@ readallfields=false
 readmodifywriteproportion=0
 maxscanlength=1000
 scanlengthdistribution=uniform
-#maxexecutiontime=1000000
 table=usertable

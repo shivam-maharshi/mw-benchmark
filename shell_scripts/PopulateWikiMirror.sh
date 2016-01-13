@@ -18,6 +18,6 @@ cd /var/www/html/mediawiki/maintenance
 sudo php importDump.php < /home/ubuntu/elwiki-20151201-pages-meta-history.xml >& progress.log &
 
 # For using MWImport for dumping.
-java -Xmx16396m -Xms1024m -XX:+UseParallelGC -server -jar mwdumper.jar --format=sql:1.5 /home/ubuntu/elwiki-20151201-pages-meta-history.xml.bz2 | mysql -u root -p wikimirror
+java -Xmx16396m -Xms1024m -XX:+UseParallelGC -server -jar mwdumper.jar --format=sql:1.5 /home/ubuntu/elwiki-20151201-pages-meta-history.xml.bz2 | mysql -u root -p wikimirror --default-character-set=utf8
 
 sudo tail -f progress.log
