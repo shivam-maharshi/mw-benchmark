@@ -34,7 +34,6 @@ public class WebClient extends DB {
 
 	@Override
 	public Status read(String table, String key, Set<String> fields, HashMap<String, ByteIterator> result) {
-		System.out.println("Get title : " + key);
 		return getStatus(sendGet(HTTP + urlPrefix + "/index.php/" + key));
 	}
 
@@ -107,7 +106,7 @@ public class WebClient extends DB {
 
 	private String getPostParameters(String title, ByteIterator data) throws UnsupportedEncodingException {
 		StringBuffer params = new StringBuffer("section=0");
-		params.append("&title=").append(URLEncoder.encode(title, "UTF-8")).append("&appendtext=")
+		params.append("&title=").append(title).append("&appendtext=")
 				.append(data.toString()).append("&token=%2B%5C");
 		return params.toString();
 	}
