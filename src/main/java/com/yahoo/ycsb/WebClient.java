@@ -23,6 +23,8 @@ public class WebClient extends DB {
 	private Properties props;
 	private static final String URL_PREFIX = "url.prefix";
 	private static final String URL_PREFIX_DEFAULT = "52.34.20.119/mediawiki";
+	private static final String LOG_CALLS = "log.enable";
+	private static boolean logCalls = false;
 	private static final String HTTP = "http://";
 	private static String urlPrefix;
 
@@ -30,6 +32,7 @@ public class WebClient extends DB {
 	public void init() throws DBException {
 		props = getProperties();
 		urlPrefix = props.getProperty(URL_PREFIX, URL_PREFIX_DEFAULT);
+		logCalls = Boolean.valueOf(props.getProperty(LOG_CALLS).trim());
 	}
 
 	@Override
@@ -58,7 +61,6 @@ public class WebClient extends DB {
 
 	@Override
 	public Status insert(String table, String key, HashMap<String, ByteIterator> values) {
-		System.out.println("Post title : " + key);
 		String postUrl = "/api.php?action=edit&format=json";
 		String postParams;
 		try {
@@ -76,6 +78,8 @@ public class WebClient extends DB {
 
 	// Returns response code for verification.
 	private int sendGet(String url) {
+		if (logCalls)
+			System.out.println("GET : " + url);
 		int responseCode = 0;
 		try {
 			URL obj = new URL(url);
@@ -88,16 +92,13 @@ public class WebClient extends DB {
 			con.setConnectTimeout(10000);
 			con.connect();
 			responseCode = con.getResponseCode();
+			if (logCalls)
+				System.out.println("GET URL : " + url + " || Response Code : " + responseCode);
 			BufferedReader in;
 			if (responseCode == 200) {
 				in = new BufferedReader(new InputStreamReader(con.getInputStream()));
 				in.close();
 			}
-			// String inputLine;
-			// StringBuffer response = new StringBuffer();
-			// while ((inputLine = in.readLine()) != null) {
-			// response.append(inputLine);
-			// }
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -106,12 +107,13 @@ public class WebClient extends DB {
 
 	private String getPostParameters(String title, ByteIterator data) throws UnsupportedEncodingException {
 		StringBuffer params = new StringBuffer("section=0");
-		params.append("&title=").append(title).append("&appendtext=")
-				.append(data.toString()).append("&token=%2B%5C");
+		params.append("&title=").append(title).append("&appendtext=").append(data.toString()).append("&token=%2B%5C");
 		return params.toString();
 	}
 
 	private int sendPost(String url, String parameters) {
+		if (logCalls)
+			System.out.println("POST : " + url);
 		int responseCode = 500;
 		try {
 			URL obj = new URL(url);
@@ -139,6 +141,8 @@ public class WebClient extends DB {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		if (logCalls)
+			System.out.println("POST URL : " + url + " || Response Code : " + responseCode);
 		return responseCode;
 	}
 
