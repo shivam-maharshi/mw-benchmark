@@ -42,6 +42,7 @@ import com.yahoo.ycsb.generator.ConstantIntegerGenerator;
 import com.yahoo.ycsb.generator.CounterGenerator;
 import com.yahoo.ycsb.generator.DiscreteGenerator;
 import com.yahoo.ycsb.generator.ExponentialGenerator;
+import com.yahoo.ycsb.generator.FileGenerator;
 import com.yahoo.ycsb.generator.Generator;
 import com.yahoo.ycsb.generator.HistogramGenerator;
 import com.yahoo.ycsb.generator.HotspotIntegerGenerator;
@@ -151,6 +152,10 @@ public class CoreWorkload extends Workload {
 	 * The default filename containing a field length histogram.
 	 */
 	public static final String FIELD_LENGTH_HISTOGRAM_FILE_PROPERTY_DEFAULT = "hist.txt";
+	
+	public static final String FIELD_LENGTH_DISTRIBUTION_FILE_PROPERTY = "fieldlengthdistfile";
+	
+	public static final String FIELD_LENGTH_DISTRIBUTION_FILE_PROPERTY_DEFAULT = "fieldLengthDistFile.txt";
 
 	/**
 	 * Generator object that produces field lengths. The value of this depends
@@ -348,8 +353,6 @@ public class CoreWorkload extends Workload {
 	private static Map<Long, String> readUrlMap;
 	private static Map<Long, String> writeUrlMap;
 	
-	public static int FIELD_LENGTH=0;
-
 	IntegerGenerator keysequence;
 
 	DiscreteGenerator operationchooser;
@@ -415,6 +418,10 @@ public class CoreWorkload extends Workload {
 			} catch (IOException e) {
 				throw new WorkloadException("Couldn't read field length histogram file: " + fieldlengthhistogram, e);
 			}
+		} else if(fieldlengthdistribution.compareTo("file") == 0) {
+			String fieldLengthDistributionFile =  p.getProperty(FIELD_LENGTH_DISTRIBUTION_FILE_PROPERTY,
+					FIELD_LENGTH_DISTRIBUTION_FILE_PROPERTY_DEFAULT);
+			fieldlengthgenerator = new FileGenerator(fieldLengthDistributionFile);
 		} else {
 			throw new WorkloadException("Unknown field length distribution \"" + fieldlengthdistribution + "\"");
 		}
@@ -604,7 +611,7 @@ public class CoreWorkload extends Workload {
 			data = new StringByteIterator(buildDeterministicValue(key, fieldkey));
 		} else {
 			// fill with random data
-			data = new RandomByteIterator(FIELD_LENGTH - fieldlengthgenerator.nextInt());
+			data = new RandomByteIterator(fieldlengthgenerator.nextInt());
 		}
 		value.put(fieldkey, data);
 		return value;

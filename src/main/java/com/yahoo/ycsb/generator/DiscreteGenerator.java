@@ -110,5 +110,5 @@ public class DiscreteGenerator extends Generator
 	{
 		_values.add(new Pair(weight,value));
 	}
-
+	
 }

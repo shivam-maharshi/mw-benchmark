@@ -50,7 +50,7 @@ public class PrepareInsertSizeDistribution {
 			Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(filepath), "utf-8"));
 			while (size > 0) {
 				int count = (int) (Math.random() * SIZE);
-				writer.write(getValue(count) + " \n");
+				writer.write(getValue(count) + "\n");
 				size--; // Number of samples to be build.
 			}
 			writer.flush();
