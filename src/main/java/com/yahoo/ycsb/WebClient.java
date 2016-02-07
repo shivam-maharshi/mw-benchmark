@@ -78,8 +78,6 @@ public class WebClient extends DB {
 
 	// Returns response code for verification.
 	private int sendGet(String url) {
-		if (logCalls)
-			System.out.println("GET : " + url);
 		int responseCode = 0;
 		try {
 			URL obj = new URL(url);
@@ -89,12 +87,7 @@ public class WebClient extends DB {
 			con.setRequestProperty("Accept", "*/*");
 			con.setDoOutput(false);
 			con.setInstanceFollowRedirects(false);
-			con.setConnectTimeout(5000);
-			con.setReadTimeout(15000);
 			con.connect();
-			responseCode = con.getResponseCode();
-			if (logCalls)
-				System.out.println("GET URL : " + url + " || Response Code : " + responseCode);
 			BufferedReader in;
 			if (responseCode == 200) {
 				String inputLine;
@@ -104,9 +97,11 @@ public class WebClient extends DB {
 					response.append(inputLine);
 				}
 				if (logCalls)
-					System.out.println("GET URL : " + url + " || Response Code : " + responseCode + " || Response Content Length: "+response.length());
+					System.out.println("GET URL : " + url + " || Response Code : " + responseCode
+							+ " || Response Content Length: " + response.length());
 				in.close();
-			}
+			} else if (logCalls)
+				System.out.println("GET URL : " + url + " || Response Code : " + responseCode);
 		} catch (IOException e) {
 			responseCode = 500;
 			e.printStackTrace();
@@ -121,20 +116,15 @@ public class WebClient extends DB {
 	}
 
 	private int sendPost(String url, String parameters) {
-		if (logCalls)
-			System.out.println("POST : " + url);
-		int responseCode = 500;
+		int responseCode = 200;
 		try {
 			URL obj = new URL(url);
 			HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 			con.setRequestMethod("POST");
 			con.setRequestProperty("User-Agent", "Mozilla/5.0");
 			con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
-			con.setRequestProperty("Content-Length", "" + Integer.toString(parameters.getBytes().length));
 			con.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
 			con.setDoOutput(true);
-			con.setConnectTimeout(5000);
-			con.setReadTimeout(15000);
 			DataOutputStream wr = new DataOutputStream(con.getOutputStream());
 			wr.writeBytes(parameters);
 			wr.flush();
@@ -146,15 +136,17 @@ public class WebClient extends DB {
 				response.append(inputLine);
 			}
 			in.close();
-			if (logCalls)
-				System.out.println("POST URL : " + url + " || Response Code : " + responseCode + " || Response : " + response.toString());
-			if (response.toString().contains("Success")) {
-				responseCode = 200;
-			}
+			// Can ignore this check.
+			// if (response.toString().contains("Success")) {
+			// responseCode = 200;
+			// }
+			responseCode = con.getResponseCode();
 		} catch (IOException e) {
 			responseCode = 500;
 			e.printStackTrace();
 		}
+		if (logCalls)
+			System.out.println("POST URL : " + url + " || Response Code : " + responseCode);
 		return responseCode;
 	}
 
