@@ -89,7 +89,8 @@ public class WebClient extends DB {
 			con.setRequestProperty("Accept", "*/*");
 			con.setDoOutput(false);
 			con.setInstanceFollowRedirects(false);
-			con.setConnectTimeout(10000);
+			con.setConnectTimeout(5000);
+			con.setReadTimeout(15000);
 			con.connect();
 			responseCode = con.getResponseCode();
 			if (logCalls)
@@ -107,6 +108,7 @@ public class WebClient extends DB {
 				in.close();
 			}
 		} catch (IOException e) {
+			responseCode = 500;
 			e.printStackTrace();
 		}
 		return responseCode;
@@ -131,6 +133,8 @@ public class WebClient extends DB {
 			con.setRequestProperty("Content-Length", "" + Integer.toString(parameters.getBytes().length));
 			con.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
 			con.setDoOutput(true);
+			con.setConnectTimeout(5000);
+			con.setReadTimeout(15000);
 			DataOutputStream wr = new DataOutputStream(con.getOutputStream());
 			wr.writeBytes(parameters);
 			wr.flush();
@@ -148,6 +152,7 @@ public class WebClient extends DB {
 				responseCode = 200;
 			}
 		} catch (IOException e) {
+			responseCode = 500;
 			e.printStackTrace();
 		}
 		return responseCode;
