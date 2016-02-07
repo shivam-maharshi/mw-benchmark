@@ -89,6 +89,7 @@ public class WebClient extends DB {
 			con.setInstanceFollowRedirects(false);
 			con.connect();
 			BufferedReader in;
+			responseCode = con.getResponseCode();
 			if (responseCode == 200) {
 				String inputLine;
 				in = new BufferedReader(new InputStreamReader(con.getInputStream()));

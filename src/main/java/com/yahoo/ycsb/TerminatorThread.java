@@ -59,6 +59,8 @@ public class TerminatorThread extends Thread {
         try {
           t.join(waitTimeOutInMS);
           if (t.isAlive()) {
+        	  // http://insidecoffe.blogspot.com/2011/12/when-timeout-fails-in-threadjoin.html
+        	  // http://stackoverflow.com/questions/5657709/what-happens-to-java-thread-after-a-join-call-with-timeout
             System.out.println("Still waiting for thread " + t.getName() + " to complete. " +
                 "Workload status: " + workload.isStopRequested());
           }
