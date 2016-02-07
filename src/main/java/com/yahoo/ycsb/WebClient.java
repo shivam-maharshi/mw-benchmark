@@ -22,17 +22,23 @@ public class WebClient extends DB {
 
 	private Properties props;
 	private static final String URL_PREFIX = "url.prefix";
+	private static final String CON_TIMEOUT = "con.timeout";
+	private static final String READ_TIMEOUT = "read.timeout";
 	private static final String URL_PREFIX_DEFAULT = "52.34.20.119/mediawiki";
 	private static final String LOG_CALLS = "log.enable";
 	private static boolean logCalls = false;
 	private static final String HTTP = "http://";
 	private static String urlPrefix;
+	private static int conTimeout = 15;
+	private static int readTimeout = 30;
 
 	@Override
 	public void init() throws DBException {
 		props = getProperties();
 		urlPrefix = props.getProperty(URL_PREFIX, URL_PREFIX_DEFAULT);
 		logCalls = Boolean.valueOf(props.getProperty(LOG_CALLS).trim());
+		conTimeout = Integer.valueOf(props.getProperty(CON_TIMEOUT, "15"));
+		readTimeout = Integer.valueOf(props.getProperty(READ_TIMEOUT, "30"));
 	}
 
 	@Override
@@ -88,6 +94,8 @@ public class WebClient extends DB {
 			con.setDoOutput(false);
 			con.setInstanceFollowRedirects(false);
 			con.connect();
+			con.setConnectTimeout(conTimeout);
+			con.setReadTimeout(readTimeout);
 			BufferedReader in;
 			responseCode = con.getResponseCode();
 			if (responseCode == 200) {
@@ -123,6 +131,8 @@ public class WebClient extends DB {
 			con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
 			con.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
 			con.setDoOutput(true);
+			con.setConnectTimeout(conTimeout);
+			con.setReadTimeout(readTimeout);
 			DataOutputStream wr = new DataOutputStream(con.getOutputStream());
 			wr.writeBytes(parameters);
 			wr.flush();
