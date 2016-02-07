@@ -97,16 +97,13 @@ public class WebClient extends DB {
 				while ((inputLine = in.readLine()) != null) {
 					response.append(inputLine);
 				}
-				if (logCalls)
-					System.out.println("GET URL : " + url + " || Response Code : " + responseCode
-							+ " || Response Content Length: " + response.length());
 				in.close();
-			} else if (logCalls)
-				System.out.println("GET URL : " + url + " || Response Code : " + responseCode);
+			}
 		} catch (IOException e) {
 			responseCode = 500;
 			e.printStackTrace();
 		}
+		System.out.println("GET URL : " + url + " || Response Code : " + responseCode);
 		return responseCode;
 	}
 
@@ -131,17 +128,19 @@ public class WebClient extends DB {
 			wr.flush();
 			wr.close();
 			BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
-			String inputLine;
-			StringBuffer response = new StringBuffer();
-			while ((inputLine = in.readLine()) != null) {
-				response.append(inputLine);
+			responseCode = con.getResponseCode();
+			if (responseCode == 200) {
+				String inputLine;
+				StringBuffer response = new StringBuffer();
+				while ((inputLine = in.readLine()) != null) {
+					response.append(inputLine);
+				}
+				in.close();
 			}
-			in.close();
 			// Can ignore this check.
 			// if (response.toString().contains("Success")) {
 			// responseCode = 200;
 			// }
-			responseCode = con.getResponseCode();
 		} catch (IOException e) {
 			responseCode = 500;
 			e.printStackTrace();
