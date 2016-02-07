@@ -21,7 +21,7 @@ db=com.yahoo.ycsb.WebClient
 exporter=com.yahoo.ycsb.measurements.exporter.TextMeasurementsExporter
 exportfile=/home/ubuntu/BenchmarkingResults.txt
 threadcount=100
-measurementtype=timeseries
+measurementtype=hdrhistogram
 
 #	Worload Properties
 dataintegrity=false
@@ -48,6 +48,7 @@ readtrace=/home/ubuntu/readtrace.txt
 writetrace=/home/ubuntu/writetrace.txt
 
 #	Measurement Properties
+hdrhistogram.percentiles=90,95,99
 histogram.buckets=1
 timeseries.granularity=1000
 
