@@ -96,7 +96,14 @@ public class WebClient extends DB {
 				System.out.println("GET URL : " + url + " || Response Code : " + responseCode);
 			BufferedReader in;
 			if (responseCode == 200) {
+				String inputLine;
 				in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+				StringBuffer response = new StringBuffer();
+				while ((inputLine = in.readLine()) != null) {
+					response.append(inputLine);
+				}
+				if (logCalls)
+					System.out.println("GET URL : " + url + " || Response Code : " + responseCode + " || Response Content Length: "+response.length());
 				in.close();
 			}
 		} catch (IOException e) {
@@ -135,14 +142,14 @@ public class WebClient extends DB {
 				response.append(inputLine);
 			}
 			in.close();
+			if (logCalls)
+				System.out.println("POST URL : " + url + " || Response Code : " + responseCode + " || Response : " + response.toString());
 			if (response.toString().contains("Success")) {
 				responseCode = 200;
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		if (logCalls)
-			System.out.println("POST URL : " + url + " || Response Code : " + responseCode);
 		return responseCode;
 	}
 
@@ -178,7 +185,7 @@ public class WebClient extends DB {
 		params += "&title=" + URLEncoder.encode("Αγορά", "UTF-8");
 		params += "&appendtext=" + data;
 		params += "&token=%2B%5C";
-		w.sendPost("http://52.34.20.119/mediawiki/api.php?action=edit&format=json", params);
+		w.sendPost("http://10.0.0.91/mediawiki2/api.php?action=edit&format=json", params);
 	}
 
 }
