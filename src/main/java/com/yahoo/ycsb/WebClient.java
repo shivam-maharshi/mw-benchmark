@@ -12,6 +12,7 @@ import java.util.HashMap;
 import java.util.Properties;
 import java.util.Set;
 import java.util.Vector;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Class responsible for making web service requests for benchmarking purpose.
@@ -31,6 +32,7 @@ public class WebClient extends DB {
 	private static String urlPrefix;
 	private static int conTimeout = 15;
 	private static int readTimeout = 30;
+	private static AtomicInteger opsCounter = new AtomicInteger(0);
 
 	@Override
 	public void init() throws DBException {
@@ -111,7 +113,9 @@ public class WebClient extends DB {
 			responseCode = 500;
 			e.printStackTrace();
 		}
-		System.out.println("GET URL : " + url + " || Response Code : " + responseCode);
+		if (logCalls)
+			System.out.println("GET URL : " + url + " || Response Code : " + responseCode + " || Ops Count: "
+					+ opsCounter.incrementAndGet());
 		return responseCode;
 	}
 
@@ -156,7 +160,8 @@ public class WebClient extends DB {
 			e.printStackTrace();
 		}
 		if (logCalls)
-			System.out.println("POST URL : " + url + " || Response Code : " + responseCode);
+			System.out.println("POST URL : " + url + " || Response Code : " + responseCode + " || Ops Count: "
+					+ opsCounter.incrementAndGet());
 		return responseCode;
 	}
 
