@@ -107,23 +107,22 @@ public class WebClient extends DB {
 				String inputLine;
 				in = new BufferedReader(new InputStreamReader(con.getInputStream()));
 				StringBuffer response = new StringBuffer();
-				long start = System.currentTimeMillis();
+				Thread timer = new Thread(new Timer(execTimeout));
+				timer.start();
 				while ((inputLine = in.readLine()) != null) {
-					if ((System.currentTimeMillis() - start) > execTimeout) {
-						if (logCalls)
-							System.out.println(
-									"GET URL : " + url + " || Request exceeded maximum execution time of : "
-											+ execTimeout + " seconds.");
-						responseCode = 500;
-						break;
-					}
 					response.append(inputLine);
 				}
+				timer.interrupt();
 				in.close();
 			}
 		} catch (IOException e) {
 			responseCode = 500;
 			e.printStackTrace();
+		} catch (TimeoutException e) {
+			responseCode = 500;
+			if (logCalls)
+				System.out.println("GET URL : " + url + " || Request exceeded maximum execution time of : "
+						+ execTimeout + " seconds.");
 		}
 		if (logCalls)
 			System.out.println("GET URL : " + url + " || Response Code : " + responseCode + " || Ops Count: "
@@ -156,26 +155,25 @@ public class WebClient extends DB {
 			BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
 			responseCode = con.getResponseCode();
 			if (responseCode == 200) {
-				String inputLine;
-				long start = System.currentTimeMillis();
-				while ((inputLine = in.readLine()) != null) {
-					if (System.currentTimeMillis() - start > execTimeout) {
-						if (logCalls)
-							System.out.println("POST URL : " + url
-									+ " || Request  exceeded maximum execution time of : " + execTimeout + " seconds.");
-						responseCode = 500;
-						break;
-					}
+				Thread timer = new Thread(new Timer(execTimeout));
+				timer.start();
+				while (in.readLine() != null) {
+					// Can ignore this check.
+					// if (response.toString().contains("Success")) {
+					// responseCode = 200;
+					// }
 				}
-				// Can ignore this check.
-				// if (response.toString().contains("Success")) {
-				// responseCode = 200;
-				// }
+				timer.interrupt();
 				in.close();
 			}
 		} catch (IOException e) {
 			responseCode = 500;
 			e.printStackTrace();
+		} catch (TimeoutException e) {
+			responseCode = 500;
+			if (logCalls)
+				System.out.println("POST URL : " + url + " || Request exceeded maximum execution time of : "
+						+ execTimeout + " seconds.");
 		}
 		if (logCalls)
 			System.out.println("POST URL : " + url + " || Response Code : " + responseCode + " || Ops Count: "
@@ -217,5 +215,32 @@ public class WebClient extends DB {
 		params += "&token=%2B%5C";
 		w.sendPost("http://10.0.0.91/mediawiki2/api.php?action=edit&format=json", params);
 	}
+
+}
+
+class Timer implements Runnable {
+
+	private long timeout;
+
+	public Timer(int timeout) {
+		this.timeout = timeout * 1000;
+	}
+
+	@Override
+	public void run() {
+		try {
+			Thread.sleep(timeout);
+			System.out.println("Thread : " + System.currentTimeMillis());
+			throw new TimeoutException();
+		} catch (InterruptedException e) {
+			// Do nothing.
+		}
+	}
+
+}
+
+class TimeoutException extends RuntimeException {
+
+	private static final long serialVersionUID = 1L;
 
 }
