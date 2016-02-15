@@ -111,6 +111,10 @@ public class WebClient extends DB {
 				long start = System.currentTimeMillis();
 				while ((inputLine = in.readLine()) != null) {
 					if (System.currentTimeMillis() - start > execTimeout) {
+						if (logCalls)
+							System.out.println(
+									"GET URL : " + url + " || Request just exceeded maximum execution time of : "
+											+ execTimeout + " seconds.");
 						responseCode = 500;
 						break;
 					}
@@ -157,6 +161,9 @@ public class WebClient extends DB {
 				long start = System.currentTimeMillis();
 				while ((inputLine = in.readLine()) != null) {
 					if (System.currentTimeMillis() - start > execTimeout) {
+						if (logCalls)
+							System.out.println("POST URL : " + url
+									+ " || Request  exceeded maximum execution time of : " + execTimeout + " seconds.");
 						responseCode = 500;
 						break;
 					}
