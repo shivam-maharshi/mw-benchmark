@@ -104,13 +104,11 @@ public class WebClient extends DB {
 			BufferedReader in;
 			responseCode = con.getResponseCode();
 			if (responseCode == 200) {
-				String inputLine;
 				in = new BufferedReader(new InputStreamReader(con.getInputStream()));
-				StringBuffer response = new StringBuffer();
 				Thread timer = new Thread(new Timer(execTimeout));
 				timer.start();
-				while ((inputLine = in.readLine()) != null) {
-					response.append(inputLine);
+				while (in.readLine() != null) {
+					// Only parse the input stream.
 				}
 				timer.interrupt();
 				in.close();
@@ -158,7 +156,7 @@ public class WebClient extends DB {
 				Thread timer = new Thread(new Timer(execTimeout));
 				timer.start();
 				while (in.readLine() != null) {
-					// Can ignore this check.
+					// Only parse the input stream.
 					// if (response.toString().contains("Success")) {
 					// responseCode = 200;
 					// }
@@ -223,14 +221,13 @@ class Timer implements Runnable {
 	private long timeout;
 
 	public Timer(int timeout) {
-		this.timeout = timeout * 1000;
+		this.timeout = timeout;
 	}
 
 	@Override
 	public void run() {
 		try {
 			Thread.sleep(timeout);
-			System.out.println("Thread : " + System.currentTimeMillis());
 			throw new TimeoutException();
 		} catch (InterruptedException e) {
 			// Do nothing.
