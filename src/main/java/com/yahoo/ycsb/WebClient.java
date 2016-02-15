@@ -41,10 +41,9 @@ public class WebClient extends DB {
 		props = getProperties();
 		urlPrefix = props.getProperty(URL_PREFIX, URL_PREFIX_DEFAULT);
 		logCalls = Boolean.valueOf(props.getProperty(LOG_CALLS).trim());
-		conTimeout = Integer.valueOf(props.getProperty(CON_TIMEOUT, "15"));
-		readTimeout = Integer.valueOf(props.getProperty(READ_TIMEOUT, "30"));
-		execTimeout = Integer.valueOf(props.getProperty(EXEC_TIMEOUT, "10"));
-		execTimeout *= 1000;
+		conTimeout = Integer.valueOf(props.getProperty(CON_TIMEOUT, "15")) * 1000;
+		readTimeout = Integer.valueOf(props.getProperty(READ_TIMEOUT, "30")) * 1000;
+		execTimeout = Integer.valueOf(props.getProperty(EXEC_TIMEOUT, "10")) * 1000;
 	}
 
 	@Override
@@ -110,10 +109,10 @@ public class WebClient extends DB {
 				StringBuffer response = new StringBuffer();
 				long start = System.currentTimeMillis();
 				while ((inputLine = in.readLine()) != null) {
-					if (System.currentTimeMillis() - start > execTimeout) {
+					if ((System.currentTimeMillis() - start) > execTimeout) {
 						if (logCalls)
 							System.out.println(
-									"GET URL : " + url + " || Request just exceeded maximum execution time of : "
+									"GET URL : " + url + " || Request exceeded maximum execution time of : "
 											+ execTimeout + " seconds.");
 						responseCode = 500;
 						break;
