@@ -25,13 +25,15 @@ public class WebClient extends DB {
 	private static final String URL_PREFIX = "url.prefix";
 	private static final String CON_TIMEOUT = "con.timeout";
 	private static final String READ_TIMEOUT = "read.timeout";
+	private static final String EXEC_TIMEOUT = "exec.timeout";
 	private static final String URL_PREFIX_DEFAULT = "52.34.20.119/mediawiki";
 	private static final String LOG_CALLS = "log.enable";
 	private static boolean logCalls = false;
 	private static final String HTTP = "http://";
 	private static String urlPrefix;
-	private static int conTimeout;
-	private static int readTimeout;
+	private static int conTimeout = 15;
+	private static int readTimeout = 30;
+	private static int execTimeout = 10;
 	private static AtomicInteger opsCounter = new AtomicInteger(0);
 
 	@Override
@@ -39,8 +41,10 @@ public class WebClient extends DB {
 		props = getProperties();
 		urlPrefix = props.getProperty(URL_PREFIX, URL_PREFIX_DEFAULT);
 		logCalls = Boolean.valueOf(props.getProperty(LOG_CALLS).trim());
-		conTimeout = Integer.valueOf(props.getProperty(CON_TIMEOUT, "2"));
-		readTimeout = Integer.valueOf(props.getProperty(READ_TIMEOUT, "2"));
+		conTimeout = Integer.valueOf(props.getProperty(CON_TIMEOUT, "15"));
+		readTimeout = Integer.valueOf(props.getProperty(READ_TIMEOUT, "30"));
+		execTimeout = Integer.valueOf(props.getProperty(EXEC_TIMEOUT, "10"));
+		execTimeout *= 1000;
 	}
 
 	@Override
@@ -90,33 +94,28 @@ public class WebClient extends DB {
 		try {
 			URL obj = new URL(url);
 			HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-			con.setConnectTimeout(conTimeout * 1000);
-			con.setReadTimeout(readTimeout * 1000);
 			con.setRequestMethod("GET");
 			con.setRequestProperty("User-Agent", "Mozilla/5.0");
 			con.setRequestProperty("Accept", "*/*");
 			con.setDoOutput(false);
 			con.setInstanceFollowRedirects(false);
+			con.connect();
+			con.setConnectTimeout(conTimeout);
+			con.setReadTimeout(readTimeout);
 			BufferedReader in;
 			responseCode = con.getResponseCode();
 			if (responseCode == 200) {
+				String inputLine;
 				in = new BufferedReader(new InputStreamReader(con.getInputStream()));
 				StringBuffer response = new StringBuffer();
-				String inputLine;
-				int BUFFER_SIZE = 1024;
-				char[] buffer = new char[BUFFER_SIZE]; // or some other size,
-				int charsRead = 0;
-				System.out.println(System.currentTimeMillis());
-				while ((charsRead = in.read(buffer, 0, BUFFER_SIZE)) != -1) {
-					// sb.append(buffer, 0, charsRead);
+				long start = System.currentTimeMillis();
+				while ((inputLine = in.readLine()) != null) {
+					if (System.currentTimeMillis() - start > execTimeout) {
+						responseCode = 500;
+						break;
+					}
+					response.append(inputLine);
 				}
-				//
-				//
-				// while ((inputLine = in.readLine()) != null) {
-				// System.out.println(in.readLine());
-				// // response.append(inputLine);
-				// }
-				System.out.println(System.currentTimeMillis());
 				in.close();
 			}
 		} catch (IOException e) {
@@ -155,16 +154,19 @@ public class WebClient extends DB {
 			responseCode = con.getResponseCode();
 			if (responseCode == 200) {
 				String inputLine;
-				StringBuffer response = new StringBuffer();
+				long start = System.currentTimeMillis();
 				while ((inputLine = in.readLine()) != null) {
-					response.append(inputLine);
+					if (System.currentTimeMillis() - start > execTimeout) {
+						responseCode = 500;
+						break;
+					}
 				}
+				// Can ignore this check.
+				// if (response.toString().contains("Success")) {
+				// responseCode = 200;
+				// }
+				in.close();
 			}
-			in.close();
-			// Can ignore this check.
-			// if (response.toString().contains("Success")) {
-			// responseCode = 200;
-			// }
 		} catch (IOException e) {
 			responseCode = 500;
 			e.printStackTrace();
@@ -201,28 +203,13 @@ public class WebClient extends DB {
 	}
 
 	public static void main(String[] args) throws UnsupportedEncodingException {
-		// String data = "Miusov, as a man man of breeding and deilcacy, could
-		// not but feel some inwrd qualms, when he reached the Father Superior's
-		// with Ivan: he felt ashamed of havin lost his temper. He felt that he
-		// ought to have disdaimed that despicable wretch, Fyodor Pavlovitch,
-		// too much to have been upset by him in Father Zossima's cell, and so
-		// to have forgotten himself. Teh monks were not to blame, in any case,
-		// he reflceted, on the steps.And if they're decent people here (and the
-		// Father Superior, I understand, is a nobleman) why not be friendly and
-		// courteous withthem? I won't argue, I'll fall in with everything, I'll
-		// win them by politness, and show them that I've nothing to do with
-		// that Aesop, thta buffoon, that Pierrot, and have merely been takken
-		// in over this affair, just as they have.";
+		String data = "Miusov, as a man man of breeding and deilcacy, could not but feel some inwrd qualms, when he reached the Father Superior's with Ivan: he felt ashamed of havin lost his temper. He felt that he ought to have disdaimed that despicable wretch, Fyodor Pavlovitch, too much to have been upset by him in Father Zossima's cell, and so to have forgotten himself. Teh monks were not to blame, in any case, he reflceted, on the steps.And if they're decent people here (and the Father Superior, I understand, is a nobleman) why not be friendly and courteous withthem? I won't argue, I'll fall in with everything, I'll win them by politness, and show them that I've nothing to do with that Aesop, thta buffoon, that Pierrot, and have merely been takken in over this affair, just as they have.";
 		WebClient w = new WebClient();
-		// String params = "section=0";
-		// params += "&title=" + URLEncoder.encode("Αγορά", "UTF-8");
-		// params += "&appendtext=" + data;
-		// params += "&token=%2B%5C";
-		// w.sendPost("http://10.0.0.91/mediawiki2/api.php?action=edit&format=json",
-		// params);
-		System.out.println(System.currentTimeMillis());
-		w.sendGet("http://10.0.0.91/mediawiki2/index.php/%CE%93%CE%B1%CE%BB%CE%BB%CE%AF%CE%B1");
-		System.out.println(System.currentTimeMillis());
+		String params = "section=0";
+		params += "&title=" + URLEncoder.encode("Αγορά", "UTF-8");
+		params += "&appendtext=" + data;
+		params += "&token=%2B%5C";
+		w.sendPost("http://10.0.0.91/mediawiki2/api.php?action=edit&format=json", params);
 	}
 
 }

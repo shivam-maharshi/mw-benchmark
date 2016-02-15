@@ -38,8 +38,9 @@ maxexecutiontime=720
 
 #	Custom Properties
 url.prefix=52.34.20.119/mediawiki
-con.timeout=15
-read.timeout=30
+con.timeout=2
+read.timeout=2
+exec.timeout=10
 log.enable=false
 readzipfconstant=0.6175
 insertzipfconstant=0.6391
