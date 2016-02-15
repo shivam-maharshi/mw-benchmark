@@ -89,42 +89,57 @@ public class WebClient extends DB {
 
 	// Returns response code for verification.
 	private int sendGet(String url) {
+		int opsCount = opsCounter.incrementAndGet();
+		System.out.println("OpsCount : "+opsCount + " || Entered GET at : "+System.currentTimeMillis());
 		int responseCode = 0;
 		try {
+			System.out.println("OpsCount : "+opsCount + " || Starting timer at : "+System.currentTimeMillis());
+			Thread timer = new Thread(new Timer(execTimeout, opsCount));
+			timer.start();
+			System.out.println("OpsCount : "+opsCount + " || Timer started at : "+System.currentTimeMillis());
 			URL obj = new URL(url);
+			System.out.println("OpsCount : " + opsCount + " ||  Opening connection at : " + System.currentTimeMillis());
 			HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+			System.out.println("OpsCount : " + opsCount + " ||  Opened connection at : " + System.currentTimeMillis());
 			con.setRequestMethod("GET");
 			con.setRequestProperty("User-Agent", "Mozilla/5.0");
 			con.setRequestProperty("Accept", "*/*");
 			con.setDoOutput(false);
 			con.setInstanceFollowRedirects(false);
-			con.connect();
 			con.setConnectTimeout(conTimeout);
 			con.setReadTimeout(readTimeout);
+			con.connect();
 			BufferedReader in;
 			responseCode = con.getResponseCode();
+			System.out.println("OpsCount : " + opsCount + " ||  ResponseCode "+ responseCode +" recieved at : " + System.currentTimeMillis());
 			if (responseCode == 200) {
+				System.out.println("OpsCount : " + opsCount + " ||  Opening input stream at : " + System.currentTimeMillis());
 				in = new BufferedReader(new InputStreamReader(con.getInputStream()));
-				Thread timer = new Thread(new Timer(execTimeout));
-				timer.start();
+				System.out.println("OpsCount : " + opsCount + " ||  Reading input stream at : " + System.currentTimeMillis());
 				while (in.readLine() != null) {
 					// Only parse the input stream.
 				}
+				System.out.println("OpsCount : " + opsCount + " ||  Input stream read at : " + System.currentTimeMillis());
+				System.out.println("OpsCount : " + opsCount + " ||  Interupting timer at : " + System.currentTimeMillis());
 				timer.interrupt();
+				System.out.println("OpsCount : " + opsCount + " ||  Timer interupted at : " + System.currentTimeMillis());
 				in.close();
+				System.out.println("OpsCount : " + opsCount + " ||  Input stream closed at : " + System.currentTimeMillis());
 			}
 		} catch (IOException e) {
+			System.out.println("OpsCount : " + opsCount + " || IOException at : " + System.currentTimeMillis());
 			responseCode = 500;
-			e.printStackTrace();
 		} catch (TimeoutException e) {
+			System.out.println("OpsCount : " + opsCount + " ||  Timeout Exception at : " + System.currentTimeMillis());
 			responseCode = 500;
-			if (logCalls)
-				System.out.println("GET URL : " + url + " || Request exceeded maximum execution time of : "
-						+ execTimeout + " seconds.");
+//			if (logCalls)
+//				System.out.println("GET URL : " + url + " || Request exceeded maximum execution time of : "
+//						+ execTimeout + " seconds.");
 		}
-		if (logCalls)
-			System.out.println("GET URL : " + url + " || Response Code : " + responseCode + " || Ops Count: "
-					+ opsCounter.incrementAndGet());
+//		if (logCalls)
+//			System.out.println("GET URL : " + url + " || Response Code : " + responseCode + " || Ops Count: "
+//					+ opsCount);
+		System.out.println("OpsCount : " + opsCount + " || Returning response code " + responseCode + " at : " + System.currentTimeMillis());
 		return responseCode;
 	}
 
@@ -137,6 +152,8 @@ public class WebClient extends DB {
 	private int sendPost(String url, String parameters) {
 		int responseCode = 200;
 		try {
+			Thread timer = new Thread(new Timer(execTimeout, opsCounter.get()));
+			timer.start();
 			URL obj = new URL(url);
 			HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 			con.setRequestMethod("POST");
@@ -153,8 +170,6 @@ public class WebClient extends DB {
 			BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
 			responseCode = con.getResponseCode();
 			if (responseCode == 200) {
-				Thread timer = new Thread(new Timer(execTimeout));
-				timer.start();
 				while (in.readLine() != null) {
 					// Only parse the input stream.
 					// if (response.toString().contains("Success")) {
@@ -219,17 +234,22 @@ public class WebClient extends DB {
 class Timer implements Runnable {
 
 	private long timeout;
+	private int id;
 
-	public Timer(int timeout) {
+	public Timer(int timeout, int id) {
 		this.timeout = timeout;
+		this.id = id;
 	}
 
 	@Override
 	public void run() {
+		System.out.println("OpsCount : " + id + " || Inside timer run at : " + System.currentTimeMillis());
 		try {
 			Thread.sleep(timeout);
+			System.out.println("OpsCount : " + id + " || Timer throwing exception at : " + System.currentTimeMillis());
 			throw new TimeoutException();
 		} catch (InterruptedException e) {
+			System.out.println("OpsCount : " + id + " || Inside timer interrupted exception at : " + System.currentTimeMillis());
 			// Do nothing.
 		}
 	}
