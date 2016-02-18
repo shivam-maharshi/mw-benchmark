@@ -136,10 +136,10 @@ public class WebClient extends DB {
 //				System.out.println("GET URL : " + url + " || Request exceeded maximum execution time of : "
 //						+ execTimeout + " seconds.");
 		}
-//		if (logCalls)
-//			System.out.println("GET URL : " + url + " || Response Code : " + responseCode + " || Ops Count: "
-//					+ opsCount);
-		System.out.println("OpsCount : " + opsCount + " || Returning response code " + responseCode + " at : " + System.currentTimeMillis());
+		if (logCalls)
+			System.out.println("GET URL : " + url + " || Response Code : " + responseCode + " || Ops Count: "
+					+ opsCount);
+//		System.out.println("OpsCount : " + opsCount + " || Returning response code " + responseCode + " at : " + System.currentTimeMillis());
 		return responseCode;
 	}
 
