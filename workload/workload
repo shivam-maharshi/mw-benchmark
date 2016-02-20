@@ -38,15 +38,15 @@ maxexecutiontime=720
 
 #	Custom Properties
 url.prefix=52.34.20.119/mediawiki
-con.timeout=2
-read.timeout=2
+con.timeout=10
+read.timeout=10
 exec.timeout=10
 log.enable=false
 readzipfconstant=0.6175
 insertzipfconstant=0.6391
 fieldlengthdistfile=/home/ubuntu/fieldLengthDistFile.txt
-recordcount=20000
-writecount=1500
+recordcount=10000
+writecount=5000
 readtrace=/home/ubuntu/readtrace.txt
 writetrace=/home/ubuntu/writetrace.txt
 
