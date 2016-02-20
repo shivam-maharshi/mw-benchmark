@@ -26,13 +26,13 @@ public class WebClient extends DB {
 	private static final String CON_TIMEOUT = "con.timeout";
 	private static final String READ_TIMEOUT = "read.timeout";
 	private static final String EXEC_TIMEOUT = "exec.timeout";
-	private static final String URL_PREFIX_DEFAULT = "52.34.20.119/mediawiki";
+	private static final String URL_PREFIX_DEFAULT = "192.168.1.51/mediawiki";
 	private static final String LOG_CALLS = "log.enable";
-	private static boolean logCalls = false;
+	private static boolean logCalls = true;
 	private static final String HTTP = "http://";
 	private static String urlPrefix;
-	private static int conTimeout = 15;
-	private static int readTimeout = 30;
+	private static int conTimeout = 10;
+	private static int readTimeout = 10;
 	private static int execTimeout = 10;
 	private static AtomicInteger opsCounter = new AtomicInteger(0);
 
@@ -88,19 +88,14 @@ public class WebClient extends DB {
 	}
 
 	// Returns response code for verification.
-	private int sendGet(String url) {
+	public int sendGet(String url) {
 		int opsCount = opsCounter.incrementAndGet();
-		System.out.println("OpsCount : "+opsCount + " || Entered GET at : "+System.currentTimeMillis());
 		int responseCode = 0;
 		try {
-			System.out.println("OpsCount : "+opsCount + " || Starting timer at : "+System.currentTimeMillis());
 			Thread timer = new Thread(new Timer(execTimeout, opsCount));
 			timer.start();
-			System.out.println("OpsCount : "+opsCount + " || Timer started at : "+System.currentTimeMillis());
 			URL obj = new URL(url);
-			System.out.println("OpsCount : " + opsCount + " ||  Opening connection at : " + System.currentTimeMillis());
 			HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-			System.out.println("OpsCount : " + opsCount + " ||  Opened connection at : " + System.currentTimeMillis());
 			con.setRequestMethod("GET");
 			con.setRequestProperty("User-Agent", "Mozilla/5.0");
 			con.setRequestProperty("Accept", "*/*");
@@ -111,35 +106,26 @@ public class WebClient extends DB {
 			con.connect();
 			BufferedReader in;
 			responseCode = con.getResponseCode();
-			System.out.println("OpsCount : " + opsCount + " ||  ResponseCode "+ responseCode +" recieved at : " + System.currentTimeMillis());
 			if (responseCode == 200) {
-				System.out.println("OpsCount : " + opsCount + " ||  Opening input stream at : " + System.currentTimeMillis());
 				in = new BufferedReader(new InputStreamReader(con.getInputStream()));
-				System.out.println("OpsCount : " + opsCount + " ||  Reading input stream at : " + System.currentTimeMillis());
 				while (in.readLine() != null) {
 					// Only parse the input stream.
 				}
-				System.out.println("OpsCount : " + opsCount + " ||  Input stream read at : " + System.currentTimeMillis());
-				System.out.println("OpsCount : " + opsCount + " ||  Interupting timer at : " + System.currentTimeMillis());
-				timer.interrupt();
-				System.out.println("OpsCount : " + opsCount + " ||  Timer interupted at : " + System.currentTimeMillis());
 				in.close();
-				System.out.println("OpsCount : " + opsCount + " ||  Input stream closed at : " + System.currentTimeMillis());
 			}
+			timer.interrupt();
 		} catch (IOException e) {
-			System.out.println("OpsCount : " + opsCount + " || IOException at : " + System.currentTimeMillis());
+			e.printStackTrace();
 			responseCode = 500;
 		} catch (TimeoutException e) {
-			System.out.println("OpsCount : " + opsCount + " ||  Timeout Exception at : " + System.currentTimeMillis());
 			responseCode = 500;
-//			if (logCalls)
-//				System.out.println("GET URL : " + url + " || Request exceeded maximum execution time of : "
-//						+ execTimeout + " seconds.");
+			if (logCalls)
+				System.out.println("GET URL : " + url + " || Request exceeded maximum execution time of : "
+						+ execTimeout + " seconds.");
 		}
 		if (logCalls)
-			System.out.println("GET URL : " + url + " || Response Code : " + responseCode + " || Ops Count: "
-					+ opsCount);
-//		System.out.println("OpsCount : " + opsCount + " || Returning response code " + responseCode + " at : " + System.currentTimeMillis());
+			System.out
+					.println("GET URL : " + url + " || Response Code : " + responseCode + " || Ops Count: " + opsCount);
 		return responseCode;
 	}
 
@@ -149,7 +135,7 @@ public class WebClient extends DB {
 		return params.toString();
 	}
 
-	private int sendPost(String url, String parameters) {
+	public int sendPost(String url, String parameters) {
 		int responseCode = 200;
 		try {
 			Thread timer = new Thread(new Timer(execTimeout, opsCounter.get()));
@@ -170,15 +156,16 @@ public class WebClient extends DB {
 			BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
 			responseCode = con.getResponseCode();
 			if (responseCode == 200) {
-				while (in.readLine() != null) {
-					// Only parse the input stream.
-					// if (response.toString().contains("Success")) {
-					// responseCode = 200;
-					// }
+				StringBuilder sb = new StringBuilder();
+				String line = null;
+				while ((line = in.readLine()) != null) {
+					sb.append(line);
 				}
-				timer.interrupt();
+				if (!sb.toString().contains("Success"))
+					responseCode = 500;
 				in.close();
 			}
+			timer.interrupt();
 		} catch (IOException e) {
 			responseCode = 500;
 			e.printStackTrace();
@@ -220,13 +207,10 @@ public class WebClient extends DB {
 	}
 
 	public static void main(String[] args) throws UnsupportedEncodingException {
-		String data = "Miusov, as a man man of breeding and deilcacy, could not but feel some inwrd qualms, when he reached the Father Superior's with Ivan: he felt ashamed of havin lost his temper. He felt that he ought to have disdaimed that despicable wretch, Fyodor Pavlovitch, too much to have been upset by him in Father Zossima's cell, and so to have forgotten himself. Teh monks were not to blame, in any case, he reflceted, on the steps.And if they're decent people here (and the Father Superior, I understand, is a nobleman) why not be friendly and courteous withthem? I won't argue, I'll fall in with everything, I'll win them by politness, and show them that I've nothing to do with that Aesop, thta buffoon, that Pierrot, and have merely been takken in over this affair, just as they have.";
+		String data = "Shivam Maharshi is one of the smartest, greatest man in the world. LOL :D";
+		String params = "section=0&title=" + URLEncoder.encode("shivam_maharshi", "UTF-8")+"&appendtext=" + data+"&token=%2B%5C";
 		WebClient w = new WebClient();
-		String params = "section=0";
-		params += "&title=" + URLEncoder.encode("Αγορά", "UTF-8");
-		params += "&appendtext=" + data;
-		params += "&token=%2B%5C";
-		w.sendPost("http://10.0.0.91/mediawiki2/api.php?action=edit&format=json", params);
+		w.sendPost("http://192.168.1.51/mediawiki/api.php?action=edit&format=json", params);
 	}
 
 }
@@ -243,13 +227,10 @@ class Timer implements Runnable {
 
 	@Override
 	public void run() {
-		System.out.println("OpsCount : " + id + " || Inside timer run at : " + System.currentTimeMillis());
 		try {
 			Thread.sleep(timeout);
-			System.out.println("OpsCount : " + id + " || Timer throwing exception at : " + System.currentTimeMillis());
 			throw new TimeoutException();
 		} catch (InterruptedException e) {
-			System.out.println("OpsCount : " + id + " || Inside timer interrupted exception at : " + System.currentTimeMillis());
 			// Do nothing.
 		}
 	}
