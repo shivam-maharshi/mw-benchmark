@@ -1,3 +1,4 @@
+ cd ~/benchmarking
  sudo rm pagecounts-20151101-000000.gz
  sudo rm pagecounts-20151101-010000.gz
  sudo rm pagecounts-20151101-020000.gz

@@ -1,21 +1,9 @@
+cd ~/benchmarking/YCSB4WebServices/jar
 
-
-sudo java -Xms8096m -Xmx12086m -cp "YCSB4WebServices-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/ubuntu/workload -p threadcount=25 -p exportfile=/home/ubuntu/BenchmarkingResults1.txt
-
-sudo java -Xms8096m -Xmx12086m -cp "YCSB4WebServices-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/ubuntu/workload -p threadcount=50 -p exportfile=/home/ubuntu/BenchmarkingResults2.txt
-
-sudo java -Xms8096m -Xmx12086m -cp "YCSB4WebServices-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/ubuntu/workload -p threadcount=75 -p exportfile=/home/ubuntu/BenchmarkingResults3.txt
-
-sudo java -Xms8096m -Xmx12086m -cp "YCSB4WebServices-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/ubuntu/workload -p threadcount=100 -p exportfile=/home/ubuntu/BenchmarkingResults4.txt
-
-sudo java -Xms8096m -Xmx12086m -cp "YCSB4WebServices-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/ubuntu/workload -p threadcount=125 -p exportfile=/home/ubuntu/BenchmarkingResults5.txt
-
-sudo java -Xms8096m -Xmx12086m -cp "YCSB4WebServices-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/ubuntu/workload -p threadcount=150 -p exportfile=/home/ubuntu/BenchmarkingResults6.txt
-
-sudo java -Xms8096m -Xmx12086m -cp "YCSB4WebServices-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/ubuntu/workload -p threadcount=175 -p exportfile=/home/ubuntu/BenchmarkingResults7.txt
-
-sudo java -Xms8096m -Xmx12086m -cp "YCSB4WebServices-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/ubuntu/workload -p threadcount=200 -p exportfile=/home/ubuntu/BenchmarkingResults8.txt
-
-sudo java -Xms8096m -Xmx12086m -cp "YCSB4WebServices-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/ubuntu/workload -p threadcount=225 -p exportfile=/home/ubuntu/BenchmarkingResults9.txt
-
-sudo java -Xms8096m -Xmx12086m -cp "YCSB4WebServices-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/ubuntu/workload -p threadcount=250 -p exportfile=/home/ubuntu/BenchmarkingResults10.txt
+sudo java -Xms8096m -Xmx12086m -cp "YCSB4WebServices-0.0.jar" com.yahoo.ycsb.Client -s -t -P ~/benchmarking/YCSB4WebServices/workload/workload -p threadcount=1 -p target=1 -p operationcount=1000 -p exportfile=~/benchmarking/BenchmarkingResults1.txt
+sudo java -Xms8096m -Xmx12086m -cp "YCSB4WebServices-0.0.jar" com.yahoo.ycsb.Client -s -t -P ~/benchmarking/YCSB4WebServices/workload/workload -p threadcount=5 -p target=5 -p operationcount=5000 -p exportfile=~/benchmarking/BenchmarkingResults5.txt
+sudo java -Xms8096m -Xmx12086m -cp "YCSB4WebServices-0.0.jar" com.yahoo.ycsb.Client -s -t -P ~/benchmarking/YCSB4WebServices/workload/workload -p threadcount=10 -p target=10 -p operationcount=7500 -p exportfile=~/benchmarking/BenchmarkingResults10.txt
+sudo java -Xms8096m -Xmx12086m -cp "YCSB4WebServices-0.0.jar" com.yahoo.ycsb.Client -s -t -P ~/benchmarking/YCSB4WebServices/workload/workload -p threadcount=15 -p target=15 -p operationcount=5000 -p exportfile=~/benchmarking/BenchmarkingResults15.txt
+sudo java -Xms8096m -Xmx12086m -cp "YCSB4WebServices-0.0.jar" com.yahoo.ycsb.Client -s -t -P ~/benchmarking/YCSB4WebServices/workload/workload -p threadcount=20 -p target=20 -p operationcount=5000 -p exportfile=~/benchmarking/BenchmarkingResults20.txt
+sudo java -Xms8096m -Xmx12086m -cp "YCSB4WebServices-0.0.jar" com.yahoo.ycsb.Client -s -t -P ~/benchmarking/YCSB4WebServices/workload/workload -p threadcount=25 -p target=25 -p operationcount=2500 -p exportfile=~/benchmarking/BenchmarkingResults25.txt
+sudo java -Xms8096m -Xmx12086m -cp "YCSB4WebServices-0.0.jar" com.yahoo.ycsb.Client -s -t -P ~/benchmarking/YCSB4WebServices/workload/workload -p threadcount=30 -p target=30 -p operationcount=1000 -p exportfile=~/benchmarking/BenchmarkingResults30.txt

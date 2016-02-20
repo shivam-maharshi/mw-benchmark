@@ -1,9 +1,12 @@
+
 sudo chmod 777 -R /var/www/html/mediawiki
 
 cd /var/www/html/mediawiki
 
 sudo echo "$wgEnableAPI=true;" >> LocalSettings.php
 sudo echo "$wgEnableWriteAPI=true;" >> LocalSettings.php
+
+sudo php maintenance/rebuildall.php
 
 sudo /etc/init.d/apache2 restart
 

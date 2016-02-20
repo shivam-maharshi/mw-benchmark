@@ -1,7 +1,7 @@
+cd /var/www/html/mediawiki
 
-
-php maintenance/populateParentId.php
-php maintenance/populateRevisionLength.php
-php maintenance/populateRevisionSha1.php
-
-php maintenance/update.php
+sudo php maintenance/populateParentId.php
+sudo php maintenance/populateRevisionLength.php
+sudo php maintenance/populateRevisionSha1.php
+sudo php maintenance/update.php
+sudo php maintenance/rebuildall.php
