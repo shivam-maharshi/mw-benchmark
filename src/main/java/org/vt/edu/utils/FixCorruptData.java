@@ -1,5 +1,7 @@
 package org.vt.edu.utils;
 
+import static org.vt.edu.utils.Constant.RELATIVE_PATH;
+
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.sql.Connection;
@@ -24,22 +26,22 @@ import com.yahoo.ycsb.WebClient;
  */
 public class FixCorruptData {
 
-	private String wikiHostIp;
-	private String filepath;
+	private String hostAd;
+	private String inputFile;
 	private Connection con = null;
 	private PreparedStatement pst = null;
 
-	public FixCorruptData(String wikiHostIp, String filepath) {
-		this.wikiHostIp = wikiHostIp;
-		this.filepath = filepath;
+	public FixCorruptData(String hostAd, String inputFile) {
+		this.hostAd = hostAd;
+		this.inputFile = inputFile;
 	}
 
 	private void initConnection() throws ClassNotFoundException {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			String url = String.format(
-					"jdbc:mysql://%s:%d/%s?user=%s&password=%s&characterEncoding=utf-8&" + "useUnicode=true",
-					wikiHostIp, 3306, "wiki", "root", "root");
+					"jdbc:mysql://%s:%d/%s?user=%s&password=%s&characterEncoding=utf-8&" + "useUnicode=true", hostAd,
+					3306, "wiki", "root", "root");
 			con = DriverManager.getConnection(url);
 		} catch (SQLException ex) {
 			ex.printStackTrace();
@@ -58,7 +60,7 @@ public class FixCorruptData {
 		params += "&title=" + title;
 		params += "&appendtext=" + generateData(len);
 		params += "&token=%2B%5C";
-		w.sendPost("http://" + wikiHostIp + "/mediawiki/api.php?action=edit&format=json", params);
+		w.sendPost("http://" + hostAd + "/mediawiki/api.php?action=edit&format=json", params);
 	}
 
 	private void read(List<String> titles) {
@@ -69,7 +71,7 @@ public class FixCorruptData {
 	private void read(String title) {
 		System.out.println("Reading data :: URL : " + title);
 		WebClient w = new WebClient();
-		w.sendGet("http://" + wikiHostIp + ":80/mediawiki/index.php/" + title);
+		w.sendGet("http://" + hostAd + ":80/mediawiki/index.php/" + title);
 	}
 
 	private String generateData(int size) {
@@ -95,7 +97,7 @@ public class FixCorruptData {
 		System.out.println("Getting page length :: URL : " + title);
 		String sql = "SELECT page_len FROM page WHERE page_title = ?";
 		pst = con.prepareStatement(sql);
-		pst.setString(1,  URLDecoder.decode(title, "UTF-8"));
+		pst.setString(1, URLDecoder.decode(title, "UTF-8"));
 		ResultSet rs = pst.executeQuery();
 		if (rs.next())
 			return rs.getInt(1);
@@ -115,7 +117,7 @@ public class FixCorruptData {
 		System.out.println("Getting revision id :: URL : " + title);
 		String sql = "SELECT page_latest FROM page WHERE page_title = ?";
 		pst = con.prepareStatement(sql);
-		pst.setString(1,  URLDecoder.decode(title, "UTF-8"));
+		pst.setString(1, URLDecoder.decode(title, "UTF-8"));
 		ResultSet rs = pst.executeQuery();
 		if (rs.next())
 			return rs.getInt(1);
@@ -133,7 +135,7 @@ public class FixCorruptData {
 		System.out.println("Deleting data :: URL : " + title + " || RevisionId : " + revisionId);
 		String sql = "DELETE FROM page WHERE page_title = (?)";
 		pst = con.prepareStatement(sql);
-		pst.setString(1,  URLDecoder.decode(title, "UTF-8"));
+		pst.setString(1, URLDecoder.decode(title, "UTF-8"));
 		pst.executeUpdate();
 		sql = "DELETE FROM revision WHERE rev_text_id = (?) ";
 		pst = con.prepareStatement(sql);
@@ -147,7 +149,7 @@ public class FixCorruptData {
 
 	public void execute() throws UnsupportedEncodingException, SQLException, ClassNotFoundException {
 		initConnection();
-		List<String> titles = FileUtil.read(filepath);
+		List<String> titles = FileUtil.read(inputFile);
 		List<Integer> sizes = getPageLen(titles);
 		List<Integer> revIds = getRevisionId(titles);
 		deleteAll(titles, revIds);
@@ -156,8 +158,7 @@ public class FixCorruptData {
 	}
 
 	public static void main(String[] args) {
-		FixCorruptData f = new FixCorruptData("192.168.1.51",
-				"C:/Users/Sam/Google Drive/Job/VirginiaTech/MS Thesis/YCSB4WebServices/benchmarking_input/invalidUrls.txt");
+		FixCorruptData f = new FixCorruptData("192.168.1.51", RELATIVE_PATH + "invalidUrls.txt");
 		try {
 			f.execute();
 		} catch (UnsupportedEncodingException | SQLException | ClassNotFoundException e) {
