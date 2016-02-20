@@ -41,8 +41,8 @@ public class WebClient extends DB {
 		props = getProperties();
 		urlPrefix = props.getProperty(URL_PREFIX, URL_PREFIX_DEFAULT);
 		logCalls = Boolean.valueOf(props.getProperty(LOG_CALLS).trim());
-		conTimeout = Integer.valueOf(props.getProperty(CON_TIMEOUT, "15")) * 1000;
-		readTimeout = Integer.valueOf(props.getProperty(READ_TIMEOUT, "30")) * 1000;
+		conTimeout = Integer.valueOf(props.getProperty(CON_TIMEOUT, "10")) * 1000;
+		readTimeout = Integer.valueOf(props.getProperty(READ_TIMEOUT, "10")) * 1000;
 		execTimeout = Integer.valueOf(props.getProperty(EXEC_TIMEOUT, "10")) * 1000;
 	}
 

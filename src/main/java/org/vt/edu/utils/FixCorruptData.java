@@ -158,7 +158,7 @@ public class FixCorruptData {
 	}
 
 	public static void main(String[] args) {
-		FixCorruptData f = new FixCorruptData("192.168.1.51", RELATIVE_PATH + "invalidUrls.txt");
+		FixCorruptData f = new FixCorruptData("192.168.1.51", RELATIVE_PATH + "corrupturls.txt");
 		try {
 			f.execute();
 		} catch (UnsupportedEncodingException | SQLException | ClassNotFoundException e) {

@@ -42,7 +42,7 @@ public class FindCorruptPages {
 
 	public static void main(String[] args) {
 		FindCorruptPages f = new FindCorruptPages("192.168.1.51:80", RELATIVE_PATH + "readtrace.txt",
-				RELATIVE_PATH + "invalidUrls.txt", 10000);
+				RELATIVE_PATH + "corrupturls.txt", 10000);
 		f.execute();
 	}
 
