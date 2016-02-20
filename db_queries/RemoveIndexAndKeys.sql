@@ -1,4 +1,4 @@
-use wikimirror;
+use wiki;
 
 ALTER TABLE page
   CHANGE page_id page_id INTEGER UNSIGNED NOT NULL,
