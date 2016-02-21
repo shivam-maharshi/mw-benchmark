@@ -41,8 +41,30 @@ public class FindCorruptPages {
 	}
 
 	public static void main(String[] args) {
-		FindCorruptPages f = new FindCorruptPages("192.168.1.51:80", RELATIVE_PATH + "readtrace.txt",
-				RELATIVE_PATH + "corrupturls.txt", 10000);
+		/*
+		 * Sample Command: sudo java -Xms8096m -Xmx12086m -cp
+		 * "YCSB4WebServices-0.0.jar" org.vt.edu.utils.FindCorruptPages
+		 * -ad=192.168.1.51:80 -input=~/development/benchmarking/readtrace.txt
+		 * -output=~/development/benchmarking/corrupturls.txt -count=10000
+		 */
+
+		String hostAd = "192.168.1.51:80";
+		String input = RELATIVE_PATH + "readtrace.txt";
+		String output = RELATIVE_PATH + "corrupturls.txt";
+		long count = 10000;
+		int argLen = args.length;
+		for (int i = 0; i < argLen; i++) {
+			if(args[i].startsWith("-ad=")) {
+				hostAd = args[i].split("=")[1];
+			} else if (args[i].startsWith("-input=")) {
+				input = args[i].split("=")[1];
+			} else if (args[i].startsWith("-output=")) {
+				output = args[i].split("=")[1];
+			} else if (args[i].startsWith("-count=")) {
+				count = Long.valueOf(args[i].split("=")[1]);
+			} 
+		}
+		FindCorruptPages f = new FindCorruptPages(hostAd, input, output, count);
 		f.execute();
 	}
 
