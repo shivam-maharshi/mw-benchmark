@@ -31,9 +31,9 @@ public class WebClient extends DB {
 	private static boolean logCalls = true;
 	private static final String HTTP = "http://";
 	private static String urlPrefix;
-	private static int conTimeout = 10;
-	private static int readTimeout = 10;
-	private static int execTimeout = 10;
+	private static int conTimeout = 10000;
+	private static int readTimeout = 10000;
+	private static int execTimeout = 10000;
 	private static AtomicInteger opsCounter = new AtomicInteger(0);
 
 	@Override
