@@ -19,7 +19,7 @@
 workload=com.yahoo.ycsb.workloads.CoreWorkload
 db=com.yahoo.ycsb.WebClient
 exporter=com.yahoo.ycsb.measurements.exporter.TextMeasurementsExporter
-exportfile=/home/ubuntu/BenchmarkingResults.txt
+exportfile=C:/Users/Sam/Google Drive/Job/VirginiaTech/MS Thesis/YCSB4WebServices/BenchmarkingResults.txt
 threadcount=100
 measurementtype=hdrhistogram
 
@@ -28,30 +28,30 @@ dataintegrity=false
 fieldcount=1
 fieldlength=258245
 fieldlengthdistribution=file
-readproportion=0.9999
+readproportion=1
 updateproportion=0
 scanproportion=0
-insertproportion=0.0001
+insertproportion=0
 requestdistribution=zipfian
 operationcount=10000
 maxexecutiontime=720
 
 #	Custom Properties
-url.prefix=52.34.20.119/mediawiki
-con.timeout=10
-read.timeout=10
-exec.timeout=10
-log.enable=false
+url.prefix=http://192.168.1.51:80/wiki/index.php/
+timeout.con=10
+timeout.read=10
+timeout.exec=10
+log.enable=true
 readzipfconstant=0.6175
 insertzipfconstant=0.6391
-fieldlengthdistfile=/home/ubuntu/fieldLengthDistFile.txt
-recordcount=10000
+fieldlengthdistfile=C:/Users/Sam/Google Drive/Job/VirginiaTech/MS Thesis/YCSB4WebServices/input/revisionsize_distribution.txt
+recordcount=10
 writecount=5000
-readtrace=/home/ubuntu/readtrace.txt
-writetrace=/home/ubuntu/writetrace.txt
+readtrace=C:/Users/Sam/Google Drive/Job/VirginiaTech/MS Thesis/YCSB4WebServices/input/en_readtrace.txt
+writetrace=C:/Users/Sam/Google Drive/Job/VirginiaTech/MS Thesis/YCSB4WebServices/input/writetrace.txt
 
 #	Measurement Properties
-hdrhistogram.percentiles=90,95,99
+hdrhistogram.percentiles=90
 histogram.buckets=1
 timeseries.granularity=1000
 

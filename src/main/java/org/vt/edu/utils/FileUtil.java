@@ -18,6 +18,7 @@ import java.util.List;
 public class FileUtil {
 
 	public static List<String> read(String filepath, long readLimit) {
+		System.out.println("Reading file : "+filepath);
 		List<String> list = new ArrayList<String>();
 		try {
 			BufferedReader file = new BufferedReader(new FileReader(filepath));
@@ -33,6 +34,7 @@ public class FileUtil {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		System.out.println("Data read from : "+filepath);
 		return list;
 	}
 
@@ -41,6 +43,7 @@ public class FileUtil {
 	}
 
 	public static void write(List<String> list, String filepath) {
+		System.out.println("Writing data to : "+filepath);
 		try {
 			Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(filepath), "utf-8"));
 			for (String line : list) {
@@ -48,7 +51,7 @@ public class FileUtil {
 			}
 			writer.flush();
 			writer.close();
-			System.out.println("Invalid Urls written to : " + filepath);
+			System.out.println("Data written to : " + filepath);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
