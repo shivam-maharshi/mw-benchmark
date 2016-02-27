@@ -24,6 +24,7 @@ import org.apache.http.entity.ContentType;
 import org.apache.http.entity.InputStreamEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.util.EntityUtils;
 
 import com.yahoo.ycsb.ByteIterator;
 import com.yahoo.ycsb.DB;
@@ -163,18 +164,25 @@ public class RestClient extends DB {
 			StringBuffer responseContent = new StringBuffer();
 			String line = "";
 			while ((line = reader.readLine()) != null) {
-				if (requestTimedout.isSatisfied())
+				if (requestTimedout.isSatisfied()) {
+					// Must avoid memory leak.
+					reader.close();
+					stream.close();
+					EntityUtils.consumeQuietly(responseEntity);
+					response.close();
+					client.close();
 					throw new TimeoutException();
+				}
 				responseContent.append(line);
 			}
 			timer.interrupt();
-			// System.out.println(responseContent.toString());
 			result.put("response", new StringByteIterator(responseContent.toString()));
+			reader.close();
 			// Closing the input stream will trigger connection release.
 			stream.close();
 		}
-		if (response != null)
-			response.close();
+		EntityUtils.consumeQuietly(responseEntity);
+		response.close();
 		client.close();
 		return responseCode;
 	}
@@ -203,16 +211,24 @@ public class RestClient extends DB {
 			StringBuffer responseContent = new StringBuffer();
 			String line = "";
 			while ((line = reader.readLine()) != null) {
-				if (requestTimedout.isSatisfied())
+				if (requestTimedout.isSatisfied()) {
+					// Must avoid memory leak.
+					reader.close();
+					stream.close();
+					EntityUtils.consumeQuietly(responseEntity);
+					response.close();
+					client.close();
 					throw new TimeoutException();
+				}
 				responseContent.append(line);
 			}
 			timer.interrupt();
+			reader.close();
 			// Closing the input stream will trigger connection release.
 			stream.close();
 		}
-		if (response != null)
-			response.close();
+		EntityUtils.consumeQuietly(responseEntity);
+		response.close();
 		client.close();
 		return responseCode;
 	}
@@ -223,8 +239,7 @@ public class RestClient extends DB {
 		HttpDelete request = new HttpDelete(endpoint);
 		CloseableHttpResponse response = client.execute(request);
 		responseCode = response.getStatusLine().getStatusCode();
-		if (response != null)
-			response.close();
+		response.close();
 		client.close();
 		return responseCode;
 	}
@@ -254,7 +269,6 @@ public class RestClient extends DB {
 	}
 
 	class Timer implements Runnable {
-
 		private long timeout;
 		private Criteria timedout;
 
@@ -277,7 +291,6 @@ public class RestClient extends DB {
 	}
 
 	class Criteria {
-
 		private boolean isSatisfied;
 
 		public Criteria(boolean isSatisfied) {
@@ -291,13 +304,10 @@ public class RestClient extends DB {
 		public void setSatisfied(boolean isSatisfied) {
 			this.isSatisfied = isSatisfied;
 		}
-
 	}
 
 	class TimeoutException extends RuntimeException {
-
 		private static final long serialVersionUID = 1L;
-
 	}
 
 }
