@@ -7,7 +7,6 @@ import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Properties;
 import java.util.Set;
@@ -23,24 +22,25 @@ public class WebClient extends DB {
 
 	private Properties props;
 	private static final String URL_PREFIX = "url.prefix";
-	private static final String CON_TIMEOUT = "con.timeout";
-	private static final String READ_TIMEOUT = "read.timeout";
-	private static final String EXEC_TIMEOUT = "exec.timeout";
+	private static final String CON_TIMEOUT = "timeout.con";
+	private static final String READ_TIMEOUT = "timeout.read";
+	private static final String EXEC_TIMEOUT = "timeout.exec";
+	private static final String LOG_ENABLED = "log.enable";
 	private static final String URL_PREFIX_DEFAULT = "192.168.1.51/mediawiki";
-	private static final String LOG_CALLS = "log.enable";
 	private static boolean logCalls = true;
 	private static final String HTTP = "http://";
 	private static String urlPrefix;
 	private static int conTimeout = 10000;
 	private static int readTimeout = 10000;
 	private static int execTimeout = 10000;
+	public volatile Criteria requestTimedout = new Criteria(false);
 	private static AtomicInteger opsCounter = new AtomicInteger(0);
 
 	@Override
 	public void init() throws DBException {
 		props = getProperties();
 		urlPrefix = props.getProperty(URL_PREFIX, URL_PREFIX_DEFAULT);
-		logCalls = Boolean.valueOf(props.getProperty(LOG_CALLS).trim());
+		logCalls = Boolean.valueOf(props.getProperty(LOG_ENABLED).trim());
 		conTimeout = Integer.valueOf(props.getProperty(CON_TIMEOUT, "10")) * 1000;
 		readTimeout = Integer.valueOf(props.getProperty(READ_TIMEOUT, "10")) * 1000;
 		execTimeout = Integer.valueOf(props.getProperty(EXEC_TIMEOUT, "10")) * 1000;
@@ -48,7 +48,8 @@ public class WebClient extends DB {
 
 	@Override
 	public Status read(String table, String key, Set<String> fields, HashMap<String, ByteIterator> result) {
-		return getStatus(sendGet(HTTP + urlPrefix + "/index.php/" + key));
+		//return getStatus(sendGet(HTTP + urlPrefix + "/index.php/" + key));
+		return getStatus(sendGet(HTTP + urlPrefix + key));
 	}
 
 	private Status getStatus(int responseCode) {
@@ -92,7 +93,8 @@ public class WebClient extends DB {
 		int opsCount = opsCounter.incrementAndGet();
 		int responseCode = 0;
 		try {
-			Thread timer = new Thread(new Timer(execTimeout, opsCount));
+			requestTimedout.setSatisfied(false);
+			Thread timer = new Thread(new Timer(execTimeout, requestTimedout));
 			timer.start();
 			URL obj = new URL(url);
 			HttpURLConnection con = (HttpURLConnection) obj.openConnection();
@@ -109,20 +111,21 @@ public class WebClient extends DB {
 			if (responseCode == 200) {
 				in = new BufferedReader(new InputStreamReader(con.getInputStream()));
 				while (in.readLine() != null) {
-					// Only parse the input stream.
+					if(requestTimedout.isSatisfied())
+						throw new TimeoutException();
 				}
 				in.close();
 			}
 			timer.interrupt();
-		} catch (IOException e) {
-			e.printStackTrace();
-			responseCode = 500;
 		} catch (TimeoutException e) {
 			responseCode = 500;
 			if (logCalls)
 				System.out.println("GET URL : " + url + " || Request exceeded maximum execution time of : "
-						+ execTimeout + " seconds.");
-		}
+						+ execTimeout + " ms.");
+		} catch (IOException e) {
+			e.printStackTrace();
+			responseCode = 500;
+		} 
 		if (logCalls)
 			System.out
 					.println("GET URL : " + url + " || Response Code : " + responseCode + " || Ops Count: " + opsCount);
@@ -138,7 +141,8 @@ public class WebClient extends DB {
 	public int sendPost(String url, String parameters) {
 		int responseCode = 200;
 		try {
-			Thread timer = new Thread(new Timer(execTimeout, opsCounter.get()));
+			requestTimedout.setSatisfied(false);
+			Thread timer = new Thread(new Timer(execTimeout, requestTimedout));
 			timer.start();
 			URL obj = new URL(url);
 			HttpURLConnection con = (HttpURLConnection) obj.openConnection();
@@ -160,7 +164,10 @@ public class WebClient extends DB {
 				String line = null;
 				while ((line = in.readLine()) != null) {
 					sb.append(line);
+					if(requestTimedout.isSatisfied())
+						throw new TimeoutException();
 				}
+				System.out.println(sb.toString());
 				if (!sb.toString().contains("Success"))
 					responseCode = 500;
 				in.close();
@@ -181,64 +188,70 @@ public class WebClient extends DB {
 		return responseCode;
 	}
 
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((props == null) ? 0 : props.hashCode());
-		return result;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		WebClient other = (WebClient) obj;
-		if (props == null) {
-			if (other.props != null)
-				return false;
-		} else if (!props.equals(other.props))
-			return false;
-		return true;
+	private static String generateData(int size) {
+		StringBuilder sb = new StringBuilder();
+		while (size > 0) {
+			sb.append("a");
+			size--;
+		}
+		return sb.toString();
 	}
 
 	public static void main(String[] args) throws UnsupportedEncodingException {
-		String data = "Shivam Maharshi is one of the smartest, greatest man in the world. LOL :D";
-		String params = "section=0&title=" + URLEncoder.encode("shivam_maharshi", "UTF-8")+"&appendtext=" + data+"&token=%2B%5C";
 		WebClient w = new WebClient();
-		w.sendPost("http://192.168.1.51/mediawiki/api.php?action=edit&format=json", params);
+//		String data = generateData(25000);
+//		for(int i=6; i<11; i++) {
+//			String params = "section=0&title=" + URLEncoder.encode(i+"", "UTF-8")+"&appendtext=" + data+"&token=%2B%5C";
+//			w.sendPost("http://192.168.1.51/wiki/api.php?action=edit&format=json", params);
+//		}
+		w.sendGet("http://192.168.1.51/wiki/index.php/1");
 	}
 
 }
 
 class Timer implements Runnable {
-
+	
 	private long timeout;
-	private int id;
-
-	public Timer(int timeout, int id) {
+	private Criteria timedout;
+	
+	public Timer(long timeout, Criteria timedout) {
+		this.timedout = timedout;
 		this.timeout = timeout;
-		this.id = id;
 	}
-
+	
 	@Override
 	public void run() {
 		try {
 			Thread.sleep(timeout);
-			throw new TimeoutException();
+			this.timedout.setSatisfied(true);
 		} catch (InterruptedException e) {
 			// Do nothing.
 		}
+		
+	}
+	
+}
+
+class Criteria {
+	
+	private boolean isSatisfied;
+	
+	public Criteria (boolean isSatisfied) {
+		this.isSatisfied = isSatisfied;
 	}
 
+	public boolean isSatisfied() {
+		return isSatisfied;
+	}
+
+	public void setSatisfied(boolean isSatisfied) {
+		this.isSatisfied = isSatisfied;
+	}
+	
 }
 
 class TimeoutException extends RuntimeException {
 
 	private static final long serialVersionUID = 1L;
-
+	
 }

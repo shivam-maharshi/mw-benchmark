@@ -33,7 +33,8 @@ public class FindCorruptPages {
 		List<String> urls = FileUtil.read(inputFile, fixCount);
 		List<String> invalidUrls = new ArrayList<>();
 		for (String url : urls) {
-			int responseCode = w.sendGet("http://" + hostAd + "/mediawiki/index.php/" + url);
+			//int responseCode = w.sendGet("http://" + hostAd + "/mediawiki/index.php/" + url);
+			int responseCode = w.sendGet("http://" + hostAd + "/test.php?title=" + url);
 			if (responseCode == 500)
 				invalidUrls.add(url);
 		}
@@ -51,7 +52,7 @@ public class FindCorruptPages {
 		String hostAd = "192.168.1.51:80";
 		String input = RELATIVE_PATH + "readtrace.txt";
 		String output = RELATIVE_PATH + "corrupturls.txt";
-		long count = 10000;
+		long count = 1;
 		int argLen = args.length;
 		for (int i = 0; i < argLen; i++) {
 			if(args[i].startsWith("-ad=")) {
