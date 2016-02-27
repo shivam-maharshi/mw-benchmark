@@ -81,7 +81,7 @@ public class RestClient extends DB {
 		int responseCode;
 		try {
 			responseCode = httpGet(urlPrefix + endpoint, result);
-		} catch (IOException e) {
+		} catch (Exception e) {
 			responseCode = handleExceptions(e);
 		}
 		if (logEnabled)
@@ -95,7 +95,7 @@ public class RestClient extends DB {
 		int responseCode;
 		try {
 			responseCode = httpPost(urlPrefix + endpoint, values.get("data").toString());
-		} catch (IOException e) {
+		} catch (Exception e) {
 			responseCode = handleExceptions(e);
 		}
 		if (logEnabled)
@@ -109,7 +109,7 @@ public class RestClient extends DB {
 		int responseCode;
 		try {
 			responseCode = httpDelete(urlPrefix + endpoint);
-		} catch (IOException e) {
+		} catch (Exception e) {
 			responseCode = handleExceptions(e);
 		}
 		if (logEnabled)
@@ -146,7 +146,7 @@ public class RestClient extends DB {
 	}
 
 	// Connection is automatically released back in case of an exception.
-	private int httpGet(String endpoint, HashMap<String, ByteIterator> result) throws IOException {
+	private int httpGet(String endpoint, HashMap<String, ByteIterator> result) throws IOException, TimeoutException {
 		requestTimedout.setSatisfied(false);
 		Thread timer = new Thread(new Timer(execTimeout, requestTimedout));
 		timer.start();
@@ -180,7 +180,7 @@ public class RestClient extends DB {
 	}
 
 	// Connection is automatically released back in case of an exception.
-	private int httpPost(String endpoint, String postData) throws IOException {
+	private int httpPost(String endpoint, String postData) throws IOException, TimeoutException {
 		requestTimedout.setSatisfied(false);
 		Thread timer = new Thread(new Timer(execTimeout, requestTimedout));
 		timer.start();
