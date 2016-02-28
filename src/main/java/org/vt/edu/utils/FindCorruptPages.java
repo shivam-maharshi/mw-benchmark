@@ -36,15 +36,19 @@ public class FindCorruptPages {
 		List<String> urls = FileUtil.read(inputFile, fixCount);
 		List<String> invalidUrls = new ArrayList<>();
 		for (String url : urls) {
+			url = "http://" + hostAd + "/index.php/" + url;
 			int responseCode;
 			try {
-				responseCode = rc.httpGet("http://" + hostAd + "/index.php/" + url,
+				System.out.println("Verifying URL : "+url);
+				responseCode = rc.httpGet(url,
 						new HashMap<String, ByteIterator>());
 			} catch (RestClient.TimeoutException | IOException e) {
 				responseCode = 500;
 			}
-			if (responseCode == 500)
-				invalidUrls.add("http://" + hostAd + "/index.php/" + url);
+			if (responseCode == 500) {
+				System.out.println("Found corrupt URL: "+url);
+				invalidUrls.add(url);
+			}
 		}
 		FileUtil.write(invalidUrls, outputFile);
 	}
