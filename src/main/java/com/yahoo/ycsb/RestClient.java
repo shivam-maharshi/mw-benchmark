@@ -5,8 +5,6 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Properties;
 import java.util.Set;
@@ -25,12 +23,6 @@ import org.apache.http.entity.InputStreamEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
-
-import com.yahoo.ycsb.ByteIterator;
-import com.yahoo.ycsb.DB;
-import com.yahoo.ycsb.DBException;
-import com.yahoo.ycsb.Status;
-import com.yahoo.ycsb.StringByteIterator;
 
 /**
  * Class responsible for making web service requests for benchmarking purpose.
@@ -85,6 +77,8 @@ public class RestClient extends DB {
 		} catch (Exception e) {
 			responseCode = handleExceptions(e);
 		}
+		if(responseCode==500)
+			
 		if (logEnabled)
 			System.out.println("Op Count: " + counter.incrementAndGet() + " | GET Request: " + urlPrefix + endpoint
 					+ " | Response Code: " + responseCode);
@@ -147,13 +141,14 @@ public class RestClient extends DB {
 	}
 
 	// Connection is automatically released back in case of an exception.
-	private int httpGet(String endpoint, HashMap<String, ByteIterator> result) throws IOException, TimeoutException {
+	public int httpGet(String endpoint, HashMap<String, ByteIterator> result) throws IOException, TimeoutException {
 		requestTimedout.setSatisfied(false);
 		Thread timer = new Thread(new Timer(execTimeout, requestTimedout));
 		timer.start();
 		int responseCode = 200;
 		HttpGet request = new HttpGet(endpoint);
 		request.setHeader("Accept", "*/*");
+		request.setHeader("Connection", "close");
 		CloseableHttpResponse response = client.execute(request);
 		responseCode = response.getStatusLine().getStatusCode();
 		HttpEntity responseEntity = response.getEntity();
@@ -188,7 +183,7 @@ public class RestClient extends DB {
 	}
 
 	// Connection is automatically released back in case of an exception.
-	private int httpPost(String endpoint, String postData) throws IOException, TimeoutException {
+	public int httpPost(String endpoint, String postData) throws IOException, TimeoutException {
 		requestTimedout.setSatisfied(false);
 		Thread timer = new Thread(new Timer(execTimeout, requestTimedout));
 		timer.start();
@@ -197,6 +192,7 @@ public class RestClient extends DB {
 		request.setHeader("Accept", "*/*");
 		request.setHeader("Accept-Language", "en-US,en;q=0.5");
 		request.setHeader("Content-Type", "application/x-www-form-urlencoded");
+		request.setHeader("Connection", "close");
 		InputStreamEntity reqEntity = new InputStreamEntity(new ByteArrayInputStream(postData.getBytes()),
 				ContentType.APPLICATION_FORM_URLENCODED);
 		reqEntity.setChunked(true);
@@ -222,6 +218,8 @@ public class RestClient extends DB {
 				}
 				responseContent.append(line);
 			}
+			if(!responseContent.toString().contains("Success"))
+				responseCode = 500;
 			timer.interrupt();
 			reader.close();
 			// Closing the input stream will trigger connection release.
@@ -243,29 +241,25 @@ public class RestClient extends DB {
 		client.close();
 		return responseCode;
 	}
-
-	public static void main(String[] args) throws UnsupportedEncodingException {
-		String data = "Miusov, as a man man of breeding and deilcacy, could not but feel some inwrd qualms, when he reached the Father Superior's with Ivan: he felt ashamed of havin lost his temper. He felt that he ought to have disdaimed that despicable wretch, Fyodor Pavlovitch, too much to have been upset by him in Father Zossima's cell, and so to have forgotten himself. Teh monks were not to blame, in any case, he reflceted, on the steps.And if they're decent people here (and the Father Superior, I understand, is a nobleman) why not be friendly and courteous withthem? I won't argue, I'll fall in with everything, I'll win them by politness, and show them that I've nothing to do with that Aesop, thta buffoon, that Pierrot, and have merely been takken in over this affair, just as they have.";
-		// String postData = "section=0";
-		// postData += "&title=" + URLEncoder.encode("Î‘Î³Î¿Ï�Î¬", "UTF-8");
-		// postData += "&appendtext=" + data;
-		// postData += "&token=%2B%5C";
-
+	
+	public static RestClient getClient() {
 		RestClient rc = new RestClient();
-		HashMap<String, ByteIterator> result = new HashMap<String, ByteIterator>();
 		try {
 			rc.init();
-			// rc.httpPost("http://10.0.0.91/mediawiki2/api.php?action=edit&format=json",
-			// postData);
-			rc.httpGet("http://192.168.1.51/wiki/index.php/Facebook", result);
-			System.out.println(result.get("response").toArray());
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
-		// w.sendPost("http://52.34.20.119/mediawiki/api.php?action=edit&format=json",
-		// params);
+		return rc;
+	}
+	
+	public static void main(String[] args) throws TimeoutException, IOException {
+		String data = "Miusov, as a man man of breeding and deilcacy, could not but feel some inwrd qualms, when he reached the Father Superior's with Ivan: he felt ashamed of havin lost his temper. He felt that he ought to have disdaimed that despicable wretch, Fyodor Pavlovitch, too much to have been upset by him in Father Zossima's cell, and so to have forgotten himself. Teh monks were not to blame, in any case, he reflceted, on the steps.And if they're decent people here (and the Father Superior, I understand, is a nobleman) why not be friendly and courteous withthem? I won't argue, I'll fall in with everything, I'll win them by politness, and show them that I've nothing to do with that Aesop, thta buffoon, that Pierrot, and have merely been takken in over this affair, just as they have.";
+		String postData = new StringBuilder("section=new&title=").append("%CE%95%CE%BE%CE%AD%CE%B3%CE%B5%CF%81%CF%83%CE%B7_%CF%84%CE%BF%CF%85_%CE%A0%CE%BF%CE%BB%CF%85%CF%84%CE%B5%CF%87%CE%BD%CE%B5%CE%AF%CE%BF%CF%85").append("&appendtext=").append(data)
+				.append("&token=%2B%5C").toString();
+		RestClient rc = getClient();
+		HashMap<String, ByteIterator> result = new HashMap<String, ByteIterator>();
+		rc.httpGet("http://192.168.1.51:8080/wiki/index.php/"+"%CE%95%CE%BE%CE%AD%CE%B3%CE%B5%CF%81%CF%83%CE%B7_%CF%84%CE%BF%CF%85_%CE%A0%CE%BF%CE%BB%CF%85%CF%84%CE%B5%CF%87%CE%BD%CE%B5%CE%AF%CE%BF%CF%85", result);
+		 rc.httpPost("http://192.168.1.51:8080/wiki/api.php?action=edit&format=json", postData);
 	}
 
 	class Timer implements Runnable {
@@ -306,7 +300,7 @@ public class RestClient extends DB {
 		}
 	}
 
-	class TimeoutException extends RuntimeException {
+public class TimeoutException extends RuntimeException {
 		private static final long serialVersionUID = 1L;
 	}
 
