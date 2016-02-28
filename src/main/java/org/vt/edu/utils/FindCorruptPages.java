@@ -2,10 +2,13 @@ package org.vt.edu.utils;
 
 import static org.vt.edu.utils.Constant.RELATIVE_PATH;
 
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
-import com.yahoo.ycsb.WebClient;
+import com.yahoo.ycsb.ByteIterator;
+import com.yahoo.ycsb.RestClient;
 
 /**
  * This scripts iterates over the complete read trace bound by the read count
@@ -29,14 +32,19 @@ public class FindCorruptPages {
 	}
 
 	public void execute() {
-		WebClient w = new WebClient();
+		RestClient rc = RestClient.getClient();
 		List<String> urls = FileUtil.read(inputFile, fixCount);
 		List<String> invalidUrls = new ArrayList<>();
 		for (String url : urls) {
-			//int responseCode = w.sendGet("http://" + hostAd + "/mediawiki/index.php/" + url);
-			int responseCode = w.sendGet("http://" + hostAd + "/test.php?title=" + url);
+			int responseCode;
+			try {
+				responseCode = rc.httpGet("http://" + hostAd + "/index.php/" + url,
+						new HashMap<String, ByteIterator>());
+			} catch (RestClient.TimeoutException | IOException e) {
+				responseCode = 500;
+			}
 			if (responseCode == 500)
-				invalidUrls.add(url);
+				invalidUrls.add("http://" + hostAd + "/index.php/" + url);
 		}
 		FileUtil.write(invalidUrls, outputFile);
 	}
@@ -55,7 +63,7 @@ public class FindCorruptPages {
 		long count = 1;
 		int argLen = args.length;
 		for (int i = 0; i < argLen; i++) {
-			if(args[i].startsWith("-ad=")) {
+			if (args[i].startsWith("-ad=")) {
 				hostAd = args[i].split("=")[1];
 			} else if (args[i].startsWith("-input=")) {
 				input = args[i].split("=")[1];
@@ -63,7 +71,7 @@ public class FindCorruptPages {
 				output = args[i].split("=")[1];
 			} else if (args[i].startsWith("-count=")) {
 				count = Long.valueOf(args[i].split("=")[1]);
-			} 
+			}
 		}
 		FindCorruptPages f = new FindCorruptPages(hostAd, input, output, count);
 		f.execute();
