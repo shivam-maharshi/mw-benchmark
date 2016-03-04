@@ -75,7 +75,7 @@ public class RestClient extends DB {
 	public Status read(String table, String endpoint, Set<String> fields, HashMap<String, ByteIterator> result) {
 		int responseCode;
 		try {
-			responseCode = httpGet(urlPrefix + endpoint, result);
+			responseCode = httpGet(urlPrefix+"index.php/" + endpoint, result);
 		} catch (Exception e) {
 			e.printStackTrace();
 			responseCode = handleExceptions(e);
@@ -90,7 +90,7 @@ public class RestClient extends DB {
 	public Status insert(String table, String endpoint, HashMap<String, ByteIterator> values) {
 		int responseCode;
 		try {
-			responseCode = httpPost(urlPrefix + endpoint, values.get("field0").toString());
+			responseCode = httpPost(urlPrefix +"api.php?action=edit&format=json"+ endpoint, values.get("field0").toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 			responseCode = handleExceptions(e);
