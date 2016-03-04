@@ -92,7 +92,7 @@ public class RestClient extends DB {
 		int responseCode;
 		try {
 			String postParams = getPostParameters(endpoint, values.get("field0"));
-			responseCode = httpPost(urlPrefix + endpoint + "api.php?action=edit&format=json", postParams);
+			responseCode = httpPost(urlPrefix + "api.php?action=edit&format=json", postParams);
 		} catch (Exception e) {
 			e.printStackTrace();
 			responseCode = handleExceptions(e);
