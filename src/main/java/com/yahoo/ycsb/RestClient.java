@@ -5,6 +5,7 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -90,14 +91,15 @@ public class RestClient extends DB {
 	public Status insert(String table, String endpoint, HashMap<String, ByteIterator> values) {
 		int responseCode;
 		try {
-			responseCode = httpPost(urlPrefix +"api.php?action=edit&format=json"+ endpoint, values.get("field0").toString());
+			String postParams = getPostParameters(endpoint, values.get("field0"));
+			responseCode = httpPost(urlPrefix + endpoint + "api.php?action=edit&format=json", postParams);
 		} catch (Exception e) {
 			e.printStackTrace();
 			responseCode = handleExceptions(e);
-			System.err.println("POST Request: " + urlPrefix + endpoint + " | Response Code: " + responseCode);
+			System.err.println("POST Request: " + urlPrefix + endpoint + "api.php?action=edit&format=json"+ " | Response Code: " + responseCode);
 		}
 		if (logEnabled)
-			System.out.println("POST Request: " + urlPrefix + endpoint + " | Response Code: " + responseCode);
+			System.out.println("POST Request: " + urlPrefix + endpoint + "api.php?action=edit&format=json" + " | Response Code: " + responseCode);
 		return getStatus(responseCode);
 	}
 
@@ -183,6 +185,12 @@ public class RestClient extends DB {
 		response.close();
 		client.close();
 		return responseCode;
+	}
+	
+	private String getPostParameters(String title, ByteIterator data) throws UnsupportedEncodingException {
+		StringBuffer params = new StringBuffer("section=0");
+		params.append("&title=").append(title).append("&appendtext=").append(data.toString()).append("&token=%2B%5C");
+		return params.toString();
 	}
 
 	// Connection is automatically released back in case of an exception.
