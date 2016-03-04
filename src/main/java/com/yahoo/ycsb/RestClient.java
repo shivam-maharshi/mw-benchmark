@@ -90,7 +90,7 @@ public class RestClient extends DB {
 	public Status insert(String table, String endpoint, HashMap<String, ByteIterator> values) {
 		int responseCode;
 		try {
-			responseCode = httpPost(urlPrefix + endpoint, values.get("data").toString());
+			responseCode = httpPost(urlPrefix + endpoint, values.get("field0").toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 			responseCode = handleExceptions(e);

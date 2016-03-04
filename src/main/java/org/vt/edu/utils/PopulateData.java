@@ -1,6 +1,7 @@
 package org.vt.edu.utils;
 
 import static org.vt.edu.utils.Constant.RELATIVE_PATH;
+import static org.vt.edu.utils.Constant.OUTPUT_PATH;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -109,7 +110,7 @@ public class PopulateData {
 		System.out.println("Getting text data :: URL : " + title);
 		String sql = "SELECT old_text FROM text t, page p WHERE p.page_latest = t.old_id AND p.page_title = ? LIMIT 1";
 		fromPst = fromCon.prepareStatement(sql);
-		fromPst.setString(1, URLDecoder.decode(title, "UTF-8"));
+		fromPst.setString(1, URLDecoder.decode("Σεβαστούπολη", "UTF-8"));
 		ResultSet rs = fromPst.executeQuery();
 		if (rs.next()) {
 			Blob text = rs.getBlob(1);
@@ -167,15 +168,15 @@ public class PopulateData {
 	}
 
 	public static void main(String[] args) {
-		String fromHostAd = "192.168.1.51:8080";
-		String toHostAd = "192.168.1.51:8080";
+		String fromHostAd = "192.168.1.51:80";
+		String toHostAd = "192.168.1.51:80";
 		String toEndPoint = "wiki";
-		String inputFile = RELATIVE_PATH + "trace.txt";
+		String inputFile = RELATIVE_PATH + "readtrace.txt";
 		String fromDB = "wiki";
-		String writeFailedUrlPath = RELATIVE_PATH + "writeFailedTitles.txt";
-		String readFailedUrlPath = RELATIVE_PATH + "readFailedTitles.txt";
-		String missingUrlsPath = RELATIVE_PATH + "missingTitles.txt";
-		long readCount = 10000;
+		String writeFailedUrlPath = OUTPUT_PATH + "writeFailedTitles.txt";
+		String readFailedUrlPath = OUTPUT_PATH + "readFailedTitles.txt";
+		String missingUrlsPath = OUTPUT_PATH + "missingTitles.txt";
+		long readCount = 10;
 		int argLen = args.length;
 		for (int i = 0; i < argLen; i++) {
 			if (args[i].startsWith("-from=")) {
@@ -192,7 +193,9 @@ public class PopulateData {
 				writeFailedUrlPath = args[i].split("=")[1];
 			} else if (args[i].startsWith("-readFailedFilePath=")) {
 				readFailedUrlPath = args[i].split("=")[1];
-			} else if (args[i].startsWith("-readCount=")) {
+			} else if (args[i].startsWith("-missingUrlsFilePath=")) {
+				missingUrlsPath = args[i].split("=")[1];
+			}  else if (args[i].startsWith("-readCount=")) {
 				readCount = Long.valueOf(args[i].split("=")[1]);
 			}
 		}
