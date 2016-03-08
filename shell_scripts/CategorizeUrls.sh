@@ -1,0 +1,1 @@
+sudo java -Xms3096m -Xmx1024m -cp "YCSB4WebServices-0.0.jar" org.vt.edu.utils.CategorizeByHttpStatus -ad=192.168.1.51:80/wiki -input=~/development/benchmarking/readtrace.txt -output=~/development/benchmarking/ -count=10000
