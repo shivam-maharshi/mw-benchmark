@@ -37,7 +37,7 @@ operationcount=10000
 maxexecutiontime=720
 
 #	Custom Properties
-url.prefix=http://192.168.1.51:80/wiki/index.php/
+url.prefix=http://192.168.1.51:80/wiki/
 timeout.con=10
 timeout.read=10
 timeout.exec=10

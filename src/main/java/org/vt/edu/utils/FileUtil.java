@@ -17,12 +17,15 @@ import java.util.List;
  */
 public class FileUtil {
 
-	public static List<String> read(String filepath, long readLimit) {
+	public static List<String> read(String filepath, long startOffset, long readLimit) {
 		System.out.println("Reading file : "+filepath);
 		List<String> list = new ArrayList<String>();
 		try {
 			BufferedReader file = new BufferedReader(new FileReader(filepath));
 			String line = null;
+			while ((line = file.readLine()) != null && startOffset > 0) {
+				startOffset--;
+			}
 			long count = 0;
 			while ((line = file.readLine()) != null) {
 				list.add(line.trim());
@@ -39,7 +42,11 @@ public class FileUtil {
 	}
 
 	public static List<String> read(String filepath) {
-		return read(filepath, Long.MAX_VALUE);
+		return read(filepath, 0, Long.MAX_VALUE);
+	}
+	
+	public static List<String> read(String filepath, long readLimit) {
+		return read(filepath, 0, readLimit);
 	}
 
 	public static void write(List<String> list, String filepath) {

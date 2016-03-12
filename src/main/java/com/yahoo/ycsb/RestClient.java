@@ -96,10 +96,10 @@ public class RestClient extends DB {
 		} catch (Exception e) {
 			e.printStackTrace();
 			responseCode = handleExceptions(e);
-			System.err.println("POST Request: " + urlPrefix + endpoint + "api.php?action=edit&format=json"+ " | Response Code: " + responseCode);
+			System.err.println("POST Request: " + urlPrefix + "api.php?action=edit&format=json"+ " | Response Code: " + responseCode);
 		}
 		if (logEnabled)
-			System.out.println("POST Request: " + urlPrefix + endpoint + "api.php?action=edit&format=json" + " | Response Code: " + responseCode);
+			System.out.println("POST Request: " + urlPrefix + "api.php?action=edit&format=json" + " | Response Code: " + responseCode);
 		return getStatus(responseCode);
 	}
 

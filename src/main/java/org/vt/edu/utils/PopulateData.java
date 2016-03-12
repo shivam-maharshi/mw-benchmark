@@ -132,7 +132,7 @@ public class PopulateData {
 		long start = System.currentTimeMillis();
 		System.out.println("Executing script at : " + start);
 		initConnection();
-		List<String> titles = FileUtil.read(inputFile, count);
+		List<String> titles = FileUtil.read(inputFile, 10000, count);
 		for (String title : titles) {
 			String data;
 			try {
@@ -176,7 +176,7 @@ public class PopulateData {
 		String writeFailedUrlPath = OUTPUT_PATH + "writeFailedTitles.txt";
 		String readFailedUrlPath = OUTPUT_PATH + "readFailedTitles.txt";
 		String missingUrlsPath = OUTPUT_PATH + "missingTitles.txt";
-		long readCount = 10;
+		long readCount = 1000;
 		int argLen = args.length;
 		for (int i = 0; i < argLen; i++) {
 			if (args[i].startsWith("-from=")) {
