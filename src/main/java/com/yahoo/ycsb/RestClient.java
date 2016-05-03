@@ -80,10 +80,10 @@ public class RestClient extends DB {
 		} catch (Exception e) {
 			e.printStackTrace();
 			responseCode = handleExceptions(e);
-			System.err.println("GET Request: " + urlPrefix + endpoint + " | Response Code: " + responseCode);
+			System.err.println("GET Request: " + urlPrefix +"index.php/"+ endpoint + " | Response Code: " + responseCode);
 		}
 		if (logEnabled)
-			System.out.println("GET Request: " + urlPrefix + endpoint + " | Response Code: " + responseCode);
+			System.out.println("GET Request: " + urlPrefix +"index.php/"+ endpoint + " | Response Code: " + responseCode);
 		return getStatus(responseCode);
 	}
 
