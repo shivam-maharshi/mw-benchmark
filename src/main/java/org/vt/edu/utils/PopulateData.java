@@ -169,14 +169,14 @@ public class PopulateData {
 
 	public static void main(String[] args) {
 		String fromHostAd = "192.168.1.51:80";
-		String toHostAd = "192.168.1.51:80";
+		String toHostAd = "129.114.111.33:8080";
 		String toEndPoint = "wiki";
 		String inputFile = RELATIVE_PATH + "readtrace.txt";
 		String fromDB = "wiki";
 		String writeFailedUrlPath = OUTPUT_PATH + "writeFailedTitles.txt";
 		String readFailedUrlPath = OUTPUT_PATH + "readFailedTitles.txt";
 		String missingUrlsPath = OUTPUT_PATH + "missingTitles.txt";
-		long readCount = 1000;
+		long readCount = 10000;
 		int argLen = args.length;
 		for (int i = 0; i < argLen; i++) {
 			if (args[i].startsWith("-from=")) {
