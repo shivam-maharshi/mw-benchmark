@@ -1,0 +1,6 @@
+# This file contains important numbers of this project that resulted directly from data analysis.
+
+total_monthly_writes=58857
+total_monthly_reads=2867552286
+maximum_revision_size=258245
+minimum_revision_size=1

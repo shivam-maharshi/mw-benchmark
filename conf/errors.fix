@@ -1,0 +1,39 @@
+
+#1. Tomcat Error - ModeC & ModeE
+22-Mar-2016 04:45:36.161 SEVERE [http-nio-8080-Acceptor-0] org.apache.tomcat.util.net.NioEndpoint$Acceptor.run Socket accept failed
+ java.io.IOException: Too many open files
+        at sun.nio.ch.ServerSocketChannelImpl.accept0(Native Method)
+        at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:241)
+        at org.apache.tomcat.util.net.NioEndpoint$Acceptor.run(NioEndpoint.java:682)
+        at java.lang.Thread.run(Thread.java:745)
+        
+Reason:
+The maximum number of the files that can be opened by the application on the OS is less than what the application is trying for.
+
+Solution:
+Increase the maximum number of files that can be opened on the OS.
+
+On Mac
+	ulimit -a (See max files limit is really low = 250)
+	sudo vim ~/.bash_profile
+	add - ulimit -n 4096
+	ulimit -a (See max files limit is updated now = 2048)
+	Then - https://support.code42.com/Administrator/3/Troubleshooting/Code42_Server_Stalls_Due_To_Too_Many_Open_Files
+	
+On CentOS
+	ulimit -a 
+	add - ulimit -n 4096
+	
+#2. Tomcat Error - ModeB_20
+com.sleepycat.je.LockTimeoutException: (JE 4.0.103) Lock expired. 
+Locker 1562943887 849683_http-nio-8080-exec-883_Txn: 
+waited for lock on database=acessdateindex LockAddr:213086982 node=5083525 type=WRITE grant=WAIT_NEW timeoutMillis=50000 startTime=1458712449445 endTime=1458712499446
+
+Reason:
+Thrown when multiple threads are competing for a lock and the lock timeout interval is exceeded for the current thread. This may be the result of a deadlock or simply because a lock is held for longer than the timeout interval.
+In this case the threads are waiting for more than 50 seconds before timing out. The general solution of increasing the timeout does not apply here.
+
+#3. Apache Web Server
+(32) Broken pipe: core_output_filter: writing data to network
+
+Solution: Set EnableSendfile to Off, EnableMMAP Off in httpd.conf

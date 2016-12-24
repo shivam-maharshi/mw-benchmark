@@ -1,0 +1,896 @@
+CPU usage: 7.14% user, 21.42% sys, 71.42% idle 
+MemRegions: 13849 total, 1962M resident, 77M private, 193M shared.
+PhysMem: 4373M used (1717M wired), 28G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS   %CPU_ME %CPU_OTHRS UID FAULTS  COW   MSGSENT MSGRECV SYSBSD  SYSMACH CSW     PAGEINS IDLEW POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 2.69% user, 1.83% sys, 95.46% idle 
+MemRegions: 13928 total, 1950M resident, 77M private, 193M shared.
+PhysMem: 5842M used (1753M wired), 26G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS   %CPU_ME %CPU_OTHRS UID FAULTS  COW   MSGSENT MSGRECV SYSBSD   SYSMACH CSW      PAGEINS IDLEW   POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 2.26% user, 1.82% sys, 95.91% idle 
+MemRegions: 13893 total, 1948M resident, 77M private, 193M shared.
+PhysMem: 6661M used (1762M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS   %CPU_ME %CPU_OTHRS UID FAULTS   COW   MSGSENT MSGRECV SYSBSD   SYSMACH CSW      PAGEINS IDLEW   POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 2.23% user, 2.32% sys, 95.43% idle 
+MemRegions: 13893 total, 1948M resident, 77M private, 193M shared.
+PhysMem: 7073M used (1784M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS   %CPU_ME %CPU_OTHRS UID FAULTS   COW   MSGSENT MSGRECV SYSBSD   SYSMACH CSW      PAGEINS IDLEW   POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 2.23% user, 2.58% sys, 95.18% idle 
+MemRegions: 13746 total, 1942M resident, 77M private, 193M shared.
+PhysMem: 7264M used (1794M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS   %CPU_ME %CPU_OTHRS UID FAULTS   COW   MSGSENT MSGRECV SYSBSD   SYSMACH CSW      PAGEINS IDLEW   POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 2.77% user, 3.24% sys, 93.98% idle 
+MemRegions: 13804 total, 1943M resident, 77M private, 193M shared.
+PhysMem: 7373M used (1812M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME %CPU_OTHRS UID FAULTS   COW   MSGSENT MSGRECV SYSBSD    SYSMACH CSW      PAGEINS IDLEW    POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 3.14% user, 3.83% sys, 93.2% idle 
+MemRegions: 13747 total, 1940M resident, 77M private, 193M shared.
+PhysMem: 8026M used (1845M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME %CPU_OTHRS UID FAULTS   COW   MSGSENT MSGRECV SYSBSD    SYSMACH CSW      PAGEINS IDLEW    POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 3.68% user, 4.52% sys, 91.78% idle 
+MemRegions: 13747 total, 1940M resident, 77M private, 193M shared.
+PhysMem: 7890M used (1883M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME %CPU_OTHRS UID FAULTS   COW   MSGSENT MSGRECV SYSBSD    SYSMACH CSW       PAGEINS IDLEW    POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 3.94% user, 4.81% sys, 91.24% idle 
+MemRegions: 13747 total, 1940M resident, 77M private, 193M shared.
+PhysMem: 7713M used (1920M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME %CPU_OTHRS UID FAULTS   COW   MSGSENT MSGRECV SYSBSD    SYSMACH CSW       PAGEINS IDLEW    POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 7.33% user, 5.41% sys, 87.24% idle 
+MemRegions: 13747 total, 1940M resident, 77M private, 193M shared.
+PhysMem: 7451M used (1966M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS   COW   MSGSENT  MSGRECV  SYSBSD    SYSMACH CSW       PAGEINS IDLEW    POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 4.76% user, 5.61% sys, 89.61% idle 
+MemRegions: 13747 total, 1940M resident, 76M private, 193M shared.
+PhysMem: 7283M used (1989M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS   COW   MSGSENT  MSGRECV  SYSBSD    SYSMACH CSW       PAGEINS IDLEW    POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.48% user, 6.25% sys, 88.26% idle 
+MemRegions: 13747 total, 1940M resident, 76M private, 193M shared.
+PhysMem: 7252M used (1992M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS   COW   MSGSENT  MSGRECV  SYSBSD    SYSMACH CSW       PAGEINS IDLEW    POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 6.2% user, 6.78% sys, 87.18% idle 
+MemRegions: 13747 total, 1940M resident, 76M private, 193M shared.
+PhysMem: 7191M used (1992M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW   MSGSENT  MSGRECV  SYSBSD    SYSMACH CSW       PAGEINS IDLEW    POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 6.70% user, 7.33% sys, 85.95% idle 
+MemRegions: 13747 total, 1940M resident, 76M private, 193M shared.
+PhysMem: 7189M used (1992M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW   MSGSENT  MSGRECV  SYSBSD    SYSMACH  CSW       PAGEINS IDLEW    POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 7.44% user, 7.99% sys, 84.55% idle 
+MemRegions: 13747 total, 1940M resident, 76M private, 193M shared.
+PhysMem: 7190M used (1992M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW   MSGSENT  MSGRECV  SYSBSD    SYSMACH  CSW       PAGEINS IDLEW    POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 8.36% user, 8.75% sys, 82.87% idle 
+MemRegions: 13747 total, 1940M resident, 76M private, 193M shared.
+PhysMem: 7197M used (1996M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW   MSGSENT  MSGRECV  SYSBSD    SYSMACH  CSW       PAGEINS IDLEW    POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 8.88% user, 9.49% sys, 81.61% idle 
+MemRegions: 13689 total, 1939M resident, 76M private, 193M shared.
+PhysMem: 7209M used (2009M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW   MSGSENT  MSGRECV  SYSBSD    SYSMACH  CSW       PAGEINS IDLEW    POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 9.18% user, 10.72% sys, 80.9% idle 
+MemRegions: 13689 total, 1939M resident, 76M private, 193M shared.
+PhysMem: 7213M used (2009M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW   MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW       PAGEINS IDLEW    POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 9.12% user, 10.82% sys, 80.4% idle 
+MemRegions: 13689 total, 1939M resident, 76M private, 193M shared.
+PhysMem: 7237M used (2030M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW   MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW       PAGEINS IDLEW    POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 9.12% user, 10.85% sys, 80.2% idle 
+MemRegions: 13689 total, 1939M resident, 76M private, 193M shared.
+PhysMem: 7242M used (2030M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW   MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW       PAGEINS IDLEW    POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 9.2% user, 10.80% sys, 80.17% idle 
+MemRegions: 13689 total, 1939M resident, 76M private, 193M shared.
+PhysMem: 7247M used (2030M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW   MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW       PAGEINS IDLEW    POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 9.13% user, 11.1% sys, 79.85% idle 
+MemRegions: 13689 total, 1939M resident, 76M private, 193M shared.
+PhysMem: 7247M used (2030M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW   MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW       PAGEINS IDLEW    POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 9.11% user, 11.8% sys, 79.80% idle 
+MemRegions: 13689 total, 1939M resident, 76M private, 193M shared.
+PhysMem: 7251M used (2030M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW   MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW       PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 9.8% user, 11.1% sys, 79.89% idle 
+MemRegions: 13689 total, 1939M resident, 76M private, 193M shared.
+PhysMem: 7252M used (2030M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW   MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 9.16% user, 11.18% sys, 79.64% idle 
+MemRegions: 13689 total, 1939M resident, 76M private, 193M shared.
+PhysMem: 7255M used (2030M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW   MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 9.17% user, 11.26% sys, 79.56% idle 
+MemRegions: 13787 total, 1941M resident, 76M private, 194M shared.
+PhysMem: 7270M used (2031M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW   MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 3.14% user, 4.31% sys, 92.53% idle 
+MemRegions: 13787 total, 1941M resident, 76M private, 194M shared.
+PhysMem: 7254M used (2031M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW   MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 1.53% user, 1.31% sys, 97.14% idle 
+MemRegions: 14080 total, 1985M resident, 76M private, 196M shared.
+PhysMem: 7417M used (2033M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW   MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 4.19% user, 1.31% sys, 94.48% idle 
+MemRegions: 14080 total, 1985M resident, 76M private, 196M shared.
+PhysMem: 7752M used (2035M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW   MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 4.42% user, 1.33% sys, 94.24% idle 
+MemRegions: 14080 total, 1985M resident, 76M private, 196M shared.
+PhysMem: 7880M used (2036M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW   MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 4.65% user, 1.34% sys, 93.99% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 8024M used (2038M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW   MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 4.64% user, 1.35% sys, 93.99% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 8195M used (2039M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW   MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.35% user, 1.38% sys, 93.25% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 7721M used (2041M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW   MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 4.81% user, 1.39% sys, 93.79% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 7895M used (2041M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.5% user, 1.41% sys, 93.52% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 8095M used (2041M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.41% user, 1.41% sys, 93.17% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 7413M used (2041M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.18% user, 1.41% sys, 93.40% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 7892M used (2041M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.15% user, 1.47% sys, 93.37% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 7451M used (2041M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.27% user, 1.46% sys, 93.25% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 7946M used (2041M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.33% user, 1.45% sys, 93.21% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 8170M used (2041M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.42% user, 1.45% sys, 93.11% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 8402M used (2041M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.79% user, 1.48% sys, 92.72% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 7767M used (2041M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.52% user, 1.47% sys, 92.99% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 8007M used (2041M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.49% user, 1.47% sys, 93.3% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 8255M used (2041M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.93% user, 1.49% sys, 92.56% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 7639M used (2041M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.51% user, 1.47% sys, 93.0% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 7887M used (2041M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.54% user, 1.66% sys, 92.78% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 7590M used (2041M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 6.45% user, 1.73% sys, 91.80% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 7838M used (2047M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 4.78% user, 1.87% sys, 93.34% idle 
+MemRegions: 14129 total, 1987M resident, 79M private, 196M shared.
+PhysMem: 8245M used (2047M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 6.33% user, 1.56% sys, 92.9% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 7456M used (2047M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.59% user, 1.51% sys, 92.89% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 7728M used (2047M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.82% user, 1.53% sys, 92.64% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 8009M used (2047M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.64% user, 1.51% sys, 92.83% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 8271M used (2047M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT  MSGRECV  SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 6.26% user, 1.55% sys, 92.18% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 7948M used (2047M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.55% user, 1.51% sys, 92.92% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 8206M used (2047M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.98% user, 1.92% sys, 92.8% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 8823M used (2050M wired), 23G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.88% user, 1.61% sys, 92.50% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 8173M used (2050M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.79% user, 1.52% sys, 92.67% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 8187M used (2050M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 6.36% user, 1.56% sys, 92.6% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 7838M used (2052M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.61% user, 1.53% sys, 92.84% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 8100M used (2052M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.74% user, 1.52% sys, 92.72% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 8367M used (2052M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 6.12% user, 1.55% sys, 92.31% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 7518M used (2052M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.66% user, 1.52% sys, 92.81% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 7794M used (2052M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.73% user, 1.57% sys, 92.68% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 8067M used (2052M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.65% user, 1.51% sys, 92.82% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 8331M used (2052M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 6.27% user, 1.56% sys, 92.15% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 8002M used (2052M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.54% user, 1.52% sys, 92.92% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 8254M used (2052M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.53% user, 1.51% sys, 92.95% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 8516M used (2052M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 6.23% user, 1.55% sys, 92.20% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 7906M used (2052M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.71% user, 1.54% sys, 92.73% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 8171M used (2052M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.63% user, 1.51% sys, 92.85% idle 
+MemRegions: 14080 total, 1985M resident, 79M private, 196M shared.
+PhysMem: 8428M used (2052M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 3.53% user, 1.74% sys, 94.72% idle 
+MemRegions: 14199 total, 1988M resident, 79M private, 196M shared.
+PhysMem: 7335M used (2053M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.52% user, 1.25% sys, 98.21% idle 
+MemRegions: 14257 total, 1989M resident, 79M private, 196M shared.
+PhysMem: 7339M used (2053M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.50% user, 1.24% sys, 98.24% idle 
+MemRegions: 14199 total, 1988M resident, 79M private, 196M shared.
+PhysMem: 7340M used (2053M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.50% user, 1.25% sys, 98.23% idle 
+MemRegions: 14199 total, 1988M resident, 79M private, 196M shared.
+PhysMem: 7342M used (2053M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.50% user, 1.25% sys, 98.24% idle 
+MemRegions: 14199 total, 1988M resident, 79M private, 196M shared.
+PhysMem: 7344M used (2053M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.50% user, 1.25% sys, 98.23% idle 
+MemRegions: 14199 total, 1988M resident, 79M private, 196M shared.
+PhysMem: 7347M used (2053M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.51% user, 1.24% sys, 98.23% idle 
+MemRegions: 13906 total, 1944M resident, 79M private, 196M shared.
+PhysMem: 7284M used (2052M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.48% user, 1.24% sys, 98.26% idle 
+MemRegions: 13848 total, 1942M resident, 79M private, 196M shared.
+PhysMem: 7282M used (2051M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.48% user, 1.23% sys, 98.27% idle 
+MemRegions: 13848 total, 1942M resident, 79M private, 196M shared.
+PhysMem: 7285M used (2051M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.48% user, 1.21% sys, 98.29% idle 
+MemRegions: 13848 total, 1942M resident, 77M private, 196M shared.
+PhysMem: 7288M used (2051M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.48% user, 1.21% sys, 98.29% idle 
+MemRegions: 13848 total, 1942M resident, 77M private, 196M shared.
+PhysMem: 7290M used (2051M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 1.46% user, 1.67% sys, 96.86% idle 
+MemRegions: 14061 total, 1980M resident, 77M private, 198M shared.
+PhysMem: 7606M used (2053M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 2.83% user, 1.23% sys, 95.93% idle 
+MemRegions: 14061 total, 1980M resident, 77M private, 198M shared.
+PhysMem: 7842M used (2053M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 2.97% user, 1.23% sys, 95.78% idle 
+MemRegions: 14061 total, 1980M resident, 77M private, 198M shared.
+PhysMem: 7559M used (2053M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 2.84% user, 1.22% sys, 95.93% idle 
+MemRegions: 14061 total, 1980M resident, 77M private, 198M shared.
+PhysMem: 7820M used (2053M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 2.96% user, 1.24% sys, 95.78% idle 
+MemRegions: 14061 total, 1980M resident, 77M private, 198M shared.
+PhysMem: 7813M used (2053M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 3.14% user, 1.25% sys, 95.59% idle 
+MemRegions: 14061 total, 1980M resident, 77M private, 198M shared.
+PhysMem: 8073M used (2053M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 3.43% user, 1.31% sys, 95.25% idle 
+MemRegions: 14061 total, 1980M resident, 77M private, 198M shared.
+PhysMem: 8122M used (2053M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 3.90% user, 1.33% sys, 94.75% idle 
+MemRegions: 14061 total, 1980M resident, 77M private, 198M shared.
+PhysMem: 8466M used (2053M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.96% user, 1.62% sys, 92.41% idle 
+MemRegions: 14061 total, 1980M resident, 79M private, 198M shared.
+PhysMem: 7783M used (2053M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.50% user, 1.52% sys, 92.96% idle 
+MemRegions: 14061 total, 1980M resident, 79M private, 198M shared.
+PhysMem: 8035M used (2053M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.76% user, 1.54% sys, 92.69% idle 
+MemRegions: 14061 total, 1980M resident, 79M private, 198M shared.
+PhysMem: 8304M used (2053M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH  CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.92% user, 1.54% sys, 92.53% idle 
+MemRegions: 14061 total, 1980M resident, 79M private, 198M shared.
+PhysMem: 7669M used (2053M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.50% user, 1.56% sys, 92.92% idle 
+MemRegions: 14061 total, 1980M resident, 79M private, 198M shared.
+PhysMem: 7918M used (2053M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.67% user, 1.54% sys, 92.77% idle 
+MemRegions: 14061 total, 1980M resident, 79M private, 198M shared.
+PhysMem: 8175M used (2053M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.84% user, 1.52% sys, 92.62% idle 
+MemRegions: 14157 total, 1983M resident, 79M private, 199M shared.
+PhysMem: 7660M used (2054M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.55% user, 1.56% sys, 92.87% idle 
+MemRegions: 14108 total, 1981M resident, 79M private, 199M shared.
+PhysMem: 7919M used (2053M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.58% user, 1.54% sys, 92.86% idle 
+MemRegions: 14108 total, 1981M resident, 79M private, 199M shared.
+PhysMem: 8168M used (2053M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.49% user, 1.53% sys, 92.96% idle 
+MemRegions: 14108 total, 1981M resident, 79M private, 199M shared.
+PhysMem: 8413M used (2053M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 6.21% user, 1.56% sys, 92.21% idle 
+MemRegions: 14108 total, 1981M resident, 79M private, 199M shared.
+PhysMem: 8051M used (2053M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.66% user, 1.54% sys, 92.78% idle 
+MemRegions: 14108 total, 1981M resident, 79M private, 199M shared.
+PhysMem: 8313M used (2053M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.56% user, 1.52% sys, 92.90% idle 
+MemRegions: 14108 total, 1981M resident, 79M private, 199M shared.
+PhysMem: 8573M used (2053M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 6.22% user, 1.80% sys, 91.96% idle 
+MemRegions: 14108 total, 1981M resident, 79M private, 199M shared.
+PhysMem: 8108M used (2058M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 4.91% user, 2.0% sys, 93.8% idle 
+MemRegions: 14108 total, 1981M resident, 79M private, 199M shared.
+PhysMem: 10G used (2059M wired), 22G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.41% user, 1.63% sys, 92.94% idle 
+MemRegions: 14108 total, 1981M resident, 79M private, 199M shared.
+PhysMem: 8311M used (2059M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 6.18% user, 1.54% sys, 92.26% idle 
+MemRegions: 14108 total, 1981M resident, 79M private, 199M shared.
+PhysMem: 7709M used (2060M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.45% user, 1.49% sys, 93.4% idle 
+MemRegions: 14108 total, 1981M resident, 79M private, 199M shared.
+PhysMem: 7970M used (2060M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.55% user, 1.48% sys, 92.95% idle 
+MemRegions: 14108 total, 1981M resident, 79M private, 199M shared.
+PhysMem: 7693M used (2060M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.37% user, 1.48% sys, 93.13% idle 
+MemRegions: 14108 total, 1981M resident, 79M private, 199M shared.
+PhysMem: 7951M used (2060M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.38% user, 1.48% sys, 93.13% idle 
+MemRegions: 14108 total, 1981M resident, 79M private, 199M shared.
+PhysMem: 8206M used (2060M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.60% user, 1.53% sys, 92.85% idle 
+MemRegions: 14108 total, 1981M resident, 79M private, 199M shared.
+PhysMem: 7693M used (2060M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 1.57% user, 1.42% sys, 97.0% idle 
+MemRegions: 14226 total, 1984M resident, 79M private, 199M shared.
+PhysMem: 7406M used (2061M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.50% user, 1.24% sys, 98.24% idle 
+MemRegions: 14226 total, 1984M resident, 79M private, 199M shared.
+PhysMem: 7408M used (2061M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.50% user, 1.25% sys, 98.24% idle 
+MemRegions: 14226 total, 1984M resident, 79M private, 199M shared.
+PhysMem: 7410M used (2061M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.50% user, 1.25% sys, 98.24% idle 
+MemRegions: 14226 total, 1984M resident, 79M private, 199M shared.
+PhysMem: 7412M used (2061M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.50% user, 1.25% sys, 98.24% idle 
+MemRegions: 14226 total, 1984M resident, 79M private, 199M shared.
+PhysMem: 7415M used (2061M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.50% user, 1.24% sys, 98.24% idle 
+MemRegions: 14226 total, 1984M resident, 79M private, 199M shared.
+PhysMem: 7417M used (2061M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 2.45% user, 1.68% sys, 95.86% idle 
+MemRegions: 14121 total, 1982M resident, 79M private, 199M shared.
+PhysMem: 7745M used (2060M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 2.43% user, 1.17% sys, 96.38% idle 
+MemRegions: 14121 total, 1982M resident, 79M private, 199M shared.
+PhysMem: 7950M used (2061M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 2.44% user, 1.18% sys, 96.36% idle 
+MemRegions: 14121 total, 1982M resident, 79M private, 199M shared.
+PhysMem: 7915M used (2061M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 2.40% user, 1.16% sys, 96.42% idle 
+MemRegions: 14121 total, 1982M resident, 79M private, 199M shared.
+PhysMem: 8115M used (2061M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 2.53% user, 1.18% sys, 96.28% idle 
+MemRegions: 14121 total, 1982M resident, 79M private, 199M shared.
+PhysMem: 8311M used (2065M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 2.55% user, 1.17% sys, 96.27% idle 
+MemRegions: 14121 total, 1982M resident, 79M private, 199M shared.
+PhysMem: 8286M used (2062M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 2.52% user, 1.18% sys, 96.28% idle 
+MemRegions: 14121 total, 1982M resident, 79M private, 199M shared.
+PhysMem: 8492M used (2062M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 3.36% user, 1.25% sys, 95.37% idle 
+MemRegions: 14121 total, 1982M resident, 79M private, 199M shared.
+PhysMem: 7596M used (2064M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 2.75% user, 1.22% sys, 96.1% idle 
+MemRegions: 14121 total, 1982M resident, 79M private, 199M shared.
+PhysMem: 7784M used (2064M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 2.89% user, 1.26% sys, 95.84% idle 
+MemRegions: 14225 total, 1984M resident, 79M private, 199M shared.
+PhysMem: 8046M used (2060M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 3.42% user, 1.40% sys, 95.17% idle 
+MemRegions: 14166 total, 1983M resident, 79M private, 199M shared.
+PhysMem: 8310M used (2061M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 3.21% user, 1.21% sys, 95.57% idle 
+MemRegions: 14166 total, 1983M resident, 79M private, 199M shared.
+PhysMem: 8139M used (2064M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 4.75% user, 1.33% sys, 93.91% idle 
+MemRegions: 14166 total, 1983M resident, 79M private, 199M shared.
+PhysMem: 8252M used (2062M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.37% user, 1.35% sys, 93.26% idle 
+MemRegions: 14166 total, 1983M resident, 79M private, 199M shared.
+PhysMem: 8457M used (2062M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.92% user, 1.39% sys, 92.67% idle 
+MemRegions: 14166 total, 1983M resident, 79M private, 199M shared.
+PhysMem: 7869M used (2064M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.2% user, 1.34% sys, 93.62% idle 
+MemRegions: 14166 total, 1983M resident, 79M private, 199M shared.
+PhysMem: 8098M used (2064M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.37% user, 1.37% sys, 93.25% idle 
+MemRegions: 14166 total, 1983M resident, 79M private, 199M shared.
+PhysMem: 8354M used (2064M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.58% user, 1.36% sys, 93.5% idle 
+MemRegions: 14166 total, 1983M resident, 79M private, 199M shared.
+PhysMem: 7739M used (2064M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.27% user, 1.36% sys, 93.36% idle 
+MemRegions: 14166 total, 1983M resident, 79M private, 199M shared.
+PhysMem: 7993M used (2064M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.23% user, 1.39% sys, 93.36% idle 
+MemRegions: 14166 total, 1983M resident, 79M private, 199M shared.
+PhysMem: 7773M used (2064M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.18% user, 1.65% sys, 93.15% idle 
+MemRegions: 14166 total, 1983M resident, 79M private, 199M shared.
+PhysMem: 8977M used (2066M wired), 23G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.25% user, 1.40% sys, 93.34% idle 
+MemRegions: 14166 total, 1983M resident, 79M private, 199M shared.
+PhysMem: 8278M used (2067M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.23% user, 1.35% sys, 93.41% idle 
+MemRegions: 14166 total, 1983M resident, 79M private, 199M shared.
+PhysMem: 8445M used (2067M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.56% user, 1.35% sys, 93.7% idle 
+MemRegions: 14166 total, 1983M resident, 79M private, 199M shared.
+PhysMem: 7819M used (2069M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 4.87% user, 1.34% sys, 93.78% idle 
+MemRegions: 14166 total, 1983M resident, 79M private, 199M shared.
+PhysMem: 8039M used (2072M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 4.98% user, 1.33% sys, 93.67% idle 
+MemRegions: 14166 total, 1983M resident, 79M private, 199M shared.
+PhysMem: 8263M used (2069M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.5% user, 1.35% sys, 93.58% idle 
+MemRegions: 14217 total, 1985M resident, 79M private, 199M shared.
+PhysMem: 8555M used (2069M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.69% user, 1.35% sys, 92.94% idle 
+MemRegions: 14166 total, 1983M resident, 79M private, 199M shared.
+PhysMem: 8168M used (2069M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 4.89% user, 1.32% sys, 93.77% idle 
+MemRegions: 14166 total, 1983M resident, 79M private, 199M shared.
+PhysMem: 8384M used (2069M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.18% user, 1.70% sys, 93.11% idle 
+MemRegions: 14166 total, 1983M resident, 79M private, 199M shared.
+PhysMem: 7937M used (2071M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.20% user, 1.35% sys, 93.44% idle 
+MemRegions: 14166 total, 1983M resident, 79M private, 199M shared.
+PhysMem: 8186M used (2071M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.16% user, 1.35% sys, 93.48% idle 
+MemRegions: 14166 total, 1983M resident, 79M private, 199M shared.
+PhysMem: 8438M used (2072M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.54% user, 1.35% sys, 93.9% idle 
+MemRegions: 14166 total, 1983M resident, 79M private, 199M shared.
+PhysMem: 8071M used (2072M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 4.95% user, 1.35% sys, 93.69% idle 
+MemRegions: 14166 total, 1983M resident, 79M private, 199M shared.
+PhysMem: 8266M used (2072M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.2% user, 1.33% sys, 93.64% idle 
+MemRegions: 14166 total, 1983M resident, 79M private, 199M shared.
+PhysMem: 8482M used (2072M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.28% user, 1.34% sys, 93.36% idle 
+MemRegions: 14166 total, 1983M resident, 79M private, 199M shared.
+PhysMem: 7849M used (2073M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 4.76% user, 1.32% sys, 93.90% idle 
+MemRegions: 14166 total, 1983M resident, 79M private, 199M shared.
+PhysMem: 8058M used (2073M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.3% user, 1.34% sys, 93.61% idle 
+MemRegions: 14166 total, 1983M resident, 79M private, 199M shared.
+PhysMem: 8286M used (2073M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 7.16% user, 2.40% sys, 90.42% idle 
+MemRegions: 14386 total, 1987M resident, 79M private, 199M shared.
+PhysMem: 8745M used (2075M wired), 23G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 14.25% user, 3.8% sys, 82.65% idle 
+MemRegions: 14386 total, 1987M resident, 79M private, 199M shared.
+PhysMem: 8278M used (2075M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 14.58% user, 3.11% sys, 82.30% idle 
+MemRegions: 14386 total, 1987M resident, 79M private, 199M shared.
+PhysMem: 8211M used (2076M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 14.73% user, 3.12% sys, 82.14% idle 
+MemRegions: 14386 total, 1987M resident, 79M private, 199M shared.
+PhysMem: 8163M used (2077M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 12.83% user, 2.99% sys, 84.17% idle 
+MemRegions: 14386 total, 1987M resident, 81M private, 199M shared.
+PhysMem: 7802M used (2077M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 12.14% user, 3.19% sys, 84.66% idle 
+MemRegions: 14386 total, 1987M resident, 81M private, 199M shared.
+PhysMem: 8255M used (2082M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 14.17% user, 3.14% sys, 82.68% idle 
+MemRegions: 14166 total, 1983M resident, 81M private, 199M shared.
+PhysMem: 8286M used (2081M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 14.26% user, 3.9% sys, 82.63% idle 
+MemRegions: 14166 total, 1983M resident, 81M private, 199M shared.
+PhysMem: 7947M used (2082M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 13.24% user, 2.98% sys, 83.77% idle 
+MemRegions: 14166 total, 1983M resident, 81M private, 199M shared.
+PhysMem: 8400M used (2082M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 14.39% user, 3.19% sys, 82.41% idle 
+MemRegions: 14166 total, 1983M resident, 81M private, 199M shared.
+PhysMem: 8374M used (2082M wired), 24G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 13.94% user, 3.60% sys, 82.45% idle 
+MemRegions: 14668 total, 1999M resident, 81M private, 200M shared.
+PhysMem: 7532M used (2084M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 5.7% user, 3.36% sys, 91.55% idle 
+MemRegions: 14552 total, 1992M resident, 81M private, 200M shared.
+PhysMem: 7373M used (2086M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 4.24% user, 2.5% sys, 93.70% idle 
+MemRegions: 14552 total, 1992M resident, 81M private, 200M shared.
+PhysMem: 7396M used (2086M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 4.18% user, 2.16% sys, 93.65% idle 
+MemRegions: 14625 total, 1995M resident, 81M private, 200M shared.
+PhysMem: 7411M used (2086M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 3.77% user, 2.6% sys, 94.16% idle 
+MemRegions: 14552 total, 1992M resident, 82M private, 200M shared.
+PhysMem: 7509M used (2087M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 1.54% user, 2.3% sys, 96.42% idle 
+MemRegions: 14552 total, 1992M resident, 82M private, 200M shared.
+PhysMem: 10G used (2093M wired), 22G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 2.64% user, 2.77% sys, 94.57% idle 
+MemRegions: 14252 total, 1984M resident, 82M private, 200M shared.
+PhysMem: 7478M used (2096M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 1.22% user, 2.84% sys, 95.92% idle 
+MemRegions: 14252 total, 1984M resident, 82M private, 200M shared.
+PhysMem: 7491M used (2110M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 1.22% user, 2.80% sys, 95.96% idle 
+MemRegions: 14252 total, 1984M resident, 82M private, 200M shared.
+PhysMem: 7492M used (2110M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 1.24% user, 2.88% sys, 95.86% idle 
+MemRegions: 14252 total, 1984M resident, 82M private, 200M shared.
+PhysMem: 7493M used (2111M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 1.22% user, 2.83% sys, 95.93% idle 
+MemRegions: 14252 total, 1984M resident, 82M private, 200M shared.
+PhysMem: 7493M used (2112M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 1.23% user, 2.86% sys, 95.89% idle 
+MemRegions: 14252 total, 1984M resident, 82M private, 200M shared.
+PhysMem: 7494M used (2112M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 1.8% user, 2.52% sys, 96.38% idle 
+MemRegions: 14252 total, 1984M resident, 82M private, 200M shared.
+PhysMem: 7494M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.44% user, 0.36% sys, 99.19% idle 
+MemRegions: 14252 total, 1984M resident, 82M private, 200M shared.
+PhysMem: 7494M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.46% user, 0.39% sys, 99.14% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7495M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.45% user, 0.37% sys, 99.16% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7494M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.45% user, 0.38% sys, 99.16% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7494M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.45% user, 0.37% sys, 99.16% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7494M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.45% user, 0.37% sys, 99.16% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7494M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS    %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.45% user, 0.37% sys, 99.17% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7494M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.45% user, 0.38% sys, 99.16% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7494M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.43% user, 0.35% sys, 99.21% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7494M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.45% user, 0.37% sys, 99.16% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7494M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.45% user, 0.37% sys, 99.16% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7494M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.45% user, 0.37% sys, 99.16% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7494M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.45% user, 0.38% sys, 99.16% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7494M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.46% user, 0.38% sys, 99.14% idle 
+MemRegions: 14301 total, 1987M resident, 80M private, 200M shared.
+PhysMem: 7498M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.45% user, 0.37% sys, 99.16% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7495M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.45% user, 0.37% sys, 99.17% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7495M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 3.99% user, 1.2% sys, 94.97% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7280M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.44% user, 0.36% sys, 99.18% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7280M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.45% user, 0.37% sys, 99.16% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7280M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.45% user, 0.38% sys, 99.15% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7279M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.45% user, 0.37% sys, 99.16% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7279M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.46% user, 0.38% sys, 99.15% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7283M used (2116M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.45% user, 0.38% sys, 99.16% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7280M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.45% user, 0.38% sys, 99.16% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7280M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.45% user, 0.38% sys, 99.16% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7280M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.44% user, 0.37% sys, 99.17% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7287M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.44% user, 0.37% sys, 99.18% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7287M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.45% user, 0.38% sys, 99.16% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7287M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.45% user, 0.37% sys, 99.16% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7287M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.46% user, 0.38% sys, 99.15% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7284M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.45% user, 0.37% sys, 99.17% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7284M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.45% user, 0.38% sys, 99.16% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7284M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.45% user, 0.37% sys, 99.17% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7284M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.45% user, 0.38% sys, 99.16% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7284M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.43% user, 0.35% sys, 99.20% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7284M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.45% user, 0.37% sys, 99.16% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7284M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.44% user, 0.37% sys, 99.17% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7284M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.46% user, 0.38% sys, 99.15% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7285M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.45% user, 0.37% sys, 99.17% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7285M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.45% user, 0.37% sys, 99.16% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7285M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.45% user, 0.37% sys, 99.17% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7285M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.45% user, 0.37% sys, 99.17% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7285M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.44% user, 0.37% sys, 99.18% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7285M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.44% user, 0.36% sys, 99.19% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7285M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+CPU usage: 0.53% user, 0.61% sys, 98.85% idle 
+MemRegions: 14252 total, 1984M resident, 80M private, 200M shared.
+PhysMem: 7649M used (2113M wired), 25G unused.
+PID  COMMAND          %CPU TIME     #TH   #WQ #PORTS MEM    PURG   CMPRS PGRP PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD     SYSMACH   CSW        PAGEINS  IDLEW     POWER USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD

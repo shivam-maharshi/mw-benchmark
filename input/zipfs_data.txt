@@ -1,0 +1,18 @@
+# This file includes the Zipf's constant data for read & write operations.
+
+# Read Zipf's Constant
+1. Count: 10000,  Equation: y = -0.6175x + 5.0870, R² = 0.9898
+2. Count: 20000,  Equation: y = -0.7104x + 5.3935, R² = 0.9772
+3. Count: 50000,  Equation: y = -0.8912x + 6.0513, R² = 0.9650
+4. Count: 100000, Equation: y = -1.0307x + 6.6071, R² = 0.9682
+
+# Write Zipf's Constant
+1. Count: 5000,  Equation: y = -0.6391x + 2.7859, R² = 0.9863
+2. Count: 10000, Equation: y = -0.6802x + 2.9066, R² = 0.9507
+3. Count: 20000, Equation: y = -0.7242x + 3.0411, R² = 0.9529
+
+# Almost the same of what is mentioned officially by WikiPedia.
+https://en.wikipedia.org/wiki/Wikipedia:Does_Wikipedia_traffic_obey_Zipf's_law%3F
+
+# References
+1. http://www.hpl.hp.com/research/idl/papers/ranking/ranking.html
