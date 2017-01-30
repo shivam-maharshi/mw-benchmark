@@ -41,13 +41,23 @@ YCSB4WebServices is a modification of the light wieght core module of the Yahoo 
 10. [Utility Tools] (https://github.com/shivam-maharshi/hckn-resrch/tree/master/mw-benchmark/src/main/java/org/vt/edu)
 It contains all the utitlity tools required to setup wikipedia, analyze inputs, download dumps, populate database, fix database schema, prepare traces, etc.
 
-* 
+* [Analysis] (https://github.com/shivam-maharshi/hckn-resrch/tree/master/mw-benchmark/src/main/java/org/vt/edu/analysis)
+  It contains the utility tools to analyze raw input data and create processed data usable by the benchmarking tool. Some of these tools can analyze a monthly trace, calculate request distribution parameters, etc.
+  
+* [Traces] (https://github.com/shivam-maharshi/hckn-resrch/tree/master/mw-benchmark/src/main/java/org/vt/edu/trace)
+  It contains the utility tools to fetch and process trace files from remote servers and official wikipedia online archives. Some of these tools can download a monthly trace, unzip them, merge them together and stores them into a single file for a final trace.
+
+* [Utils] (https://github.com/shivam-maharshi/hckn-resrch/tree/master/mw-benchmark/src/main/java/org/vt/edu/trace)
+  It contains the utility tools to download resources from the internet, unzip different formats, interact with files on the localfile system, verify & fix a wikipedia installation and populate a wikipedia database using the MediaWiki APIs for sane data insertion.
 
 ## [Usage] (https://github.com/shivam-maharshi/hckn-resrch/tree/master/mw-benchmark)
 
+Detailed usage for all tools is provided in the code. Using shell scripts are fairly straightforward. Given below are a few example usage for some important tasks:
+
+1. 
 
 ## [Build] (https://github.com/shivam-maharshi/hckn-resrch/tree/master/mw-benchmark)
 
 * ```mvn clean build```
 
- _**Feel free to fork, copy, suggest corrections or ask questions. Happy hacking :)**_
+_**Feel free to fork, copy, suggest corrections or ask questions. Happy hacking :)**_
