@@ -11,7 +11,7 @@ This project contains all the code and configurations to install, optimize and b
 
 This project contains full-fledged web service benchmarking tool, utility tools, optimized configurations, SQL scripts, and shell scripts to allow for quick benchmarking by reproducing a realistic workload for benchmarking. A few important links with a brief explanation are given below:
 
-1. [Analysis] (https://github.com/shivam-maharshi/hckn-resrch/tree/master/mw-benchmark/analysis):
+**1. [Analysis] (https://github.com/shivam-maharshi/hckn-resrch/tree/master/mw-benchmark/analysis)**:
 Analysis contains the raw input data about the read, write, delete, update & size trace required to calculate the input parameters for request distribution etc. THe parameters can be calculated using techniques like Linear Regression, Naive Bayes Model population, etc.
 
 2. [Configurations] (https://github.com/shivam-maharshi/hckn-resrch/tree/master/mw-benchmark/conf):
@@ -55,14 +55,17 @@ It contains all the utitlity tools required to setup wikipedia, analyze inputs, 
 Detailed usage for all tools is provided in the code. Using shell scripts are fairly straightforward. Given below are a few example usage for some important tasks:
 
 ### 1. Categorize URLs by HTTP Status Code:
+
 ```java -Xms8096m -Xmx12086m -cp "YCSB4WebServices-0.0.jar" org.vt.edu.utils.CategorizeByHttpStatus -ad=192.168.1.51:80/wiki -input=~/development/benchmarking/readtrace.txt -output=~/development/benchmarking/ -count=10000
 ```
 
 ### 2. Find Corrupt Pages:
+
 ```java -Xms8096m -Xmx12086m -cp "YCSB4WebServices-0.0.jar" org.vt.edu.utils.FindCorruptPages -ad=192.168.1.51:80 -input=~/development/benchmarking/readtrace.txt -output=~/development/benchmarking/corrupturls.txt -count=10000
 ```
 
 ### 3. Prepare Zipf's Log v/s Log Data:
+
 ```java -Xms8096m -Xmx12086m -cp "YCSB4WebServices-0.0.jar" org.vt.edu.utils.FindCorruptPages -in=/development/benchmarking/in.txt -out=/development/benchmarking/out.txt -number=10000
 ```
 
