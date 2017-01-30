@@ -55,17 +55,20 @@ It contains all the utitlity tools required to setup wikipedia, analyze inputs, 
 Detailed usage for all tools is provided in the code. Using shell scripts are fairly straightforward. Given below are a few example usage for some important tasks:
 
 1. Categorize URLs by HTTP Status Code:
+
 `java -Xms8096m -Xmx12086m -cp "YCSB4WebServices-0.0.jar" org.vt.edu.utils.CategorizeByHttpStatus -ad=192.168.1.51:80/wiki -input=~/development/benchmarking/readtrace.txt -output=~/development/benchmarking/ -count=10000`
 
 2. Find Corrupt Pages:
+
 `java -Xms8096m -Xmx12086m -cp "YCSB4WebServices-0.0.jar" org.vt.edu.utils.FindCorruptPages -ad=192.168.1.51:80 -input=~/development/benchmarking/readtrace.txt -output=~/development/benchmarking/corrupturls.txt -count=10000`
 
 3. Prepare Zipf's Log v/s Log Data:
+
 `java -Xms8096m -Xmx12086m -cp "YCSB4WebServices-0.0.jar" org.vt.edu.utils.FindCorruptPages -in=/development/benchmarking/in.txt -out=/development/benchmarking/out.txt -number=10000`
 
 ## [Build] (https://github.com/shivam-maharshi/hckn-resrch/tree/master/mw-benchmark)
 
 * ```mvn clean build```
 
-### [Karma] (https://github.com/shivam-maharshi/hckn-resrch/tree/master/mw-benchmark)
+## [Karma] (https://github.com/shivam-maharshi/hckn-resrch/tree/master/mw-benchmark)
 The main intention behind the existence of this project on GitHub is to help someone in need. _**Feel free to fork, copy, suggest corrections or ask questions. Happy benchmarking :)**_
