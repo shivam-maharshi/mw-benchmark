@@ -11,7 +11,7 @@ This project contains all the code and configurations to install, optimize and b
 
 This project contains full-fledged web service benchmarking tool, utility tools, optimized configurations, SQL scripts, and shell scripts to allow for quick benchmarking by reproducing a realistic workload for benchmarking. A few important links with a brief explanation are given below:
 
-**1. [Analysis] (https://github.com/shivam-maharshi/hckn-resrch/tree/master/mw-benchmark/analysis)**:
+1. **[Analysis] (https://github.com/shivam-maharshi/hckn-resrch/tree/master/mw-benchmark/analysis)**:
 Analysis contains the raw input data about the read, write, delete, update & size trace required to calculate the input parameters for request distribution etc. THe parameters can be calculated using techniques like Linear Regression, Naive Bayes Model population, etc.
 
 2. [Configurations] (https://github.com/shivam-maharshi/hckn-resrch/tree/master/mw-benchmark/conf):
