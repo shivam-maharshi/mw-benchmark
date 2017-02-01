@@ -1,5 +1,6 @@
 cd /var/www/html/mediawiki/maintenance
 
+// Must run this to use edit apis
 sudo php cleanupTitles.php
 sudo php deleteSelfExternals.php
 sudo php populateBacklinkNamespace.php
