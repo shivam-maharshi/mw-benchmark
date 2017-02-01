@@ -1,3 +1,5 @@
+// Don't drop indexes for edit apis to work!
+
 use wiki;
 
 ALTER TABLE page
