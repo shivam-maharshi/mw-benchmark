@@ -13,6 +13,8 @@ sudo /etc/init.d/apache2 restart
 cd /home/shivam
 
 sudo wget "http://archive.org/download/elwiki-20151201/elwiki-20151201-pages-meta-current.xml.bz2"
+sudo wget "http://archive.org/download/elwiki-20151201/elwiki-20151201-all-titles-in-ns0.gz"
+
 sudo bzip2 -dk elwiki-20151201-pages-meta-current.xml.bz2
 
 cd /var/www/html/mediawiki/maintenance
