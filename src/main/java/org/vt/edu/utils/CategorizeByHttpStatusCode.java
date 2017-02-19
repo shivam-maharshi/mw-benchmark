@@ -38,6 +38,7 @@ public class CategorizeByHttpStatusCode {
     this.output = output;
     this.offset = offset;
     this.workers = workers;
+    this.count = count;
     this.rsMap = new ConcurrentHashMap<>();
   }
 
@@ -77,7 +78,7 @@ public class CategorizeByHttpStatusCode {
    * Sample Command: sudo java -Xms8096m -Xmx12086m -cp "mw-benchmark-0.0.jar"
    * org.vt.edu.utils.CategorizeByHttpStatusCode -ad=192.168.1.51:80/wiki
    * -input=~/development/benchmarking/input.txt
-   * -output=~/development/benchmarking/ -count=10000 -offset=0 -worker=4
+   * -output=~/development/benchmarking/ -count=10000 -offset=0 -workers=4
    */
   public static void main(String[] args) {
     String hostAd = "192.168.1.51:80/wiki";
