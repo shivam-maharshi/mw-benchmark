@@ -19,7 +19,7 @@
 workload=com.yahoo.ycsb.workloads.CoreWorkload
 db=com.yahoo.ycsb.WebClient
 exporter=com.yahoo.ycsb.measurements.exporter.TextMeasurementsExporter
-exportfile=C:/Users/Sam/Google Drive/Job/VirginiaTech/MS Thesis/YCSB4WebServices/BenchmarkingResults.txt
+exportfile=C:/Shivam/Work/WorkSpace/mw-benchmark/BenchmarkingResults.txt
 threadcount=100
 measurementtype=hdrhistogram
 
@@ -44,11 +44,11 @@ timeout.exec=10
 log.enable=true
 readzipfconstant=0.6175
 insertzipfconstant=0.6391
-fieldlengthdistfile=C:/Users/Sam/Google Drive/Job/VirginiaTech/MS Thesis/YCSB4WebServices/input/revisionsize_distribution.txt
+fieldlengthdistfile=C:/Shivam/Work/WorkSpace/mw-benchmark/input/revisionsize_distribution.txt
 recordcount=10
 writecount=5000
-readtrace=C:/Users/Sam/Google Drive/Job/VirginiaTech/MS Thesis/YCSB4WebServices/input/en_readtrace.txt
-writetrace=C:/Users/Sam/Google Drive/Job/VirginiaTech/MS Thesis/YCSB4WebServices/input/writetrace.txt
+readtrace=C:/Shivam/Work/WorkSpace/mw-benchmark/input/readtrace.txt
+writetrace=C:/Shivam/Work/WorkSpace/mw-benchmark/input/writetrace.txt
 
 #	Measurement Properties
 hdrhistogram.percentiles=90
