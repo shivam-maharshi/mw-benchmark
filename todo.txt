@@ -1,0 +1,85 @@
+# Questions:
+1. Does there exists a client for YCSB to benchmark Web Services ?
+Ans. No. Made a thorough search, no mentions of any such benchmarking. Only used for Key-Value stores.
+
+2. Can something be improved in MWDumper script to make it faster and more reliable ?
+Ans. No. Nothing much to change in the code.
+
+
+# Tasks:
+1. Find out the API call to add data to an existing Wiki page - Done.
+
+These are the inbuilt APIs - https://www.mediawiki.org/wiki/API:Edit
+
+a. First URL to fetch token - We read from the response by tag "edittoken".
+http://52.34.20.119/mediawiki/api.php?action=query&titles=pageTitle&prop=info|revisions&intoken=edit
+
+For Unregistered Users token will always be - "+\", hence we may skip this step.
+
+b. URL to write data on Wikipage.
+
+URL : http://52.34.20.119/mediawiki/api.php?action=edit&format=json
+
+Post Parameters :
+	
+	title=title
+	section=0
+	appendtext=tobewritten
+	token=%2B%5C
+
+Headers Required: Content-Type : application/x-www-form-urlencoded
+
+2. Add the write functionality in YCSB that does the following:
+	a. Picks url to write data from a file according to Zipfs law. - Done
+	b. Creates a fake string data whose size follows Zipfs law. - Done
+	c. Read to write ratio will be passed from properties file. - Done
+	d. Make Zipf constant configurable from properties file. - Done
+	e. Load read & write URL map according to record & write counts. - Done
+	
+	
+3. Find a way through which a trace can be run as step function in YCSB. 
+	Not possible without code manipulation. Which is a little tricky. High chances of error.
+
+4. Build a one month read trace for the Wiki mirror.
+	a. Automatically download 720 wiki trace files in parallel. - Done. Maximum only 3 concurrent threads allowed.
+	b. Automatically UnZip 720 wiki trace files in parallel. - Done
+	c. Build top 1% trace (10K) URLs from unzipped files. - Done
+	d. Calculate the total read count: 2867552286
+
+5. Build a one month write trace for the Wiki mirror. - Done
+	a. Use data from revision database for:
+		i. Page distribution - rev_timestamp & rev_page column. - Done
+		ii. Calculate the total write count: 58857
+	
+	b. Find out maximum and minimum edit data size. - Pending
+		
+6. Invoke a benchmarking test from an AWS test client machine to AWS wiki mirror. - 500 Req / sec.
+		
+7. Write scripts to bring a newly instantiated AWS instance to the final state.
+	a. Install MediaWiki and all required software on a bare machine. - Done
+	b. Download, unzip and automatically populate MediaWiki database. - Done
+	c. For benchmarking client machine install required softwares and invoke test. - Done
+
+8. Calculate the zipfs coefficient from the statistics for
+	a. Read URL patterns - 0.6175
+	b. Write URL patterns - 0.6391
+	c. Write data size patterns
+
+9. Read the proposal JCDL proposal. - Done
+
+10. Write my part in 4 paragraphs for the paper. - Done
+
+11. Book: http://www.amazon.com/Writing-Your-Dissertation-Fifteen-Minutes/dp/080504891X
+
+## Limitations:
+2. Setting up environment are not completely automatic. They require some manual intervention for:
+	a. Passing password and other input to other prompts.
+	b. Setting MediaWiki is a manual process via web browser, no commands available for that.
+	
+Info:
+
+1. One Apache Process Max Size = 70 MB, Avg Size = 60 MB, Shared Size = 50 MB, Shared Max Memory = 60 MB, Virtual Size = 320 MB
+2. Total RAM = 32 GB, Swap = 32 GB, Dedicated Apache RAM Memory = 25 GB, Max Clients = 25*1000 MB / 70 MB = 357
+3. MySQL Memory Usage = 2.4 GB (All forked processes share this memory.)
+
+Please note that only HTTP GET requests are archived with Response codes 200, 302, 303

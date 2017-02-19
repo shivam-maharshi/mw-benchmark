@@ -44,13 +44,17 @@ public class PopulateData {
 	private String writeFailedUrlPath = null;
 	private String readFailedUrlPath = null;
 	private String missingUrlsPath = null;
+	private String illegalUrlsPath = null;
 	private long count;
 	private List<String> writeFailedUrls = null;
 	private List<String> readFailedUrls = null;
 	private List<String> missingUrls = null;
+	private List<String> illegalUrls = null;
+	private RestClient rc = null;
+
 
 	public PopulateData(String fromHostAd, String toHostAd, String toEndPoint, String inputFile, String fromDB,
-			String writeFailedUrlPath, String readFailedUrlPath, String missingUrlsPath, long readCount) {
+			String writeFailedUrlPath, String readFailedUrlPath, String missingUrlsPath, String illegalUrlsPath, long readCount) {
 		this.fromHostAd = fromHostAd;
 		this.toHostAd = toHostAd;
 		this.toEndPoint = toEndPoint;
@@ -60,9 +64,12 @@ public class PopulateData {
 		this.writeFailedUrlPath = writeFailedUrlPath;
 		this.readFailedUrlPath = readFailedUrlPath;
 		this.missingUrlsPath = missingUrlsPath;
+		this.illegalUrlsPath = illegalUrlsPath;
 		this.writeFailedUrls = new ArrayList<>();
 		this.readFailedUrls = new ArrayList<>();
 		this.missingUrls = new ArrayList<>();
+		this.illegalUrls = new ArrayList<>();
+		this.rc = RestClient.getClient();
 	}
 
 	private void initConnection() {
@@ -77,25 +84,24 @@ public class PopulateData {
 		}
 	}
 
-	private int write(String title, String data) {
+	public int write(String title, String data) {
 		System.out.println("Posting data :: URL : " + title + " || Size : " + data.length());
-		RestClient rc = RestClient.getClient();
 		int responseCode;
 		try {
 			data = URLEncoder.encode(data, "UTF-8");
-			String postData = new StringBuilder("section=0&title=").append(title).append("&appendtext=").append(data)
+			String postData = new StringBuilder("section=new&title=").append(title).append("&appendtext=").append(data)
 					.append("&token=%2B%5C").toString();
 			responseCode = rc.httpPost("http://" + toHostAd + "/" + toEndPoint + "/api.php?action=edit&format=json",
 					postData);
 		} catch (RestClient.TimeoutException | IOException e) {
 			responseCode = 500;
 		}
+		System.out.println("Posted data :: URL : " + title + " || Response code : " + responseCode);
 		return responseCode;
 	}
 
 	private int read(String title) {
 		System.out.println("Reading data :: URL : " + title);
-		RestClient rc = RestClient.getClient();
 		int responseCode;
 		try {
 			responseCode = rc.httpGet("http://" + toHostAd + "/" + toEndPoint + "/index.php/" + title,
@@ -106,11 +112,11 @@ public class PopulateData {
 		return responseCode;
 	}
 
-	private String getText(String title) throws SQLException, IOException {
+	private String getText(String title) throws SQLException, IOException, IllegalArgumentException {
 		System.out.println("Getting text data :: URL : " + title);
 		String sql = "SELECT old_text FROM text t, page p WHERE p.page_latest = t.old_id AND p.page_title = ? LIMIT 1";
 		fromPst = fromCon.prepareStatement(sql);
-		fromPst.setString(1, URLDecoder.decode("Σεβαστούπολη", "UTF-8"));
+		fromPst.setString(1, URLDecoder.decode(title, "UTF-8"));
 		ResultSet rs = fromPst.executeQuery();
 		if (rs.next()) {
 			Blob text = rs.getBlob(1);
@@ -132,7 +138,7 @@ public class PopulateData {
 		long start = System.currentTimeMillis();
 		System.out.println("Executing script at : " + start);
 		initConnection();
-		List<String> titles = FileUtil.read(inputFile, 10000, count);
+		List<String> titles = FileUtil.read(inputFile, 127129, count);
 		for (String title : titles) {
 			String data;
 			try {
@@ -158,25 +164,32 @@ public class PopulateData {
 			} catch (SQLException | IOException e) {
 				e.printStackTrace();
 				missingUrls.add(title);
+			} catch (IllegalArgumentException e) {
+			  e.printStackTrace();
+			  illegalUrls.add(title);
 			}
 		}
 		FileUtil.write(writeFailedUrls, writeFailedUrlPath);
 		FileUtil.write(readFailedUrls, readFailedUrlPath);
 		FileUtil.write(missingUrls, missingUrlsPath);
+		FileUtil.write(illegalUrls, illegalUrlsPath);
 		System.out.println("Successfully finished populating data in : "
 				+ ((System.currentTimeMillis() - start) / 60000) + " mins.");
 	}
 
 	public static void main(String[] args) {
-		String fromHostAd = "192.168.1.51:80";
-		String toHostAd = "129.114.111.33:8080";
-		String toEndPoint = "wiki";
-		String inputFile = RELATIVE_PATH + "readtrace.txt";
+	   //PopulateData pd = new PopulateData(null, "192.168.1.51:80", "testwiki", null, null, null, null, null, 0);
+	   //int rc = pd.write("Google", "Google is the biggest software company.");
+		String fromHostAd = "192.168.1.51";
+		String toHostAd = "192.168.1.51";
+		String toEndPoint = "sw";
+		String inputFile = RELATIVE_PATH + "readtrace_full.txt";
 		String fromDB = "wiki";
 		String writeFailedUrlPath = OUTPUT_PATH + "writeFailedTitles.txt";
 		String readFailedUrlPath = OUTPUT_PATH + "readFailedTitles.txt";
 		String missingUrlsPath = OUTPUT_PATH + "missingTitles.txt";
-		long readCount = 10000;
+		String illegalUrlsPath = OUTPUT_PATH + "illegalTitles.txt";
+		long readCount = Integer.MAX_VALUE;
 		int argLen = args.length;
 		for (int i = 0; i < argLen; i++) {
 			if (args[i].startsWith("-from=")) {
@@ -195,12 +208,14 @@ public class PopulateData {
 				readFailedUrlPath = args[i].split("=")[1];
 			} else if (args[i].startsWith("-missingUrlsFilePath=")) {
 				missingUrlsPath = args[i].split("=")[1];
-			}  else if (args[i].startsWith("-readCount=")) {
+			} else if (args[i].startsWith("-illegalUrlsFilePath=")) {
+        illegalUrlsPath = args[i].split("=")[1];
+      } else if (args[i].startsWith("-readCount=")) {
 				readCount = Long.valueOf(args[i].split("=")[1]);
 			}
 		}
 		PopulateData pd = new PopulateData(fromHostAd, toHostAd, toEndPoint, inputFile, fromDB, writeFailedUrlPath,
-				readFailedUrlPath, missingUrlsPath, readCount);
+				readFailedUrlPath, missingUrlsPath, illegalUrlsPath, readCount);
 		pd.execute();
 	}
 
