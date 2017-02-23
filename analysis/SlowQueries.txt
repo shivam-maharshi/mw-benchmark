@@ -1,0 +1,30 @@
+Reading mysql slow query log from /var/log/mysql/mysql-slow.log
+Count: 21684  Time=3.99s (86504s)  Lock=0.00s (9s)  Rows=1.0 (21665), root[root]@localhost
+  SELECT /* WikiPage::pageData  */  page_id,page_namespace,page_title,page_restrictions,page_is_redirect,page_is_new,page_random,page_touched,page_links_updated,page_latest,page_len,page_content_model  FROM `page`   WHERE page_namespace = 'S' AND page_title = 'S'  LIMIT N
+
+Count: 322  Time=3.03s (977s)  Lock=0.00s (0s)  Rows=0.0 (0), root[root]@localhost
+  SELECT /* Revision::fetchFromConds N.N.N.N */  rev_id,rev_page,rev_text_id,rev_timestamp,rev_comment,rev_user_text,rev_user,rev_minor_edit,rev_deleted,rev_len,rev_parent_id,rev_sha1,rev_content_format,rev_content_model,page_namespace,page_title,page_id,page_latest,page_is_redirect,page_len,user_name  FROM `revision` INNER JOIN `page` ON ((page_id = rev_page)) LEFT JOIN `user` ON ((rev_user != N) AND (user_id = rev_user))  WHERE page_namespace = 'S' AND page_title = 'S' AND (rev_id=page_latest)  LIMIT N
+
+Count: 297  Time=4.81s (1427s)  Lock=0.00s (0s)  Rows=0.0 (0), root[root]@localhost
+  SELECT /* LinkBatch::doQuery (for Skin::preloadExistence) N.N.N.N */  page_id,page_namespace,page_title,page_len,page_is_redirect,page_latest,page_content_model  FROM `page`   WHERE (page_namespace = 'S' AND page_title = 'S')
+
+Count: 139  Time=3.50s (486s)  Lock=0.00s (0s)  Rows=0.9 (132), root[root]@localhost
+  SELECT /* WikiPage::pageData N.N.N.N */  page_id,page_namespace,page_title,page_restrictions,page_is_redirect,page_is_new,page_random,page_touched,page_links_updated,page_latest,page_len,page_content_model  FROM `page`   WHERE page_namespace = 'S' AND page_title = 'S'  LIMIT N
+
+Count: 132  Time=2.94s (388s)  Lock=0.00s (0s)  Rows=0.0 (0), root[root]@localhost
+  SELECT /* LocalRepo::getArticleID N.N.N.N */  page_id  FROM `page`   WHERE page_namespace = 'S' AND page_title = 'S'  LIMIT N
+
+Count: 53  Time=5.02s (266s)  Lock=0.00s (0s)  Rows=0.0 (0), root[root]@localhost
+  SELECT /* OutputPage::addCategoryLinks N.N.N.N */  page_id,page_namespace,page_title,page_len,page_is_redirect,page_latest,pp_value,page_content_model  FROM `page` LEFT JOIN `page_props` ON (pp_propname = 'S' AND (pp_page = page_id))  WHERE (page_namespace = 'S' AND page_title IN ('S','S','S','S') )
+
+Count: 51  Time=4.51s (229s)  Lock=0.00s (0s)  Rows=0.0 (0), root[root]@localhost
+  SELECT /* OutputPage::addCategoryLinks N.N.N.N */  page_id,page_namespace,page_title,page_len,page_is_redirect,page_latest,pp_value,page_content_model  FROM `page` LEFT JOIN `page_props` ON (pp_propname = 'S' AND (pp_page = page_id))  WHERE (page_namespace = 'S' AND page_title IN ('S','S','S') )
+
+Count: 43  Time=4.22s (181s)  Lock=0.00s (0s)  Rows=0.0 (0), root[root]@localhost
+  SELECT /* OutputPage::addCategoryLinks N.N.N.N */  page_id,page_namespace,page_title,page_len,page_is_redirect,page_latest,pp_value,page_content_model  FROM `page` LEFT JOIN `page_props` ON (pp_propname = 'S' AND (pp_page = page_id))  WHERE (page_namespace = 'S' AND page_title IN ('S','S') )
+
+Count: 35  Time=5.15s (180s)  Lock=0.00s (0s)  Rows=0.0 (0), root[root]@localhost
+  SELECT /* OutputPage::addCategoryLinks N.N.N.N */  page_id,page_namespace,page_title,page_len,page_is_redirect,page_latest,pp_value,page_content_model  FROM `page` LEFT JOIN `page_props` ON (pp_propname = 'S' AND (pp_page = page_id))  WHERE (page_namespace = 'S' AND page_title = 'S')
+
+Count: 21  Time=6.00s (126s)  Lock=0.00s (0s)  Rows=0.0 (0), root[root]@localhost
+  SELECT /* ResourceLoaderWikiModule::getTitleInfo N.N.N.N */  page_namespace,page_title,rev_len,rev_sha1  FROM `page` INNER JOIN `revision` ON ((page_latest=rev_id))  WHERE (page_namespace = 'S' AND page_title = 'S')
