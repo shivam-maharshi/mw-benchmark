@@ -1,3 +1,5 @@
+Command: mysqldumpslow -s c -t 10 /var/log/mysql/mysql-slow.log
+
 Reading mysql slow query log from /var/log/mysql/mysql-slow.log
 Count: 21684  Time=3.99s (86504s)  Lock=0.00s (9s)  Rows=1.0 (21665), root[root]@localhost
   SELECT /* WikiPage::pageData  */  page_id,page_namespace,page_title,page_restrictions,page_is_redirect,page_is_new,page_random,page_touched,page_links_updated,page_latest,page_len,page_content_model  FROM `page`   WHERE page_namespace = 'S' AND page_title = 'S'  LIMIT N
