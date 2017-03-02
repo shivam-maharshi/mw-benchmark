@@ -2,7 +2,7 @@ sudo visudo
 shivam	ALL=(ALL)	ALL
 wget http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 rpm -ivh epel-release-6-8.noarch.rpm
-yum install httpd mysql-server php php-mysql
+yum install -y httpd mysql-server php php-mysql
 yum --enablerepo=extras install epel-release
 yum --enablerepo=epel install phpmyadmin
 mysqladmin -u root password 'root'
