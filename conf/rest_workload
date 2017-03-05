@@ -1,0 +1,41 @@
+#	Core Properties
+workload=com.yahoo.ycsb.workloads.RestWorkload
+db=com.yahoo.ycsb.webservice.rest.RestClient
+exporter=com.yahoo.ycsb.measurements.exporter.TextMeasurementsExporter
+threadcount=1
+fieldlengthdistribution=uniform
+measurementtype=hdrhistogram
+
+#	Workload Properties
+fieldcount=1
+fieldlength=258245
+fieldlengthdistfile=/Users/library/development/benchmarking/revisionsize_distribution.txt
+readproportion=0.99998
+updateproportion=0
+deleteproportion=0
+insertproportion=0.00002
+requestdistribution=zipfian
+operationcount=600
+
+#	Custom Properties
+url.prefix=http://192.168.1.51/sw/
+url.trace.read=/Users/library/development/benchmarking/readtrace.txt
+url.trace.insert=/Users/library/development/benchmarking/writetrace.txt
+url.trace.update=/Users/library/development/benchmarking/readtrace.txt
+url.trace.delete=/Users/library/development/benchmarking/readtrace.txt
+headers=Accept */* Accept-Language en-US,en;q=0.5 Content-Type application/x-www-form-urlencoded user-agent Mozilla/5.0 Connection close
+timeout.con=10
+timeout.read=10
+timeout.exec=10
+log.enable=true
+readrecordcount=10000
+insertrecordcount=5000
+deleterecordcount=1000
+updaterecordcount=1000
+readzipfconstant=0.6175
+insertzipfconstant=0.6391
+
+#	Measurement Properties
+hdrhistogram.percentiles=90,99
+histogram.buckets=1
+timeseries.granularity=1000
