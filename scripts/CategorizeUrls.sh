@@ -1,1 +1,1 @@
-sudo java -Xms3096m -Xmx1024m -cp "YCSB4WebServices-0.0.jar" org.vt.edu.utils.CategorizeByHttpStatus -ad=192.168.1.51:80/wiki -input=~/development/benchmarking/readtrace.txt -output=~/development/benchmarking/ -count=10000
+sudo java -Xms1024m -Xmx3072m -cp "mw-benchmark-0.0.jar" org.vt.edu.utils.CategorizeByHttpStatusCode -ad=192.168.1.51:80/sw -input=/Users/library/development/benchmarking/readtrace.txt -output=/Users/library/development/benchmarking/ -offset=0 -workers=8
