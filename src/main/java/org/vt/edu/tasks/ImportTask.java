@@ -1,4 +1,4 @@
-package org.vt.edu.utils;
+package org.vt.edu.tasks;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,7 +11,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
+
+import org.vt.edu.utils.RestClient;
 
 /**
  * Import tasks responsible for importing a given list in MediaWiki database
@@ -20,19 +23,27 @@ import java.util.List;
  * @author shivam.maharshi
  */
 public class ImportTask implements Runnable {
-  
+
   private List<String> titles;
   private String toHostAd;
   private String toEndPoint;
   private Connection fromCon = null;
   private PreparedStatement fromPst = null;
   private RestClient rc = null;
-  
-  public ImportTask (List<String> titles, String toHostAd, String toEndPoint, Connection fromCon) {
+  private volatile List<String> success = new ArrayList<>();
+  private volatile List<String> write = new ArrayList<>();
+  private volatile List<String> illegal = new ArrayList<>();
+  private volatile List<String> missing = new ArrayList<>();
+
+  public ImportTask(List<String> titles, String toHostAd, String toEndPoint, Connection fromCon, List<String> success,
+      List<String> write, List<String> missing, List<String> illegal) {
     this.titles = titles;
     this.toHostAd = toHostAd;
     this.toEndPoint = toEndPoint;
     this.fromCon = fromCon;
+    this.success = success;
+    this.missing = missing;
+    this.write = write;
     this.rc = RestClient.getClient();
   }
 
@@ -43,35 +54,27 @@ public class ImportTask implements Runnable {
       try {
         data = getText(title);
         if (data == null) {
-          PopulateData.missingUrls.add(title);
+          missing.add(title);
           continue;
         }
-        // Retries once.
         int responseCode = write(title, data, i);
         if (responseCode == 500) {
           responseCode = write(title, data, i);
           if (responseCode == 500)
-            PopulateData.writeFailedUrls.add(title);
+            write.add(title);
         } else {
-          PopulateData.successfulUrls.add(title);
+          success.add(title);
         }
-        // Retries once.
-//        responseCode = read(title);
-//        if (responseCode == 500) {
-//          responseCode = read(title);
-//          if (responseCode == 500)
-//            PopulateData.readFailedUrls.add(title);
-//        }
       } catch (SQLException | IOException e) {
         e.printStackTrace();
-        PopulateData.missingUrls.add(title);
+        missing.add(title);
       } catch (IllegalArgumentException e) {
         e.printStackTrace();
-        PopulateData.illegalUrls.add(title);
+        illegal.add(title);
       }
     }
   }
-  
+
   public int write(String title, String data, int i) {
     System.out.println(i + " : Posting data :: URL : " + title + " || Size : " + data.length());
     int responseCode;
@@ -87,17 +90,6 @@ public class ImportTask implements Runnable {
     System.out.println(i + " : Posted data :: URL : " + title + " || Response code : " + responseCode);
     return responseCode;
   }
-
-//  private int read(String title) {
-//    System.out.println("Reading data :: URL : " + title);
-//    int responseCode;
-//    try {
-//      responseCode = rc.httpGet("http://" + toHostAd + "/" + toEndPoint + "/index.php/" + title);
-//    } catch (RestClient.TimeoutException | IOException e) {
-//      responseCode = 500;
-//    }
-//    return responseCode;
-//  }
 
   private String getText(String title) throws SQLException, IOException, IllegalArgumentException {
     System.out.println("Getting text data :: URL : " + title);
@@ -120,5 +112,5 @@ public class ImportTask implements Runnable {
     }
     return null;
   }
-  
+
 }

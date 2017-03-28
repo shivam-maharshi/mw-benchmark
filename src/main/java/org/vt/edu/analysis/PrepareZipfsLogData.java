@@ -25,59 +25,59 @@ import java.util.List;
  */
 public class PrepareZipfsLogData {
 
-	// Required for calculation of Zipf's constant for read trace.
-	private static final String READ_COUNT_FILE = "readcount.txt";
-	// Required for calculation of Zipf's constant for read trace.
-	private static final String WRITE_COUNT_FILE = "writecount.txt";
+  // Required for calculation of Zipf's constant for read trace.
+  private static final String READ_COUNT_FILE = "readcount.txt";
+  // Required for calculation of Zipf's constant for read trace.
+  // private static final String WRITE_COUNT_FILE = "writecount.txt";
 
-	private static List<LogLogData> analyze(String filepath, int linesToRead) {
-		Integer rank = 0;
-		String countLine;
-		// For Zipf's constant. Rank on X axis and Count on the Y axis.
-		List<LogLogData> logLogData = new ArrayList<>();
-		try {
-			BufferedReader file = new BufferedReader(new FileReader(RELATIVE_PATH + filepath));
-			while ((countLine = file.readLine()) != null && linesToRead > 0) {
-				logLogData.add(rank, new LogLogData(Math.log10(++rank), Math.log10(Double.valueOf(countLine))));
-				linesToRead--;
-			}
-			file.close();
-		} catch (IOException e) {
-			// Ignore and continue analysis for the next file.
-		}
-		return logLogData;
-	}
+  private static List<LogLogData> analyze(String filepath, int linesToRead) {
+    Integer rank = 0;
+    String countLine;
+    // For Zipf's constant. Rank on X axis and Count on the Y axis.
+    List<LogLogData> logLogData = new ArrayList<>();
+    try {
+      BufferedReader file = new BufferedReader(new FileReader(RELATIVE_PATH + filepath));
+      while ((countLine = file.readLine()) != null && linesToRead > 0) {
+        logLogData.add(rank, new LogLogData(Math.log10(++rank), Math.log10(Double.valueOf(countLine))));
+        linesToRead--;
+      }
+      file.close();
+    } catch (IOException e) {
+      // Ignore and continue analysis for the next file.
+    }
+    return logLogData;
+  }
 
-	private static void writeToFile(List<LogLogData> list, String filepath) {
-		try {
-			Writer writer = new BufferedWriter(
-					new OutputStreamWriter(new FileOutputStream(RELATIVE_PATH + filepath), "utf-8"));
-			for (LogLogData data : list) {
-				writer.write(data.rankLog + "," + data.countLog + " \n");
-			}
-			writer.flush();
-			writer.close();
-			System.out.println("Data for Zipf's constant calculation written to : " + RELATIVE_PATH + filepath);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
+  private static void writeToFile(List<LogLogData> list, String filepath) {
+    try {
+      Writer writer = new BufferedWriter(
+          new OutputStreamWriter(new FileOutputStream(RELATIVE_PATH + filepath), "utf-8"));
+      for (LogLogData data : list) {
+        writer.write(data.rankLog + "," + data.countLog + " \n");
+      }
+      writer.flush();
+      writer.close();
+      System.out.println("Data for Zipf's constant calculation written to : " + RELATIVE_PATH + filepath);
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+  }
 
-	public static void main(String[] args) {
-		List<LogLogData> list = analyze(READ_COUNT_FILE, 100000);
-		writeToFile(list, "ReadOpZipfsKLogData.csv");
-	}
+  public static void main(String[] args) {
+    List<LogLogData> list = analyze(READ_COUNT_FILE, 100000);
+    writeToFile(list, "ReadOpZipfsKLogData.csv");
+  }
 
 }
 
 class LogLogData {
 
-	double countLog;
-	double rankLog;
+  double countLog;
+  double rankLog;
 
-	public LogLogData(double rankLog, double countLog) {
-		this.countLog = countLog;
-		this.rankLog = rankLog;
-	}
+  public LogLogData(double rankLog, double countLog) {
+    this.countLog = countLog;
+    this.rankLog = rankLog;
+  }
 
 }
