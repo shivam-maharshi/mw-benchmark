@@ -3,6 +3,8 @@ package org.vt.edu.utils;
 import static org.vt.edu.utils.Constant.OUTPUT_PATH;
 import static org.vt.edu.utils.Constant.RELATIVE_PATH;
 
+import java.lang.Math;
+
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -50,7 +52,7 @@ public class CategorizeByHttpStatusCode {
     ExecutorService executor = Executors.newFixedThreadPool(workers);
 
     for (int i = 0; i < workers; i++)
-      executor.execute(new CategorizeByHttpStatusCodeTask(hostAd, titles.subList(i * size, (i + 1) * size), rsMap));
+      executor.execute(new CategorizeByHttpStatusCodeTask(hostAd, titles.subList(i * size, Math.max((i + 1) * size), titles.size()), rsMap));
 
     executor.shutdown();
 
