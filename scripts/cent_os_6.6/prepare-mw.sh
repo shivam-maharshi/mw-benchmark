@@ -5,6 +5,8 @@ rpm -ivh epel-release-6-8.noarch.rpm
 yum install -y httpd mysql-server php php-mysql
 yum --enablerepo=extras install -y epel-release
 yum --enablerepo=epel install -y phpmyadmin
+wget https://github.com/shivam-maharshi/scripts/blob/master/install/centos_6.6/php_5.6.sh
+sh php_5.6.sh
 setsebool httpd_can_network_connect_db=1
 service mysqld restart
 mysqladmin -u root password 'root'
