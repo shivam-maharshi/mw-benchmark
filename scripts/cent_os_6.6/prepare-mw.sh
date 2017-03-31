@@ -5,7 +5,8 @@ rpm -ivh epel-release-6-8.noarch.rpm
 yum install -y httpd mysql-server php php-mysql
 yum --enablerepo=extras install -y epel-release
 yum --enablerepo=epel install -y phpmyadmin
-setsebool httpd_can_network_connect_db=1 
+setsebool httpd_can_network_connect_db=1
+service mysqld restart
 mysqladmin -u root password 'root'
 service mysqld restart
 service httpd restart
