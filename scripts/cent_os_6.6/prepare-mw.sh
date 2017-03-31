@@ -9,11 +9,13 @@ wget https://github.com/shivam-maharshi/scripts/blob/master/install/centos_6.6/p
 sh php_5.6.sh
 setsebool httpd_can_network_connect_db=1
 service mysqld restart
+mkdir /var/cache/w
+chmod 777 -R /var/cache/w
 mysqladmin -u root password 'root'
 service mysqld restart
 service httpd restart
 cd /var/www/html
 wget "https://releases.wikimedia.org/mediawiki/1.26/mediawiki-1.26.2.tar.gz"
 tar -xvzf mediawiki-1.26.2.tar.gz
-mv mediawiki-1.26.2 mediawiki
-chmod 777 -R mediawiki
+mv mediawiki-1.26.2 w
+chmod 777 -R w
