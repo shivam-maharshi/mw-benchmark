@@ -1,5 +1,7 @@
 /build/
+.project
 .classpath
+.pydevproject
 /target/
 .settings/
 /benchmarking_input/readtrace.txt
