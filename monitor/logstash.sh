@@ -7,7 +7,7 @@
       rename => ["column1", "DATE", "column2", "TIME", "column11", "CPU", "column25", "RAM", "column54", "NET_RX_KB", "column55", "NET_TX_KB", "column64", "DSK_RD_KB", "column65", "DSK_WT_KB"]
       convert => {
                    "CPU" => "integer"
-				   "RAM" => "integer"
+		   "RAM" => "integer"
                    "NET_RX_KB" => "integer"
                    "NET_TX_KB" => "integer"
                    "DSK_RD_KB" => "integer"
