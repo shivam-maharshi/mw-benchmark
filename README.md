@@ -74,7 +74,7 @@ java -Xms8096m -Xmx12086m -cp "YCSB4WebServices-0.0.jar" org.vt.edu.utils.FindCo
 
 ## [Build](https://github.com/shivam-maharshi/hckn-resrch/tree/master/mw-benchmark)
 
-* ```
+```
 mvn clean install
 ```
 
