@@ -38,7 +38,7 @@ public class CategorizeByHttpStatusCodeTask implements Runnable {
         responseCode = 500;
       }
       if (rsMap.get(responseCode) == null)
-        rsMap.put(responseCode, new ArrayList<>());
+        rsMap.put(responseCode, new ArrayList<String>());
 
       rsMap.get(responseCode).add(title);
     }
