@@ -1,17 +1,10 @@
 # Deleting page manually in Media Wiki:
+# Title - Φάνης_Γκέκας
+# Page Id - 74392
+# Rev Id, Page Latest - 5664947
+# Old Rev Text Id - 5664947
 
-Title - Φάνης_Γκέκας
-Page Id - 74392
-Rev Id, Page Latest - 5664947
-Old Rev Text Id - 5664947
-
-Investigate:
-1. recent changes table - 
-2. redirect table
-3. templatelinks
-
-
-1. Listing all related table keys
+# 1. Listing all related table keys
 
 SELECT
     p.page_id AS "page_id",
@@ -25,7 +18,7 @@ FROM
         INNER JOIN text t
             ON r.rev_text_id = t.old_id
 			
-2. Deleting from database the rows
+# 2. Deleting from database the rows
 
 SELECT
     CONCAT('IN(', GROUP_CONCAT(`p`.`page_id`), ')') AS 'page',
@@ -40,15 +33,12 @@ FROM
 WHERE 
 	p.page_title LIKE '%Tests/parent-a%';
 	
-3. Deleted from the ids selected from above
+# 3. Deleted from the ids selected from above
 
 SET autocommit=0;
+
 START TRANSACTION;
   DELETE FROM `page` WHERE page_id IN(5530,5528,5529,5530,5529,5528,5532,5532,5532);
   DELETE FROM `revision` WHERE rev_text_id IN(9918,9921,9917,9919,9920,9916,9922,9915,9923);
   DELETE FROM `text` WHERE old_id IN(9918,9921,9917,9919,9920,9916,9922,9915,9923);
 COMMIT;
-
-4. Run cleanup script
-
-php maintenance/deleteOrphanedRevisions.php
