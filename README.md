@@ -3,11 +3,11 @@
 # [MediaWiki Benchmark](https://github.com/shivam-maharshi/mw-benchmark/tree/master)
 This project contains all the code and configurations to install, optimize and benchmark a Wikipedia server with realistic workload. Wikipedia, empowered by MediaWiki, can be used to assess and compare the performance of different:
 
-1. Web Servers - Apache, LightHTTP, NGNIX, etc.
-2. Web Server Modules  - Apache MPM, Preform, Event, etc.
-3. Databases - MySQL, Postgress, TSQL, SQLLite, etc.
-4. Caches - Accel, Memcached, Redis, etc.
-5. Archiving - SiteStory, Cache Based Archiving, etc.
+1. **Web Servers** - Apache, LightHTTP, NGNIX, etc.
+2. **Web Server Modules** - Apache MPM, Preform, Event, etc.
+3. **Databases** - MySQL, Postgress, TSQL, SQLLite, etc.
+4. **Caches** - Accel, Memcached, Redis, etc.
+5. **Archiving** - SiteStory, Cache Based Archiving, etc.
 
 ## [Contents](https://github.com/shivam-maharshi/mw-benchmark/tree/master)
 
