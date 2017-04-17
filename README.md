@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/shivam-maharshi/mw-benchmark.svg?branch=master)](https://travis-ci.org/shivam-maharshi/mw-benchmark)
+[![Build Status](https://api.travis-ci.org/shivam-maharshi/mw-benchmark.svg?branch=master)](https://travis-ci.org/shivam-maharshi/mw-benchmark)
 
 # [MediaWiki Benchmark](https://github.com/shivam-maharshi/hckn-resrch/tree/master/mw-benchmark)
 This project contains all the code and configurations to install, optimize and benchmark a Wikipedia server with realistic workload. Wikipedia, empowered by MediaWiki, can be used to assess and compare the performance of different:
