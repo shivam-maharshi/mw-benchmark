@@ -20,9 +20,9 @@ import java.util.TreeMap;
 public class ParseResults {
 
   public Map<String, Map<Long, Result>> parseModes(String parentFolder) {
-    Map<Long, Result> a = computeAvgResults(parentFolder + File.pathSeparator + "mode-a");
-    Map<Long, Result> b = computeAvgResults(parentFolder + File.pathSeparator + "mode-b");
-    Map<Long, Result> c = computeAvgResults(parentFolder + File.pathSeparator + "mode-c");
+    Map<Long, Result> a = computeAvgResults(parentFolder + File.separator + "mode-a");
+    Map<Long, Result> b = computeAvgResults(parentFolder + File.separator + "mode-b");
+    Map<Long, Result> c = computeAvgResults(parentFolder + File.separator + "mode-c");
     Map<String, Map<Long, Result>> r = new TreeMap<>();
     r.put("a", a);
     r.put("b", b);
@@ -41,8 +41,9 @@ public class ParseResults {
         Map<Long, Result> results = parseResults(file.getPath());
         Iterator<Entry<Long, Result>> it = results.entrySet().iterator();
         while (it.hasNext()) {
-          Result ir = it.next().getValue();
-          Long key = it.next().getKey();
+          Entry<Long, Result> e = it.next();
+          Result ir = e.getValue();
+          Long key = e.getKey();
           if (res.get(key) == null)
             res.put(key, new Result());
           Result r = res.get(key);
@@ -110,31 +111,31 @@ public class ParseResults {
     Result r = new Result();
     for (String l : lines) {
       if (l.startsWith("[OVERALL], RunTime"))
-        r.setRuntime(Long.parseLong(l.split(",")[2].trim()));
+        r.setRuntime(Double.parseDouble(l.split(",")[2].trim()));
       else if (l.startsWith("[OVERALL], Throughput"))
         r.setThroughput(Double.parseDouble(l.split(",")[2].trim()));
       else if (l.startsWith("[READ], Operations"))
-        r.setReads(Long.parseLong(l.split(",")[2].trim()));
+        r.setReads(Double.parseDouble(l.split(",")[2].trim()));
       else if (l.startsWith("[READ], AverageLatency"))
-        r.setAvgLatency(Double.parseDouble(l.split(",")[2].trim()));
+        r.setAvgLatency(Double.parseDouble(l.split(",")[2].trim()) / 1000);
       else if (l.startsWith("[READ], MinLatency"))
-        r.setMinLatency(Double.parseDouble(l.split(",")[2].trim()));
+        r.setMinLatency(Double.parseDouble(l.split(",")[2].trim()) / 1000);
       else if (l.startsWith("[READ], MaxLatency"))
-        r.setMaxLatency(Double.parseDouble(l.split(",")[2].trim()));
+        r.setMaxLatency(Double.parseDouble(l.split(",")[2].trim()) / 1000);
       else if (l.startsWith("[READ], Return=ERROR"))
-        r.setReadErrors(Long.parseLong(l.split(",")[2].trim()));
+        r.setReadErrors(Double.parseDouble(l.split(",")[2].trim()));
       else if (l.startsWith("[INSERT], Operations"))
-        r.setWrites(Long.parseLong(l.split(",")[2].trim()));
+        r.setWrites(Double.parseDouble(l.split(",")[2].trim()));
       else if (l.startsWith("[INSERT], Return=ERROR"))
-        r.setWriteErrors(Long.parseLong(l.split(",")[2].trim()));
+        r.setWriteErrors(Double.parseDouble(l.split(",")[2].trim()));
       else if (l.startsWith("[UPDATE], Operations"))
-        r.setUpdates(Long.parseLong(l.split(",")[2].trim()));
+        r.setUpdates(Double.parseDouble(l.split(",")[2].trim()));
       else if (l.startsWith("[UPDATE], Return=ERROR"))
-        r.setUpdateErrors(Long.parseLong(l.split(",")[2].trim()));
+        r.setUpdateErrors(Double.parseDouble(l.split(",")[2].trim()));
       else if (l.startsWith("[DELETE], Operations"))
-        r.setDeletes(Long.parseLong(l.split(",")[2].trim()));
+        r.setDeletes(Double.parseDouble(l.split(",")[2].trim()));
       else if (l.startsWith("[DELETE], Return=ERROR"))
-        r.setDeleteErrors(Long.parseLong(l.split(",")[2].trim()));
+        r.setDeleteErrors(Double.parseDouble(l.split(",")[2].trim()));
       r.setTotalOp(r.getDeletes() + r.getReads() + r.getUpdates() + r.getWrites());
       r.setTotalErrors(r.getDeleteErrors() + r.getReadErrors() + r.getUpdateErrors() + r.getWriteErrors());
     }
