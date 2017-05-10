@@ -7,36 +7,36 @@ package org.vt.edu.utils;
  */
 public class Result {
 
-  private long concurrency;
-  private long runtime;
+  private double concurrency;
+  private double runtime;
   private double throughput;
   private double avgLatency;
   private double minLatency;
   private double maxLatency;
-  private long reads;
-  private long readErrors;
-  private long writes;
-  private long writeErrors;
-  private long deletes;
-  private long deleteErrors;
-  private long updates;
-  private long updateErrors;
-  private long totalOp;
-  private long totalErrors;
+  private double reads;
+  private double readErrors;
+  private double writes;
+  private double writeErrors;
+  private double deletes;
+  private double deleteErrors;
+  private double updates;
+  private double updateErrors;
+  private double totalOp;
+  private double totalErrors;
 
-  public long getConcurrency() {
+  public double getConcurrency() {
     return concurrency;
   }
 
-  public void setConcurrency(long concurrency) {
+  public void setConcurrency(double concurrency) {
     this.concurrency = concurrency;
   }
 
-  public long getRuntime() {
+  public double getRuntime() {
     return runtime;
   }
 
-  public void setRuntime(long runtime) {
+  public void setRuntime(double runtime) {
     this.runtime = runtime;
   }
 
@@ -72,83 +72,83 @@ public class Result {
     this.maxLatency = maxLatency;
   }
 
-  public long getReads() {
+  public double getReads() {
     return reads;
   }
 
-  public void setReads(long reads) {
+  public void setReads(double reads) {
     this.reads = reads;
   }
 
-  public long getReadErrors() {
+  public double getReadErrors() {
     return readErrors;
   }
 
-  public void setReadErrors(long readErrors) {
+  public void setReadErrors(double readErrors) {
     this.readErrors = readErrors;
   }
 
-  public long getWrites() {
+  public double getWrites() {
     return writes;
   }
 
-  public void setWrites(long writes) {
+  public void setWrites(double writes) {
     this.writes = writes;
   }
 
-  public long getWriteErrors() {
+  public double getWriteErrors() {
     return writeErrors;
   }
 
-  public void setWriteErrors(long writeErrors) {
+  public void setWriteErrors(double writeErrors) {
     this.writeErrors = writeErrors;
   }
 
-  public long getDeletes() {
+  public double getDeletes() {
     return deletes;
   }
 
-  public void setDeletes(long deletes) {
+  public void setDeletes(double deletes) {
     this.deletes = deletes;
   }
 
-  public long getDeleteErrors() {
+  public double getDeleteErrors() {
     return deleteErrors;
   }
 
-  public void setDeleteErrors(long deleteErrors) {
+  public void setDeleteErrors(double deleteErrors) {
     this.deleteErrors = deleteErrors;
   }
 
-  public long getUpdates() {
+  public double getUpdates() {
     return updates;
   }
 
-  public void setUpdates(long updates) {
+  public void setUpdates(double updates) {
     this.updates = updates;
   }
 
-  public long getUpdateErrors() {
+  public double getUpdateErrors() {
     return updateErrors;
   }
 
-  public void setUpdateErrors(long updateErrors) {
+  public void setUpdateErrors(double updateErrors) {
     this.updateErrors = updateErrors;
   }
 
-  public long getTotalOp() {
+  public double getTotalOp() {
     return totalOp;
   }
 
-  public void setTotalOp(long totalOp) {
+  public void setTotalOp(double totalOp) {
     this.totalOp = totalOp;
   }
 
-  public long getTotalErrors() {
+  public double getTotalErrors() {
     return totalErrors;
   }
 
-  public void setTotalErrors(long totalErrors) {
+  public void setTotalErrors(double totalErrors) {
     this.totalErrors = totalErrors;
   }
 
