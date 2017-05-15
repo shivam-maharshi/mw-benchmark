@@ -1,1 +1,1 @@
-sudo java -Xms1024m -Xmx3072m -cp "mw-benchmark-0.0.jar" org.vt.edu.utils.CategorizeByHttpStatusCode -ad=192.168.1.51:80/sw -input=/Users/library/development/benchmarking/readtrace.txt -output=/Users/library/development/benchmarking/ -offset=0 -workers=8
+java -Xms1024m -Xmx3072m -cp "mw-benchmark-0.0.jar" org.vt.edu.utils.CategorizeByHttpStatusCode -ad=192.168.1.51:80/sw -input=/Users/library/development/benchmarking/readtrace.txt -output=/Users/library/development/benchmarking/ -offset=0 -workers=8
