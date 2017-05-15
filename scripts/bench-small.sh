@@ -1,13 +1,13 @@
-sudo java -Xms1024m -Xmx3072m -cp "mw-benchmark-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/shivam/workload -p threadcount=15 -p target=15 -p operationcount=9000 -p exportfile=/home/shivam/br15.txt
-sudo java -Xms1024m -Xmx3072m -cp "mw-benchmark-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/shivam/workload -p threadcount=30 -p target=30 -p operationcount=18000 -p exportfile=/home/shivam/br30.txt
-sudo java -Xms1024m -Xmx3072m -cp "mw-benchmark-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/shivam/workload -p threadcount=45 -p target=45 -p operationcount=27000 -p exportfile=/home/shivam/br45.txt
-sudo java -Xms1024m -Xmx3072m -cp "mw-benchmark-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/shivam/workload -p threadcount=60 -p target=60 -p operationcount=36000 -p exportfile=/home/shivam/br60.txt
-sudo java -Xms1024m -Xmx3072m -cp "mw-benchmark-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/shivam/workload -p threadcount=75 -p target=75 -p operationcount=45000 -p exportfile=/home/shivam/br75.txt
-sudo java -Xms1024m -Xmx3072m -cp "mw-benchmark-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/shivam/workload -p threadcount=90 -p target=90 -p operationcount=54000 -p exportfile=/home/shivam/br90.txt
-sudo java -Xms1024m -Xmx3072m -cp "mw-benchmark-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/shivam/workload -p threadcount=105 -p target=105 -p operationcount=60000 -p exportfile=/home/shivam/br105.txt
-sudo java -Xms1024m -Xmx3072m -cp "mw-benchmark-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/shivam/workload -p threadcount=120 -p target=120 -p operationcount=60000 -p exportfile=/home/shivam/br120.txt
-sudo java -Xms1024m -Xmx3072m -cp "mw-benchmark-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/shivam/workload -p threadcount=135 -p target=135 -p operationcount=60000 -p exportfile=/home/shivam/br135.txt
-sudo java -Xms1024m -Xmx3072m -cp "mw-benchmark-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/shivam/workload -p threadcount=150 -p target=150 -p operationcount=60000 -p exportfile=/home/shivam/br150.txt
-sudo java -Xms1024m -Xmx3072m -cp "mw-benchmark-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/shivam/workload -p threadcount=165 -p target=165 -p operationcount=60000 -p exportfile=/home/shivam/br165.txt
-sudo java -Xms1024m -Xmx3072m -cp "mw-benchmark-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/shivam/workload -p threadcount=180 -p target=180 -p operationcount=60000 -p exportfile=/home/shivam/br180.txt
-sudo java -Xms1024m -Xmx3072m -cp "mw-benchmark-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/shivam/workload -p threadcount=195 -p target=195 -p operationcount=60000 -p exportfile=/home/shivam/br195.txt
+java -Xms1024m -Xmx3072m -cp "mw-benchmark-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/shivam/workload -p threadcount=15 -p target=15 -p operationcount=9000 -p exportfile=/home/shivam/br15.txt
+java -Xms1024m -Xmx3072m -cp "mw-benchmark-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/shivam/workload -p threadcount=30 -p target=30 -p operationcount=18000 -p exportfile=/home/shivam/br30.txt
+java -Xms1024m -Xmx3072m -cp "mw-benchmark-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/shivam/workload -p threadcount=45 -p target=45 -p operationcount=27000 -p exportfile=/home/shivam/br45.txt
+java -Xms1024m -Xmx3072m -cp "mw-benchmark-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/shivam/workload -p threadcount=60 -p target=60 -p operationcount=36000 -p exportfile=/home/shivam/br60.txt
+java -Xms1024m -Xmx3072m -cp "mw-benchmark-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/shivam/workload -p threadcount=75 -p target=75 -p operationcount=45000 -p exportfile=/home/shivam/br75.txt
+java -Xms1024m -Xmx3072m -cp "mw-benchmark-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/shivam/workload -p threadcount=90 -p target=90 -p operationcount=54000 -p exportfile=/home/shivam/br90.txt
+java -Xms1024m -Xmx3072m -cp "mw-benchmark-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/shivam/workload -p threadcount=105 -p target=105 -p operationcount=60000 -p exportfile=/home/shivam/br105.txt
+java -Xms1024m -Xmx3072m -cp "mw-benchmark-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/shivam/workload -p threadcount=120 -p target=120 -p operationcount=60000 -p exportfile=/home/shivam/br120.txt
+java -Xms1024m -Xmx3072m -cp "mw-benchmark-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/shivam/workload -p threadcount=135 -p target=135 -p operationcount=60000 -p exportfile=/home/shivam/br135.txt
+java -Xms1024m -Xmx3072m -cp "mw-benchmark-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/shivam/workload -p threadcount=150 -p target=150 -p operationcount=60000 -p exportfile=/home/shivam/br150.txt
+java -Xms1024m -Xmx3072m -cp "mw-benchmark-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/shivam/workload -p threadcount=165 -p target=165 -p operationcount=60000 -p exportfile=/home/shivam/br165.txt
+java -Xms1024m -Xmx3072m -cp "mw-benchmark-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/shivam/workload -p threadcount=180 -p target=180 -p operationcount=60000 -p exportfile=/home/shivam/br180.txt
+java -Xms1024m -Xmx3072m -cp "mw-benchmark-0.0.jar" com.yahoo.ycsb.Client -s -t -P /home/shivam/workload -p threadcount=195 -p target=195 -p operationcount=60000 -p exportfile=/home/shivam/br195.txt
