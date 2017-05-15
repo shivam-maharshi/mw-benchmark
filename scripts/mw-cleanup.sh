@@ -9,7 +9,5 @@ sudo php tidyUpBug37714.php
 sudo php updateRestrictions.php
 sudo php updateSpecialPages.php
 sudo php updateDoubleWidthSearch.php
-# sudo php refreshLinks.php
 sudo php rebuildtextindex.php
 sudo php update.php
-# sudo php rebuildall.php
