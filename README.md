@@ -23,7 +23,7 @@ It contains the configurations required to optimize individual components of the
 Input folder contains the read, write, delete, update, size distribution trace files which are used by the benchmarking tool to generate realistic workload. These files should be created by a careful analysis of the trace files given by Wikipedia [here](https://dumps.wikimedia.org/backup-index.html). The tools for this analysis are also available in this project. Refer to section 9 for more details.
 
 4. **[Jar](https://github.com/shivam-maharshi/mw-benchmark/tree/master/jar)**:
-Jar folders contains a precompiled fat jar (with dependency) of this project. The benchmarking and all util functions can be invoked using the jar present in this folder. Alternatively, you can also build this project using the command ```mvn clean build``` to create a jar compiled on your system from the source code. It is generally a good idea to follow the latter to avoid OS specific compilation issues.
+Jar folders contains a precompiled fat jar (with dependency) of this project. The benchmarking and all util functions can be invoked using the jar present in this folder. Alternatively, you can also build this project using the command ```mvn clean install``` to create a jar compiled on your system from the source code. It is generally a good idea to follow the latter to avoid OS specific compilation issues.
 
 5. **[Outputs](https://github.com/shivam-maharshi/mw-benchmark/tree/master/output)**:
 Output folders contains the output of the benchmarking and the utility tools. Please note that they do not contain the results but only the data used for analysis, db population, fixes, etc.
@@ -37,8 +37,8 @@ Scripts folder contains the shell scripts required to perform any variety of act
 8. **[SQL](https://github.com/shivam-maharshi/mw-benchmark/tree/master/sql)**:
 SQL folder contains the SQL scripts required to populate the database, add & remove the indexes & keys, fix wikipedia schema, get analysis data, etc. These scripts speed up the process of setting up and maintaining a Wikipedia server for benchmarking purpose.
 
-9. **[YCSB For Web Service Benchmark](https://github.com/shivam-maharshi/mw-benchmark/tree/master/src/main/java/com/yahoo/ycsb)**:
-YCSB4WebServices is a modification of the light wieght core module of the Yahoo Cloud Service Benchmarking project to benchmark Web Services. The motivation for this modification is the need of an easily and highly configurable tool for benchmarking web services, especially for cloud applications, where synchronization between various clients is needed. At the time of creating this tool, YCSB did not provide a very flexible and easily configurable approach to benchmark web services. Hence this is a tightly coupled approach to benchmark web services using YCSB core module. To get the official support please visit the YCSB Rest module that I've contributed especially for RESTFul web services [here](https://github.com/brianfrankcooper/YCSB/tree/master/rest). This module here has updated internal core classes like CoreWorkload, Client, Generators etc. Flexibility has also been added to fetch the URL patterns for reads, writes, updates and deletes from multiple files. Adidtionally, you can configure Zipf's constant for Read, Write and Write Data Size patterns. Take a look at the sample workload [here](https://github.com/shivam-maharshi/mw-benchmark/tree/master/workload).
+9. **[MW-Benchmark from YCSB](https://github.com/shivam-maharshi/mw-benchmark/tree/master/src/main/java/com/yahoo/ycsb)**:
+MW-Benchmark is a extension of the light wieght core module of the Yahoo Cloud Service Benchmarking project to benchmark REST Web Services. The motivation for this modification is the need of an easily and highly configurable tool for benchmarking web services, especially for cloud applications, where synchronization between various clients is needed. At the time of creating this tool, YCSB did not provide a very flexible and easily configurable approach to benchmark web services. Hence this is a tightly coupled approach to benchmark web services using YCSB core module. To get the official support please visit the YCSB Rest module that I've contributed especially for RESTFul web services [here](https://github.com/brianfrankcooper/YCSB/tree/master/rest). This module here has updated internal core classes like CoreWorkload, Client, Generators etc. Flexibility has also been added to fetch the URL patterns for reads, writes, updates and deletes from multiple files. Adidtionally, you can configure Zipf's constant for Read, Write and Write Data Size patterns. Take a look at the sample workload [here](https://github.com/shivam-maharshi/mw-benchmark/tree/master/workload).
 
 10. **[Utility Tools](https://github.com/shivam-maharshi/mw-benchmark/tree/master/src/main/java/org/vt/edu)**
 It contains all the utitlity tools required to setup wikipedia, analyze inputs, download dumps, populate database, fix database schema, prepare traces, etc.
@@ -54,7 +54,7 @@ It contains all the utitlity tools required to setup wikipedia, analyze inputs, 
 
 ## [Usage](https://github.com/shivam-maharshi/mw-benchmark/tree/master)
 
-Detailed usage for all tools is provided in the code. Using shell scripts are fairly straightforward. Given below are a few example usage for some important tasks:
+Detailed usage for all tools is provided in the code. Using shell scripts is fairly straightforward. Given below are a few example usage for some important tasks:
 
 #### 1. Categorize URLs by HTTP Status Code:
 
